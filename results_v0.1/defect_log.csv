@@ -1,0 +1,31 @@
+version_found,id,where,defect,category,how_caught,route
+v13,E1,comparison table,Semi-amplitudes of two published planets replaced by the candidate's own K (copied into the wrong column),transcription,source-paper check by independent reviewer agent,"self-review against sources, scripts or catalogues"
+v13,E2,false-alarm probability,Analytic Baluev bound quoted 30x below the bootstrap FAP (a bound cannot sit below a correct Monte Carlo value),method,independent re-implementation,"self-review against sources, scripts or catalogues"
+v13,E3,rotation,Convective turnover time 34.1 d pasted from a harmonic list (8 x P0); correct value 23.7 d,transcription,provenance check against the pipeline output file,"self-review against sources, scripts or catalogues"
+v13,E4,planet radius,Mass-radius relation evaluated wrongly (2.5 instead of 3.4 R_Earth),computation,independent recomputation,"self-review against sources, scripts or catalogues"
+v13,E5,data selection,Number of spectra flagged by one criterion given as 1; the script prints 2,transcription,re-running the released script,"self-review against sources, scripts or catalogues"
+v13,E6,out-of-sample prediction,Prediction uncertainty omitted the orbital-phase error (1.0 vs 2.7 m/s),method,independent reviewer agent,"self-review against sources, scripts or catalogues"
+v13,E7,phase coherence,Period-stability statement ambiguous,wording,independent reviewer agent,"self-review against sources, scripts or catalogues"
+v13,E8,discussion,Amplitude compared with formal errors only (ignoring jitter),overclaim,independent reviewer agent,"self-review against sources, scripts or catalogues"
+v13,E9,companions,Claimed an unprobed separation gap that the RVs themselves exclude,reasoning,independent reviewer agent,independent reviewer agent
+v13,E10,astrometry,Astrometric signature 0.34 instead of 0.05 microarcsec,arithmetic,independent reviewer agent,independent reviewer agent
+v13,E11,indicators,Bonferroni threshold 0.0057 instead of 0.0056,arithmetic,independent reviewer agent,independent reviewer agent
+v13,E12,residuals,Once-exceeded level quoted as the expected maximum of 103 draws,statistics,independent reviewer agent,independent reviewer agent
+v13,E13,zero point,A statistic of one data set quoted for the other,transcription,independent reviewer agent,independent reviewer agent
+v13,E14,evidence,Ratio to run-to-run scatter mis-stated,arithmetic,independent reviewer agent,independent reviewer agent
+v13,E15,second signal,Prior-width correction described with the wrong prior range,transcription,independent reviewer agent,independent reviewer agent
+v13,E16,comparison table,Several published values (rms; baseline; RV count; mass; limits) wrong or unlabelled,transcription,source-paper check by independent reviewer agent,independent reviewer agent
+v13,E17,comparison text,Published precision and a coherence statement misattributed,transcription,source-paper check by independent reviewer agent,independent reviewer agent
+v13,E18,companions,Companions excluded to 100 au; the speckle curve reaches about 55 au,overclaim,independent reviewer agent,independent reviewer agent
+v14,C1,ephemeris,Sign of the P-T_conj correlation asserted from a proxy fit; the posterior shows the opposite sign,reasoning,direct propagation from the posterior samples,"self-review against sources, scripts or catalogues"
+v14,C2,comparison footnote,Published K priors described as period priors,transcription,source-paper check,"self-review against sources, scripts or catalogues"
+v14,C3,follow-up,Semi-amplitude precision promised for one season overstated,overclaim,independent reviewer agent,"self-review against sources, scripts or catalogues"
+v15,R1,bibliography,DOI of a cited paper belonged to a different paper,reference,automated reference check against publisher records,automated reference check
+v15,R2,bibliography,Title of an (uncited) entry wrong,reference,automated reference check against publisher records,automated reference check
+v15,S1,rotation,Activity index on a PHOENIX-based scale fed into a relation calibrated on the S-index scale (28.6 d instead of about 39 d),method,cross-check against an independent catalogue of the same star,"self-review against sources, scripts or catalogues"
+v15,S2,transiting candidate,Transit depth computed from a catalogue radius that assumed a different stellar radius (130 vs 193 ppm),transcription,comparison with the archive record,"self-review against sources, scripts or catalogues"
+v15,S3,rotation harmonics,Simulation presented as testing a ninth-harmonic scenario it could not reproduce by construction,overclaim,independent reviewer agent (harmonic budget of the kernel),independent reviewer agent
+v15,S4,rotation,Eight statements left on the superseded rotation range,consistency,independent reviewer agent,independent reviewer agent
+v15,S5,held-out test,Result described as agreeing with the ephemeris; the test lacked the power to decide,overclaim,independent reviewer agent,independent reviewer agent
+v15,S6,speckle,Outer edge 1.2 arcsec = 55 au; the curve ends at 1.175 arcsec = 54 au,arithmetic,independent reviewer agent,independent reviewer agent
+v15,S7,AI statement,Stated that every number came from a released script; some come from literature and arithmetic,overclaim,independent reviewer agent,independent reviewer agent

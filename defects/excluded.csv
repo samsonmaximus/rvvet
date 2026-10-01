@@ -1,0 +1,100 @@
+source,quote,reason
+CHANGELOG_v13.md,"HD 22496 residual rms ""…""",Part of E16. The v12 table cell was a placeholder ('…') that was filled from the source paper; no wrong value was stated (codebook: placeholders are not defects).
+CHANGELOG_v13.md,"baseline ""895 d""",Part of E16. Merged into E17: same root cause (HD 22496 treated as ESPRESSO-only; the source's K and baseline include 17 yr of HARPS data).
+CHANGELOG_v13.md,(T1–T10: new analyses added at a referee's likely request; not defects.,"New tests are new analyses, not defects. The two corrections recorded in this section (T3b, T7) are included."
+CHANGELOG_v13.md,"Sreenivas numbers corrected; rows added for log R'HK, residual rms, the period prior of each evidence, FAP and FIP.",The corrections are E1/E16 (already coded); the added rows are new content.
+CHANGELOG_v13.md,The footnote now says that Sreenivas et al. chose their P and K priors to maximise ΔlnZ,Added content. Its mislabelled priors were found in v14 (coded as v14-TO-5).
+CHANGELOG_v13.md,**HD 47186 b** (Bouchy et al. 2009) added as a fifth column.,"Addition, not a correction."
+CHANGELOG_v13.md,The text now says plainly how HD 297396 b differs,Rewrite that follows from E1a (the corrected 'same semi-amplitude' argument); merged into E1a.
+CHANGELOG_v13.md,Rotation at P0 also excluded by TESS (< 63 ppm at P0) and the activity level,Wording bullet that adds supporting evidence; no previous claim is corrected.
+CHANGELOG_v13.md,Mamajek & Hillenbrand (2008) added as a second rotation calibration (27.6 d).,Added calibration/reference (excluded per instructions and codebook).
+CHANGELOG_v13.md,"New references: Bouchy 2009, Horner 2019, Hara 2022, Mortier & Collier Cameron 2017, Zeng 2019 (DOIs checked).",Added references are not defects.
+CHANGELOG_v13.md,(Rewrite of the abstract conclusions; not a record of defects.),The record says it is not a record of defects.
+CHANGELOG_v14.md,"Summary orders the reasons: significance, one instrument, rotation",Restructuring (v14 acceptance item 2).
+CHANGELOG_v14.md,Sect. 4.4 has the window-percentile contrast with the 200.9-d signal,New analysis (item 4).
+CHANGELOG_v14.md,Held-out test opens Sect. 5; its figure is Fig. 2,Restructuring (item 5).
+CHANGELOG_v14.md,Quasi-periodic GP named in the main text as the primary alternative,Restructuring plus a new number (item 6); no v13 statement recorded as wrong.
+CHANGELOG_v14.md,"Model ladder and ASAS-SN detail in appendices, two sentences each in the text",Moving/shortening text (item 7).
+CHANGELOG_v14.md,"""The planet in context"" rewritten: ridge, TOI-6263.01 architecture, follow-up prediction",Rewrite requested by the report (item 8); the record gives no v13 statement that was wrong (see trade-offs 2–4).
+CHANGELOG_v14.md,Corner plot of the adopted-model posterior,New analysis/figure (item 9).
+CHANGELOG_v14.md,"Hara et al. (2022, A&A 658, A177) cited for the Gaussian-envelope test",Added reference (item 10).
+CHANGELOG_v14.md,Rebuilt in aa.cls with aa.bst and A&A citations; no half-empty float pages,Formatting/build (item 11).
+CHANGELOG_v14.md,Abstract ≤ 250 words,Shortening (item 13).
+CHANGELOG_v14.md,"Placeholders filled (Zenodo DOI, GitHub user); Shappee note removed","Placeholders needing the author, and removal of a note; no wrong content recorded (item 14)."
+CHANGELOG_v14.md,"Acknowledgements: all ESO programme IDs, Gemini/Zorro, TFOP, MAST texts; Zorro observers contacted",Additions to the acknowledgements; the record does not say previous text was wrong (item 15).
+CHANGELOG_v14.md,RV table prepared for CDS; RVBank version cited with URL,"Additions (data table, version and URL); no wrong content recorded (item 16)."
+CHANGELOG_v14.md,FIP 0.45 kept out of the abstract.,Deviation from the report's request; no manuscript content recorded as wrong.
+CHANGELOG_v14.md,"""Neptunian ridge"" claimed in period only.",Decision about new text requested by the report; no v13 statement recorded as wrong.
+CHANGELOG_v14.md,"The migration argument is ours, not Castro-González et al. (2026).",Corrects an attribution suggested by the report for the rewritten section; the record does not say v13 made this attribution. Judgement call.
+CHANGELOG_v14.md,"TOI-6263.01 at 0.4 m/s is out of reach of one season, so it is not promised.",Report's suggestion declined; not v13 content. The v13 error in the same trade-off is coded as v14-TO-4.
+CHANGELOG_v14.md,Rotation section shortened.,Shortening/restructuring.
+CHANGELOG_v14.md,"Some caveats moved, none deleted.",Moving text.
+CHANGELOG_v14.md,"QP GP semi-amplitude at its maximum-likelihood covariance: 5.63 ± 0.99 m/s (104), 5.47 ± 0.83 (103).",New number.
+CHANGELOG_v14.md,Transit geometry: TOI-6263.01 transits only for i > 84.7°,New number.
+CHANGELOG_v14.md,Follow-up estimate: 40 epochs at 3–4 m/s give K/σK = 6.2–8.2.,New number (supports v14-TO-4).
+CHANGELOG_v14.md,"Corner-plot posterior (Fig. 4), repeat run of the adopted model",New analysis.
+CHANGELOG_v14.md,Sect. 4.1 now names the QP GP; 4.3 gives evidence and FIP in plain terms,Structure section: restructuring.
+CHANGELOG_v14.md,the Table B.1 overflow,"v14 review-pass fix (would be v14-RP-19): table overflowing the layout, cosmetic with no content change."
+CHANGELOG_v15.md,"Held-out test on the three 2022–2024 HARPS spectra, frozen rule, reported whichever way",New analysis (item 1). Wording problems in its write-up are coded from REFEREE_v15 4a.
+CHANGELOG_v15.md,Rotation-dependent tests rerun over 30–50 d,Reruns needed because of the v14 scale error (same root cause as v15-AL-2); new analyses. The 9·P0 overclaim is coded as S10.
+CHANGELOG_v15.md,Cite Yu et al. (2024),Added reference (item 4). Its missing caveat is coded as v15-REF-5.3.
+CHANGELOG_v15.md,TOI-6263.01 from ExoFOP,"Merged into N1 (item 5 replaced the 130-ppm depth, which came from the same catalogue-radius root cause)."
+CHANGELOG_v15.md,Zorro limits from the real curves,Replaced v14's explicitly approximate 'typical' contrast-curve edge with measured values (a check requested in v13 E18); the record does not call the v14 text wrong. The rounding of the new edge is coded as N5.
+CHANGELOG_v15.md,"OJAp class, clean build",Formatting/build (item 7).
+CHANGELOG_v15.md,Byline Samson Fraser,Not a correction (item 8).
+CHANGELOG_v15.md,Generative-AI statement per OJAp policy,New content (item 9). Its two overclaims are coded as v15-REF-5.5a and 5.5b.
+CHANGELOG_v15.md,Every reference checked,Item 10; the two fixes are coded from refcheck.md.
+CHANGELOG_v15.md,A&A leftovers removed,Venue change (item 11); not a correction of wrong content.
+CHANGELOG_v15.md,"Abstract ≤ 250 words, Summary updated",Shortening (item 12).
+CHANGELOG_v15.md,NUMBERS.md and CHANGELOG,Documentation/provenance work (item 13).
+CHANGELOG_v15.md,GitHub user and Zenodo DOI,Placeholders the author must fill (item 14).
+CHANGELOG_v15.md,The held-out test is weak and I said so.,Reporting choice; no wrong content. See REFEREE_v15 4a.2 (excluded).
+CHANGELOG_v15.md,"The rotation correction works against the planet, and it is in anyway.",Consequence of v15-AL-2 and S10; not a separate defect.
+CHANGELOG_v15.md,I removed a claim a referee would have caught.,Merged into S10 (same ninth-harmonic overclaim).
+CHANGELOG_v15.md,Fig. 6 and its numbers now come from the 30–50 d run,"Merged into N3 (S4, stale range)."
+CHANGELOG_v15.md,The ASAS-SN rotation bound still covers only 25–40 d.,"Merged into N3 (S6, stale range)."
+CHANGELOG_v15.md,The held-out paragraph moved,Moving text.
+CHANGELOG_v15.md,`heldout_new.py` is frozen and unedited,Not acted on: frozen file left unchanged (referee S12 said to leave it and note it).
+CHANGELOG_v15.md,The ESO HARPS radial-velocity catalogue (HARPS_RVCAT_V1) reproduces RVBank's DRS velocities,"New finding, not a correction."
+CHANGELOG_v15.md,The TOI-6263.01 radius in v14 (0.93 R⊕) came from the TOI catalogue,Merged into N1 (REFEREE_v15 raised the same root cause).
+CHANGELOG_v15.md,The comparison table (Table 6) mixed activity scales,Merged into S13 (REFEREE_v15 raised the same root cause).
+CHANGELOG_v15.md,The photometric follow-up plan was re-simulated for 30–50 d (it had been simulated at 28 d).,"Merged into N3 (referee S9, stale range)."
+CHANGELOG_v15.md,No paper on HD 297396 / TOI-6263 exists in ADS full text as of 2026-09-29,Literature check; not a defect.
+CHANGELOG_v15.md,ADS also links HD 297396 to the HWO target-list papers,Not checked or used in the paper; not a defect.
+REFEREE_v15.md,"(the list says 8.3; ""What will confirm it"" is 8.4 in the PDF)","Error in the acceptance list, not in the manuscript or its released files."
+REFEREE_v15.md,Verified (text = JSON/script/NUMBERS),Items the referee verified are not defects (all of Sect. 2.1 and the DONE verdicts).
+REFEREE_v15.md,a 1.8 pt overfull `\hbox` inside Table 5,Cosmetic LaTeX warning.
+REFEREE_v15.md,`LastPage` multiply defined,Cosmetic LaTeX warning; also left as is (CHANGELOG_v15 item 7).
+REFEREE_v15.md,three duplicate hyperref destinations `table.1`,Build/link-target problem from a LaTeX warning; no content change.
+REFEREE_v15.md,the URL footnote (l. 122) breaks across pages 1–2,Cosmetic layout.
+REFEREE_v15.md,"""Version September 29, 2026"" prints twice",Cosmetic layout.
+REFEREE_v15.md,there is no v15 CHANGELOG,"Missing process document, not manuscript content."
+REFEREE_v15.md,`ZENODODOI` and `GITHUBUSER` placeholders remain,Placeholders the author must fill; also not done.
+REFEREE_v15.md,predicted semi-amplitude is 0.4 m s⁻¹,N2: merged into N1 (same TOI-radius root cause).
+REFEREE_v15.md,TOI-6263.01 radius and predicted $K$ still come from the 130-ppm era,S1: merged into N1.
+REFEREE_v15.md,"""0.98 m s⁻¹ rms"" is not in NUMBERS.md","N7: the value in the text is right; only a provenance line was added to NUMBERS.md, and no statement was changed."
+REFEREE_v15.md,The 90 000 total includes v13's `fwd_qp_long.json`,N8: a missing file to ship; no statement was changed.
+REFEREE_v15.md,"""repeat every test that depends on it over 17–45 d""",S2: merged into N3 (stale-range statements).
+REFEREE_v15.md,"| S3 | l. 613, l. 821 | 55 rotations | See N3. |",S3: duplicate of N3.
+REFEREE_v15.md,"The figure is the v12 run with $P_{\rm rot} \sim U(25,40)$",S4: merged into N3.
+REFEREE_v15.md,"""The candidate rotation periods of Sect. 3.2 do not place a harmonic at $P_0$""",S5: merged into N3.
+REFEREE_v15.md,"Correct for the test run, but silent on 40–50 d, unlike Table 5.",S6: merged into N3.
+REFEREE_v15.md,"Signature ""Spots varying in 25--40 d""",S7: merged into N3.
+REFEREE_v15.md,0.17 is outside 0.09–0.14.,S8: merged into N3.
+REFEREE_v15.md,"""25 nights … over two months measure any modulation above 5 mmag at the rotation period""",S9: merged into N3 (also CHANGELOG_v15 'Found' item 4).
+REFEREE_v15.md,"These are overclaims, not stale text.","S10: the id is used for the ninth-harmonic overclaim, merged with 4b and 5.1."
+REFEREE_v15.md,"`heldout_new.py` also refers to ""Sect. 8.3"" and ""Table 4""",Second part of S12: the referee said to leave the frozen file alone; not acted on.
+REFEREE_v15.md,**Legitimate mentions (keep):**,Referee lists these as correct; not defects.
+REFEREE_v15.md,The photon-noise variant is in NUMBERS.md but not in the paper.,4a.2: disclosing a post-hoc variant that was already computed is an addition; leaving it out did not make any statement in the paper wrong or overstated. Judgement call.
+REFEREE_v15.md,The frozen 3.9 m s⁻¹ is a SERVAL-fit scatter applied to DRS velocities,"4a.5 (second bullet): the referee says to keep the frozen value; the optional clause only pre-empts a question, and no error was identified."
+REFEREE_v15.md,Consider moving the paragraph to Sect. 5,4a.5 (third bullet) and 5.8: moving text.
+REFEREE_v15.md,"""Puts much of their power beyond the third harmonic"" holds only near $w$ = 0.15, and ""sharp harmonics"" (Table 5) is not accurate.",Part of the ninth-harmonic overclaim; merged into S10.
+REFEREE_v15.md,"The ""150 000 simulated rotational signals"" headline mixes sets with little power to fail.",5.1: the requested change was only to remove the 9·P0 phrase from the headline (the number stays); merged into S10.
+REFEREE_v15.md,Fig. 6 does not show the adopted range.,5.4: duplicate of S4; merged into N3.
+REFEREE_v15.md,Build hygiene (item 7).,5.6: cosmetic build issues.
+REFEREE_v15.md,The reproducibility package is incomplete.,5.7: missing scripts/JSON files added to the deposit; no statement was changed (the missing-CHANGELOG part is a process document).
+REFEREE_v15.md,The held-out result is in a future-work section.,5.8: moving text.
+refcheck.md,"Summary: 76 OK, 2 FIX, 0 NOT FOUND, 0 UNVERIFIED.","The 76 OK entries are verified, not defects."
+refcheck.md,"Not an error. pages=138 matches ADS (2021FrASS...8..138S), but the publisher's article number is 716560.",Scott2021: the record says it is not an error.
+refcheck.md,"Not an error. ADS bibcode is 2015ITPAM..38..252A, so 2015 matches ADS.",Ambikasaran2015: the record says it is not an error.
+refcheck.md,Optional (not errors): `Frensch2023` and `Yu2024` have no DOI,Optional DOI additions; the record says they are not errors.

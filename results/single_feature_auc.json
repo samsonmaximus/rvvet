@@ -1,0 +1,128 @@
+{
+ "ind_max_dchi2": {
+  "auc": 0.7796693077409516,
+  "direction": "-",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "block_phase_rms": {
+  "auc": 0.7679344499565457,
+  "direction": "-",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "growth_rho": {
+  "auc": 0.7640053869799434,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "snr_K": {
+  "auc": 0.762404425912963,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "dchi2": {
+  "auc": 0.7455766232800046,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "log10_fap": {
+  "auc": 0.7449295431719268,
+  "direction": "-",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "ind_max_absr": {
+  "auc": 0.7130415301322566,
+  "direction": "-",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "alias_margin": {
+  "auc": 0.7103928471186589,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "K_over_rms": {
+  "auc": 0.6850496934527734,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "half_imbalance": {
+  "auc": 0.6767260823839331,
+  "direction": "-",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "block_amp_p": {
+  "auc": 0.6690224981654509,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "block_phase_p": {
+  "auc": 0.630040782786012,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "apod_gain": {
+  "auc": 0.6226290355851789,
+  "direction": "-",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "act_log10_fap": {
+  "auc": 0.6211055990098509,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "half_amp_z": {
+  "auc": 0.6183820122889423,
+  "direction": "-",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "log_ncyc": {
+  "auc": 0.6144165119558491,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": true
+ },
+ "harm_dist": {
+  "auc": 0.6010475528637564,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "harm_alias_dist": {
+  "auc": 0.5964758904748861,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "harm_missing": {
+  "auc": 0.5897685424719238,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "half_phase_z": {
+  "auc": 0.5880734022515073,
+  "direction": "-",
+  "n": 4931,
+  "prior_dependent": false
+ },
+ "log_n": {
+  "auc": 0.5136666294684374,
+  "direction": "+",
+  "n": 4931,
+  "prior_dependent": true
+ }
+}

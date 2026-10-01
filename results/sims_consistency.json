@@ -1,0 +1,167 @@
+{
+ "n": 20,
+ "max_rel_diff": 0.0,
+ "identical_kind": true,
+ "rows": [
+  {
+   "case": 440,
+   "star": "HD210752",
+   "kind": "noise",
+   "kind_stored": "noise",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 557,
+   "star": "GJ361",
+   "kind": "noise",
+   "kind_stored": "noise",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 1371,
+   "star": "GJ744",
+   "kind": "noise",
+   "kind_stored": "noise",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 2304,
+   "star": "HD68284",
+   "kind": "activity_other",
+   "kind_stored": "activity_other",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 3984,
+   "star": "GJ877",
+   "kind": "activity_other",
+   "kind_stored": "activity_other",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 4110,
+   "star": "HD43197",
+   "kind": "planet",
+   "kind_stored": "planet",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 4368,
+   "star": "HD42581",
+   "kind": "rotation_harmonic",
+   "kind_stored": "rotation_harmonic",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 4986,
+   "star": "GJ4100",
+   "kind": "planet",
+   "kind_stored": "planet",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 6545,
+   "star": "GJ398.1",
+   "kind": "rotation_harmonic",
+   "kind_stored": "rotation_harmonic",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 6769,
+   "star": "GJ138",
+   "kind": "activity_other",
+   "kind_stored": "activity_other",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 7562,
+   "star": "GJ275",
+   "kind": "planet",
+   "kind_stored": "planet",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 8179,
+   "star": "HD117207",
+   "kind": "planet",
+   "kind_stored": "planet",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 8792,
+   "star": "HD45184",
+   "kind": "activity_other",
+   "kind_stored": "activity_other",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 10299,
+   "star": "HD188815",
+   "kind": "noise",
+   "kind_stored": "noise",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 12069,
+   "star": "HD107148",
+   "kind": "activity_other",
+   "kind_stored": "activity_other",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 13156,
+   "star": "HD181720",
+   "kind": "rotation_harmonic",
+   "kind_stored": "rotation_harmonic",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 13238,
+   "star": "HD85390",
+   "kind": "activity_other",
+   "kind_stored": "activity_other",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 13896,
+   "star": "HD114729",
+   "kind": "noise",
+   "kind_stored": "noise",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 15167,
+   "star": "GJ9055",
+   "kind": "activity_other",
+   "kind_stored": "activity_other",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  },
+  {
+   "case": 15192,
+   "star": "HD109271",
+   "kind": "noise",
+   "kind_stored": "noise",
+   "max_rel_diff": 0.0,
+   "worst_feature": "N"
+  }
+ ]
+}

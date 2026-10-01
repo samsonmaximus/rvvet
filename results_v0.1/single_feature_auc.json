@@ -1,0 +1,107 @@
+{
+ "ind_max_dchi2": {
+  "auc": 0.8588723519441996,
+  "direction": "-",
+  "n": 5656
+ },
+ "block_phase_rms": {
+  "auc": 0.8351889567932869,
+  "direction": "-",
+  "n": 5642
+ },
+ "growth_rho": {
+  "auc": 0.8347919026299835,
+  "direction": "+",
+  "n": 5656
+ },
+ "block_phase_p": {
+  "auc": 0.8032713246966727,
+  "direction": "+",
+  "n": 5642
+ },
+ "block_amp_p": {
+  "auc": 0.7851589526142575,
+  "direction": "+",
+  "n": 5642
+ },
+ "ind_max_absr": {
+  "auc": 0.7611200972296646,
+  "direction": "-",
+  "n": 5656
+ },
+ "K_over_rms": {
+  "auc": 0.7545618193153337,
+  "direction": "+",
+  "n": 5656
+ },
+ "act_log10_fap": {
+  "auc": 0.7468528209159818,
+  "direction": "+",
+  "n": 5656
+ },
+ "alias_margin": {
+  "auc": 0.7440615294249451,
+  "direction": "+",
+  "n": 5656
+ },
+ "half_imbalance": {
+  "auc": 0.7092802084503221,
+  "direction": "-",
+  "n": 5656
+ },
+ "log_ncyc": {
+  "auc": 0.6950623868705694,
+  "direction": "+",
+  "n": 5656
+ },
+ "apod_gain": {
+  "auc": 0.6945561665563607,
+  "direction": "-",
+  "n": 5656
+ },
+ "harm_dist": {
+  "auc": 0.6786840288699607,
+  "direction": "+",
+  "n": 5656
+ },
+ "harm_alias_dist": {
+  "auc": 0.675966919479819,
+  "direction": "+",
+  "n": 5656
+ },
+ "half_amp_z": {
+  "auc": 0.6751151376658167,
+  "direction": "-",
+  "n": 5656
+ },
+ "harm_missing": {
+  "auc": 0.6690373857067254,
+  "direction": "+",
+  "n": 5656
+ },
+ "snr_K": {
+  "auc": 0.6667202656520435,
+  "direction": "+",
+  "n": 5656
+ },
+ "log_n": {
+  "auc": 0.666341135715532,
+  "direction": "-",
+  "n": 5656
+ },
+ "half_phase_z": {
+  "auc": 0.6633468449744666,
+  "direction": "-",
+  "n": 5656
+ },
+ "dchi2": {
+  "auc": 0.6628398648808258,
+  "direction": "+",
+  "n": 5656
+ },
+ "log10_fap": {
+  "auc": 0.6599315673572785,
+  "direction": "-",
+  "n": 5656
+ }
+}

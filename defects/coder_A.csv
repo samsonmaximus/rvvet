@@ -1,0 +1,85 @@
+id,category,origin,note
+E1a,transcription,literature-to-text,own K pasted into the literature column; literal source is code output
+E1b,transcription,literature-to-text,source's DRS value quoted for its adopted result
+E2,arithmetic,analysis,Baluev computed wrongly; the extrapolated 103-epoch FAP is also method-like
+E3,transcription,code-to-text,
+E4,arithmetic,literature-to-text,relation evaluated wrongly; could be transcription
+E5,transcription,code-to-text,
+E6,method,analysis,
+E7,wording,interpretation,
+E8,overclaim,interpretation,jitter left out of the comparison; could be method
+E9,reasoning,interpretation,understatement so not overclaim
+E10,arithmetic,analysis,
+E11,arithmetic,analysis,rounding
+E12,arithmetic,analysis,wrong statistic
+E13,transcription,code-to-text,103-epoch value quoted for both sets
+E14,arithmetic,analysis,hand ratio in prose
+E15,wording,code-to-text,implied the wrong prior; prior also missing from Table A.1
+E16a,transcription,literature-to-text,
+E16b,transcription,literature-to-text,
+E16c,transcription,literature-to-text,could be rounding of a derived ratio
+E16d,wording,literature-to-text,missing confidence-level labels
+E17,transcription,literature-to-text,ESPRESSO-only vs joint-fit data set
+E18,overclaim,literature-to-text,archive speckle coverage overstated; a number is at fault so not interpretation
+T3b,reasoning,interpretation,GP timescale read as a spot lifetime
+T7,method,analysis,unreliable evidence result used as justification
+v13-W1,overclaim,interpretation,
+v13-W2a,overclaim,interpretation,
+v13-W2b,overclaim,interpretation,
+v13-W2c,overclaim,interpretation,misdescribes what the code did; no number at fault
+v13-W3,overclaim,interpretation,
+v13-W4,overclaim,interpretation,
+v13-W5,overclaim,interpretation,
+v13-W6,overclaim,literature-to-text,spot-evolution statement from literature; could be interpretation
+v13-W7,overclaim,interpretation,
+v13-W8,overclaim,interpretation,
+v13-W9,overclaim,interpretation,descriptor; could be wording
+v13-W10,overclaim,interpretation,forecast ignored stellar-mass error; could be method
+v14-AL-1,overclaim,interpretation,partial range reported
+v14-AL-3,overclaim,interpretation,
+v14-AL-12,overclaim,interpretation,
+v14-TO-4,overclaim,interpretation,v13's replacement for W10; could be revision or method
+v14-TO-5,transcription,literature-to-text,K priors labelled as period priors
+v14-NN-5,method,analysis,invalid bound from assumed correlation; could be reasoning
+v14-RP-1,overclaim,revision,
+v14-RP-2,overclaim,revision,
+v14-RP-3,overclaim,revision,
+v14-RP-4,overclaim,revision,
+v14-RP-5,overclaim,revision,
+v14-RP-6,overclaim,revision,
+v14-RP-7,overclaim,revision,
+v14-RP-8,overclaim,revision,
+v14-RP-9,overclaim,revision,
+v14-RP-10,overclaim,revision,
+v14-RP-11,overclaim,revision,
+v14-RP-12,overclaim,revision,unclear whether 1 deg was wrong or only overprecise
+v14-RP-13,overclaim,revision,
+v14-RP-14,overclaim,revision,direction of the misstatement inferred
+v14-RP-15,transcription,revision,values put in the wrong place during the rewrite
+v14-RP-16,wording,code-to-text,nature of the caption error not recorded
+v14-RP-17,transcription,revision,could be overclaim
+v14-RP-18,overclaim,revision,record calls it wording; implied a rule fixed in advance
+v14-RP-20,wording,interpretation,
+v15-AL-2,method,analysis,wrong activity scale as input
+N1,method,literature-to-text,catalogue radius assumes a different stellar radius; could be transcription or stale
+N3,stale,revision,
+S10,method,analysis,simulation cannot test the claim; also an overclaim
+S11,stale,revision,file metadata; could be wording
+S12,stale,revision,script header comment
+S13,method,literature-to-text,mixed activity scales; could be transcription
+N4,transcription,literature-to-text,median called mean
+N5,stale,revision,v13's generic 1.2 arcsec / 55 au kept after real curve used; could be arithmetic
+N6,overclaim,analysis,number without recorded calculation
+v15-REF-4a.1,overclaim,interpretation,
+v15-REF-4a.3,overclaim,interpretation,could be method or reasoning
+v15-REF-4a.4,overclaim,interpretation,
+v15-REF-4a.5,method,analysis,
+v15-REF-4b.c1,method,analysis,missing uncertainty term; fixed with a caveat
+v15-REF-4b.c2,reference,literature-to-text,
+v15-REF-4b.c3,wording,revision,misplaced footnote
+v15-REF-5.2,wording,interpretation,undefined terms
+v15-REF-5.3,overclaim,literature-to-text,
+v15-REF-5.5a,overclaim,interpretation,
+v15-REF-5.5b,overclaim,interpretation,
+v15-RC-Perdelwitz2024,reference,literature-to-text,
+v15-RC-AstudilloDefru2017,reference,literature-to-text,

@@ -1,0 +1,21 @@
+{
+  "title": "rvvet: vetting radial-velocity planet signals in long archival time series",
+  "description": "Python package, simulations, benchmark and results for the rvvet methods paper.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Fraser, Samson",
+      "affiliation": "Independent researcher, Sicamous, British Columbia, Canada"
+    }
+  ],
+  "keywords": [
+    "exoplanets",
+    "radial velocity",
+    "false positives",
+    "stellar activity",
+    "machine learning"
+  ],
+  "access_right": "open",
+  "version": "0.3.1"
+}

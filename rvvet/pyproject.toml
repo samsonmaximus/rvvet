@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rvvet"
+version = "0.3.1"
+description = "Vetting ladder for radial-velocity planet signals in long archival time series (HARPS-RVBank)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Samson Fraser"}]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pandas>=2.0", "pyarrow>=12", "scikit-learn>=1.3", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+rvvet = "rvvet.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

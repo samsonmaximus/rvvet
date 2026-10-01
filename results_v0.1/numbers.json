@@ -1,0 +1,423 @@
+{
+ "sims_cases": 16000,
+ "sims_stars": 260,
+ "sims_class_counts": {
+  "planet": 5527,
+  "activity": 4929,
+  "planet+activity": 3966,
+  "noise": 1578
+ },
+ "sims_median_nights": 72.0,
+ "fap_calibration_noise_only": {
+  "0.001": {
+   "frac": 0.0006337135614702154,
+   "lo": 1.6044109559405192e-05,
+   "hi": 0.003525715621110802
+  },
+  "0.01": {
+   "frac": 0.0012674271229404308,
+   "lo": 0.0001535281763811948,
+   "hi": 0.004570809408058538
+  },
+  "0.05": {
+   "frac": 0.009505703422053232,
+   "lo": 0.00532975290788502,
+   "hi": 0.01562981746038664
+  },
+  "0.1": {
+   "frac": 0.022813688212927757,
+   "lo": 0.016028372840122845,
+   "hi": 0.03144491259826895
+  },
+  "0.2": {
+   "frac": 0.05449936628643853,
+   "lo": 0.04382039365259434,
+   "hi": 0.06687132577952284
+  },
+  "0.5": {
+   "frac": 0.18314321926489227,
+   "lo": 0.16434590632168358,
+   "hi": 0.20312714883685895
+  }
+ },
+ "noise_cases": 1578,
+ "detections": 5656,
+ "detection_truth_fraction": 0.6539957567185289,
+ "detections_by_kind": {
+  "planet": 3699,
+  "activity_other": 1552,
+  "rotation": 240,
+  "planet_alias_or_harmonic": 128,
+  "noise": 37
+ },
+ "detections_by_class": {
+  "size": {
+   "activity": 1128,
+   "noise": 2,
+   "planet": 2941,
+   "planet+activity": 1585
+  },
+  "mean": {
+   "activity": 0.0,
+   "noise": 0.0,
+   "planet": 0.961,
+   "planet+activity": 0.551
+  }
+ },
+ "completeness_by_snr": {
+  "(3, 5]": [
+   0.041,
+   1474
+  ],
+  "(5, 7]": [
+   0.256,
+   1014
+  ],
+  "(7, 10]": [
+   0.647,
+   1027
+  ],
+  "(10, 14]": [
+   0.874,
+   981
+  ],
+  "(14, 20]": [
+   0.954,
+   1031
+  ]
+ },
+ "completeness_by_P_snr_gt7": {
+  "(1.2, 3.0]": [
+   0.819,
+   502
+  ],
+  "(3.0, 10.0]": [
+   0.821,
+   659
+  ],
+  "(10.0, 30.0]": [
+   0.857,
+   608
+  ],
+  "(30.0, 100.0]": [
+   0.823,
+   677
+  ],
+  "(100.0, 300.0]": [
+   0.801,
+   593
+  ]
+ },
+ "single_feature_auc": {
+  "ind_max_dchi2": 0.859,
+  "block_phase_rms": 0.835,
+  "growth_rho": 0.835,
+  "block_phase_p": 0.803,
+  "block_amp_p": 0.785,
+  "ind_max_absr": 0.761,
+  "K_over_rms": 0.755,
+  "act_log10_fap": 0.747,
+  "alias_margin": 0.744,
+  "half_imbalance": 0.709,
+  "log_ncyc": 0.695,
+  "apod_gain": 0.695,
+  "harm_dist": 0.679,
+  "harm_alias_dist": 0.676,
+  "half_amp_z": 0.675,
+  "harm_missing": 0.669,
+  "snr_K": 0.667,
+  "log_n": 0.666,
+  "half_phase_z": 0.663,
+  "dchi2": 0.663,
+  "log10_fap": 0.66
+ },
+ "cv_logistic": {
+  "auc": 0.9491486533323995,
+  "brier": 0.07791582900061989,
+  "logloss": 0.26223660096289886,
+  "n": 5656,
+  "prevalence": 0.6539957567185289,
+  "auc_ci": [
+   0.9406680278561897,
+   0.9567557291120764
+  ]
+ },
+ "cv_boosting": {
+  "auc": 0.961191433611233,
+  "brier": 0.07103995230358805,
+  "logloss": 0.23701236510005896,
+  "n": 5656,
+  "prevalence": 0.6539957567185289,
+  "auc_ci": [
+   0.9557338756901507,
+   0.9665534578323429
+  ]
+ },
+ "cv_fap_only": {
+  "auc": 0.6573525996820254,
+  "brier": 0.2105232575590018,
+  "logloss": 0.6067922331125909,
+  "n": 5656,
+  "prevalence": 0.6539957567185289,
+  "auc_ci": [
+   0.6315560951598258,
+   0.6824512532804419
+  ]
+ },
+ "cv_detection_only": {
+  "auc": 0.8218706791861741,
+  "brier": 0.16548084033197216,
+  "logloss": 0.4983273873469948,
+  "n": 5656,
+  "prevalence": 0.6539957567185289,
+  "auc_ci": [
+   0.8047036746317144,
+   0.8358432402330116
+  ]
+ },
+ "rule_tpr_fpr": {
+  "tpr": 0.8826709921600433,
+  "fpr": 0.22023505365355137,
+  "precision": 0.8833874458874459
+ },
+ "rule_alias_tpr_fpr": {
+  "tpr": 0.8802379021357124,
+  "fpr": 0.21870209504343383,
+  "precision": 0.8838219326818675
+ },
+ "boosting_frac_called_planet_by_kind": {
+  "activity_other": 0.113,
+  "noise": 0.73,
+  "planet": 0.941,
+  "planet_alias_or_harmonic": 0.703,
+  "rotation": 0.121
+ },
+ "cv_boosting_no_indicators": {
+  "auc": 0.9205629882705252,
+  "brier": 0.108335951927903,
+  "logloss": 0.3432213518532212,
+  "n": 5656,
+  "prevalence": 0.6539957567185289,
+  "auc_ci": [
+   0.9117954318174533,
+   0.9285153840648844
+  ]
+ },
+ "activity_impostors_by_indicator_snr": {
+  "0.1-0.3": {
+   "n_impostors": 604,
+   "auc_boosting": 0.9440899545071246,
+   "auc_no_indicators": 0.9351977176577166,
+   "rule_fpr": 0.4470198675496689
+  },
+  "0.3-1.0": {
+   "n_impostors": 655,
+   "auc_boosting": 0.9796813250538107,
+   "auc_no_indicators": 0.9307198768390055,
+   "rule_fpr": 0.11145038167938931
+  },
+  "1.0-3.0": {
+   "n_impostors": 581,
+   "auc_boosting": 0.9908199592484176,
+   "auc_no_indicators": 0.9268946949889698,
+   "rule_fpr": 0.025817555938037865
+  }
+ },
+ "cv_boosting_N_below_median": {
+  "auc": 0.9471332992746658,
+  "n": 2815,
+  "N_median": 93.0
+ },
+ "cv_boosting_N_above_median": {
+  "auc": 0.9652172397306665,
+  "n": 2841,
+  "N_median": 93.0
+ },
+ "rule_fpr_by_kind": {
+  "activity_other": 0.191,
+  "noise": 0.703,
+  "planet": 0.883,
+  "planet_alias_or_harmonic": 0.516,
+  "rotation": 0.179
+ },
+ "first_failed_rung_impostors": {
+  "period": 680,
+  "indicators": 664,
+  "passes": 431,
+  "phase": 182
+ },
+ "first_failed_rung_planets": {
+  "passes": 3265,
+  "period": 296,
+  "indicators": 84,
+  "phase": 54
+ },
+ "perm_importance_boosting": {
+  "ind_max_dchi2": 0.1775,
+  "alias_margin": 0.0133,
+  "log_n": 0.0132,
+  "block_phase_rms": 0.013,
+  "ind_max_absr": 0.0063,
+  "log_ncyc": 0.0062,
+  "snr_K": 0.0043,
+  "block_amp_p": 0.0033,
+  "growth_rho": 0.0028,
+  "half_imbalance": 0.0027,
+  "act_log10_fap": 0.0016,
+  "log10_fap": 0.0016,
+  "apod_gain": 0.0013,
+  "K_over_rms": 0.0006,
+  "dchi2": 0.0003,
+  "half_phase_z": 0.0002,
+  "half_amp_z": 0.0002,
+  "harm_dist": 0.0001,
+  "harm_alias_dist": 0.0,
+  "harm_missing": 0.0,
+  "block_phase_p": -0.0004
+ },
+ "logistic_coefficients": {
+  "dchi2": 0.162,
+  "log10_fap": 0.031,
+  "snr_K": 0.792,
+  "K_over_rms": -0.251,
+  "log_ncyc": 0.021,
+  "alias_margin": 0.549,
+  "half_phase_z": -0.311,
+  "half_amp_z": 0.129,
+  "half_imbalance": -0.306,
+  "block_phase_p": -0.108,
+  "block_amp_p": 0.532,
+  "block_phase_rms": -0.61,
+  "growth_rho": 0.311,
+  "apod_gain": -0.181,
+  "ind_max_dchi2": -1.769,
+  "ind_max_absr": -0.122,
+  "act_log10_fap": -0.144,
+  "harm_dist": 0.96,
+  "harm_alias_dist": -0.58,
+  "log_n": -0.732,
+  "harm_missing": -0.206
+ },
+ "bench_counts": {
+  "UPHELD_INDEPENDENT": 19,
+  "REFUTED": 17,
+  "UPHELD_HARPS": 7
+ },
+ "bench_detected_by_label": {
+  "sum": {
+   "REFUTED": 4,
+   "UPHELD_HARPS": 7,
+   "UPHELD_INDEPENDENT": 12
+  },
+  "size": {
+   "REFUTED": 17,
+   "UPHELD_HARPS": 7,
+   "UPHELD_INDEPENDENT": 19
+  }
+ },
+ "bench_all": {
+  "boosting": {
+   "auc": 0.9796380090497737,
+   "lo": 0.9374864130434782,
+   "hi": 1.0
+  },
+  "logistic": {
+   "auc": 0.9638009049773755,
+   "lo": 0.9051190476190476,
+   "hi": 0.997737556561086
+  },
+  "no_indicators": {
+   "auc": 0.9411764705882353,
+   "lo": 0.8214245313510019,
+   "hi": 1.0
+  },
+  "rule": {
+   "tpr": 0.7307692307692307,
+   "fpr": 0.0,
+   "n_up": 26,
+   "n_ref": 17
+  },
+  "rule_alias": {
+   "tpr": 0.6923076923076923,
+   "fpr": 0.0,
+   "n_up": 26,
+   "n_ref": 17
+  }
+ },
+ "bench_detected": {
+  "boosting": {
+   "auc": 0.9736842105263158,
+   "lo": 0.8666666666666667,
+   "hi": 1.0
+  },
+  "logistic": {
+   "auc": 1.0,
+   "lo": 1.0,
+   "hi": 1.0
+  },
+  "no_indicators": {
+   "auc": 0.8026315789473684,
+   "lo": 0.3181818181818182,
+   "hi": 1.0
+  },
+  "rule": {
+   "tpr": 1.0,
+   "fpr": 0.0,
+   "n_up": 19,
+   "n_ref": 4
+  },
+  "rule_alias": {
+   "tpr": 0.9473684210526315,
+   "fpr": 0.0,
+   "n_up": 19,
+   "n_ref": 4
+  }
+ },
+ "bench_first_fail": {
+  "REFUTED | detection": 13,
+  "REFUTED | indicators": 2,
+  "REFUTED | period": 2,
+  "UPHELD_HARPS | passes": 7,
+  "UPHELD_INDEPENDENT | detection": 7,
+  "UPHELD_INDEPENDENT | passes": 12
+ },
+ "hd297396b": {
+  "n": 106,
+  "baseline": 6536.054,
+  "period": 4.2684,
+  "dchi2": 37.6596,
+  "log10_fap": -3.8261,
+  "log_n": 2.0253,
+  "log_ncyc": 3.1851,
+  "top_margin": 7.6295,
+  "top_period": 4.268,
+  "K": 6.5949,
+  "sK": 1.0762,
+  "snr_K": 6.1279,
+  "K_over_rms": 0.8587,
+  "window_peaks": "1.00273;1.00001;0.00274",
+  "alias_margin": 4.872,
+  "half_phase_z": 0.2224,
+  "half_amp_z": 0.0145,
+  "half_imbalance": 0.0536,
+  "block_phase_p": 0.9928,
+  "block_amp_p": 0.7951,
+  "block_phase_rms": 5.277,
+  "growth_rho": 0.9679,
+  "apod_gain": 0.2103,
+  "ind_max_dchi2": 6.7008,
+  "ind_argmax": "bis",
+  "ind_max_absr": 0.2934,
+  "act_period": 122.0012,
+  "act_dchi2": 22.7853,
+  "act_log10_fap": -1.6002,
+  "act_indicator": "halpha",
+  "harm_dist": NaN,
+  "harm_alias_dist": NaN,
+  "p_boosting": 0.8756,
+  "p_logistic": 0.9418,
+  "rule": true,
+  "rule_alias": true,
+  "p_no_indicators": 0.9573
+ }
+}

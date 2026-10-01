@@ -1,0 +1,85 @@
+id,category,origin,note
+E1a,transcription,code-to-text,own K pasted into literature column; literature-to-text arguable
+E1b,transcription,literature-to-text,source's DRS value quoted for adopted result
+E2,arithmetic,analysis,Baluev FAP computed wrongly; extrapolation part of same defect
+E3,transcription,code-to-text,
+E4,arithmetic,literature-to-text,literature relation mis-evaluated; transcription arguable
+E5,transcription,code-to-text,
+E6,method,analysis,missing uncertainty term
+E7,wording,interpretation,
+E8,overclaim,interpretation,true only for formal error
+E9,reasoning,interpretation,"wrong inference (underclaim), not overclaim"
+E10,arithmetic,analysis,
+E11,arithmetic,analysis,rounding
+E12,arithmetic,analysis,wrong statistic
+E13,transcription,code-to-text,value of one data set quoted for another
+E14,arithmetic,analysis,
+E15,wording,code-to-text,number right; prior misdescribed and missing from table
+E16a,transcription,literature-to-text,
+E16b,transcription,literature-to-text,
+E16c,transcription,literature-to-text,could be a rounding (arithmetic) error
+E16d,wording,literature-to-text,missing confidence-level labels
+E17,transcription,literature-to-text,joint-fit values attributed to one data set
+E18,overclaim,literature-to-text,range beyond archive contrast curves
+T3b,reasoning,interpretation,misread kernel timescale; method arguable
+T7,method,analysis,unreliable evidence result used as justification
+v13-W1,overclaim,interpretation,wording arguable
+v13-W2a,overclaim,interpretation,
+v13-W2b,overclaim,interpretation,missing caveat
+v13-W2c,overclaim,interpretation,misdescribed simulation amplitude; wording arguable
+v13-W3,overclaim,interpretation,
+v13-W4,overclaim,interpretation,
+v13-W5,overclaim,interpretation,
+v13-W6,overclaim,literature-to-text,spot-evolution timescale from literature
+v13-W7,overclaim,interpretation,missing caveat
+v13-W8,overclaim,interpretation,missing caveat
+v13-W9,overclaim,interpretation,wording arguable
+v13-W10,overclaim,interpretation,no calculation recorded; method arguable
+v14-AL-1,overclaim,interpretation,selective range reported
+v14-AL-3,overclaim,interpretation,
+v14-AL-12,overclaim,interpretation,
+v14-TO-4,overclaim,interpretation,introduced by v13 W10 fix; revision arguable
+v14-TO-5,transcription,literature-to-text,K priors labelled as period priors
+v14-NN-5,method,analysis,invalid bound assumption about a number
+v14-RP-1,overclaim,revision,caveat dropped in rewrite
+v14-RP-2,overclaim,revision,caveat dropped in rewrite
+v14-RP-3,overclaim,revision,caveat dropped in rewrite
+v14-RP-4,overclaim,revision,caveat dropped in rewrite
+v14-RP-5,overclaim,revision,caveat dropped in rewrite
+v14-RP-6,overclaim,revision,caveat dropped in rewrite
+v14-RP-7,overclaim,revision,caveat dropped in rewrite
+v14-RP-8,overclaim,revision,caveat dropped in rewrite
+v14-RP-9,overclaim,revision,caveat dropped in rewrite
+v14-RP-10,overclaim,revision,caveat dropped in rewrite
+v14-RP-11,overclaim,revision,caveat dropped in rewrite
+v14-RP-12,overclaim,revision,nature of error not stated; transcription possible
+v14-RP-13,overclaim,interpretation,new v14 Sect. 4.4 text; reasoning arguable
+v14-RP-14,overclaim,revision,direction of misstatement inferred
+v14-RP-15,transcription,revision,values swapped in rewrite
+v14-RP-16,wording,interpretation,error not specified in record
+v14-RP-17,transcription,revision,misstated numbers; overclaim arguable
+v14-RP-18,overclaim,revision,implies pre-set rule; wording arguable
+v14-RP-20,wording,interpretation,new footnote text
+v15-AL-2,method,analysis,wrong scale
+N1,method,literature-to-text,catalogue radius on another stellar radius; transcription arguable
+N3,stale,revision,
+S10,method,analysis,simulation cannot test claim
+S11,stale,revision,file metadata; wording arguable
+S12,stale,revision,code comment; wording arguable
+S13,method,literature-to-text,mixed scales; stale or transcription arguable
+N4,arithmetic,literature-to-text,median labelled mean (wrong statistic); wording arguable
+N5,arithmetic,literature-to-text,rounding of catalogue edge
+N6,overclaim,analysis,"false precision, no provenance; wording arguable"
+v15-REF-4a.1,overclaim,interpretation,
+v15-REF-4a.3,method,analysis,criterion inapplicable; overclaim arguable
+v15-REF-4a.4,overclaim,interpretation,missing caveat
+v15-REF-4a.5,method,analysis,wrong covariance
+v15-REF-4b.c1,method,analysis,missing uncertainty term; fixed by caveat
+v15-REF-4b.c2,reference,literature-to-text,attribution unsupported
+v15-REF-4b.c3,wording,revision,footnote misplaced in Table 2 revision
+v15-REF-5.2,wording,interpretation,undefined parameters
+v15-REF-5.3,overclaim,literature-to-text,missing caveat on cited result
+v15-REF-5.5a,overclaim,interpretation,
+v15-REF-5.5b,overclaim,interpretation,missing caveat
+v15-RC-Perdelwitz2024,reference,literature-to-text,bib data: reference over transcription
+v15-RC-AstudilloDefru2017,reference,literature-to-text,bib data: reference over transcription
