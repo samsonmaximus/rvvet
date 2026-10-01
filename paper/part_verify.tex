@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Software and verification}
+\label{sec:verify}
+
+\subsection{The package}
+
+The ladder, the simulations, the rule and the classifiers form a Python package,
+\code{rvvet} (version \nmrvvetVersion), with a command-line interface that writes the
+features of one star as JSON together with a provenance block (package version, a
+hash of the source files, the input file and the arguments). It has 40 unit tests.
+Thirteen compare the code with an expected value obtained another way: the projected
+periodogram against dense least squares, its invariance to era offsets, the nightly
+means, a circular Keplerian against a sinusoid, the analytic $(G, G')$ covariance
+against finite differences, the single-frequency limit of the FAP, the ordering of the
+likelihood-ratio and fixed-jitter statistics, the mean of the homogeneity statistic against
+its $\chi^2$ expectation, and hand-worked cases for the night boundary, the harmonic
+distances, the rule and the labels. The other 27 check behaviour on constructed
+inputs: recovery of injected periods, amplitudes and jitters, the Baluev approximation not
+exceeding its nominal rate for Gaussian noise of known variance, the alias rung staying
+inside the search band, the window around a claimed period, the detrending and clipping of
+indicators, the exclusion of seasonal aliases from the rotation proxy, a transient versus
+a stationary signal, removal of an $e = 0.6$ orbit, deterministic seeding, folds that
+never split a star, and the command line. A simulated case takes about
+\nmSecPerCase\,s on one core. Every computed result in the text of this paper is a macro written by the
+analysis script from its outputs, and so is every table body except
+Table~\ref{tab:features}; the numbers typed by hand are design constants, literature values
+and counts of items such as tests, listed in the released provenance file.
+
+\subsection{Defects found in an AI-assisted analysis}
+
+The HD\,297396\,b analysis that motivated this work was carried out by one author
+with an AI assistant (Claude, Anthropic) that wrote most of the analysis code and
+draft text, while the author made the analysis decisions. Its revisions were checked
+in up to four ways: \emph{self-review}, in which the changed numbers were checked
+against their scripts, source papers and catalogues; an \emph{independent reviewer},
+a separate instance of the model given the manuscript, the source papers and the
+scripts but not the conversation that produced them, and asked to act as a referee;
+an \emph{external report}, a review of version 13 (the ``Referee-Lens'' report)
+whose requests version 14 implemented; and, for version 15, an automated \emph{reference check} of every entry
+against the publisher's record. Each version has a change log.
+
+\emph{Method.} We extracted the defects from the records written at the time: the
+change logs of versions 13, 14 and 15, the referee report on version 15 and the
+reference check. A codebook fixed before any coding (released with the code) defines
+the unit: a statement, number, figure element, reference or analysis step that a
+record says was changed because it was wrong, unsupported, stale, inconsistent or
+ambiguous, counted once per root cause. New analyses, restructuring and cosmetic
+fixes are not defects. An instance of the model that had not seen any earlier
+tabulation extracted \nmDefN\ defects, listing the \nmDefExcluded\ record items it
+considered and excluded, with reasons; who found each defect (the \emph{route}) and
+whether it was in a released version or caught in a draft (the \emph{stage}) are read
+from the records. Two further instances, blind to each other, coded each defect's
+category and origin; they are instances of the same model, so their agreement measures the
+consistency of the codebook's application rather than independent human judgement. They agreed on \nmDefAgreeCat\% of the categories (Cohen's
+$\kappa = \nmDefKappaCat$) and \nmDefAgreeOri\% of the origins
+($\kappa = \nmDefKappaOri$); the \nmDefDisagree\ defects with any disagreement were
+settled by a third reading, with the reason recorded. One coder read two rows of the
+list of excluded items before coding; neither row is a coded defect.
+
+\emph{Results.} Table~\ref{tab:defects} gives the \nmDefN\ defects by category and
+route; \nmDefReleased\ were in released versions and \nmDefDraft\ were caught in
+drafts. The largest category, \nmDefOverPct\% of the total, is overclaims
+(\nmDefCatOverclaim), statements stronger than the evidence or caveats that were missing: a simulation presented as testing a
+scenario its kernel could not produce, a weak out-of-sample test described as
+agreement, companions said to be excluded out to 100\,au when the contrast curve
+stopped near 55\,au. Revising the text was itself a source: \nmDefOriRev\ defects
+were introduced by revision, \nmDefRevOver\ of them overclaims, mostly caveats that the
+rewrite of version 14 dropped. Of the \nmDefNumN\ numerical errors (transcription and
+arithmetic), \nmDefNumLit\ came from the literature, such as parameters of comparison
+planets that did not match their source papers, \nmDefNumAna\ from calculations in the
+analysis, \nmDefNumRev\ from revision, and \nmDefNumCode\ were numbers the project's own
+code had produced correctly and that were carried into the text wrongly, among them the
+candidate's own semi-amplitude pasted into the column of a comparison planet. Over all
+categories, only \nmDefOriCode\ defects had that origin; errors of method, such as an
+activity index on one calibration scale fed into a relation built on another, came from
+the analysis itself.
+
+The independent reviewer found \nmDefRouteRev\ of the \nmDefN, including
+\nmDefOverRev\ of the \nmDefCatOverclaim\ overclaims; self-review found \nmDefRouteSelf,
+the external report \nmDefRouteExt\ and the reference check \nmDefRouteRef; for
+\nmDefRouteUnatt\ the record does not say. These shares depend on the order of the
+checks, since the reviewer saw what self-review had not caught, and on which record exists
+for each version (for version 15 the main record is the referee report); the records were
+written by the same assistant whose work they describe. The log counts the defects
+that were found, not those that remain, for one project and one model.
+
+The same checks were applied to this paper. The first draft reported 30 defects, not
+\nmDefN: it had condensed the records by hand, its route column contradicted its own
+notes, and it concluded that most defects arose where numbers passed from code into
+text. That draft also contained four errors in the pipeline (the night boundary, the
+alias rung, the fixed jitter and the degrees of freedom of the block test;
+Sect.~\ref{sec:changes}). The independent review of the draft found all of them, and two further rounds of review found more (Sect.~\ref{sec:changes}). The night-boundary error also
+affected two archive-wide numbers in the analysis of HD\,297396\,b, though no result about
+the star; it was corrected there after release. The log describes one project rather than
+testing a hypothesis, but it is consistent with two practices: a reviewer that sees the
+sources but not the history, which found most of what was found, including most
+overclaims; and checks aimed at what the text claims, not only at whether its numbers
+match the code, since generating every number from the analysis outputs, as this paper
+now does, addresses only a small share of the defects.
+
+\begin{table}
+\caption{Defects logged in three revisions of an AI-assisted analysis, by category and
+by the check that found them.}
+\label{tab:defects}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lcccccc}
+\hline\hline
+Category & Self & Reviewer & Report & Refs & Unattr. & Total \\
+\hline
+\inputrows{tab_defects_rows}
+\hline
+\end{tabular}
+\tablefoot{From the change logs of versions 13--15 of the HD\,297396\,b manuscript, the
+referee report on version 15 and its reference check (released with the code).
+``Reviewer'': an independent instance of the model acting as a referee; ``Report'': an
+external review of version 13; ``Unattr.'': the record does not say
+who found it.}
+\end{table}

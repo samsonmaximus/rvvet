@@ -8,7 +8,9 @@ authors:
     given-names: Samson
     affiliation: "Independent researcher, Sicamous, British Columbia, Canada"
     email: samsonmfraser@gmail.com
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 doi: ZENODODOI
 repository-code: "https://github.com/GITHUBUSER/rvvet"
 keywords: [exoplanets, radial velocity, false positives, stellar activity, injection-recovery, machine learning]

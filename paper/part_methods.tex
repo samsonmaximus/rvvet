@@ -1,0 +1,274 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+
+Public radial-velocity (RV) archives now cover two decades. The HARPS-RVBank
+\citep{Trifonov2020,Perdelwitz2024} gives uniformly re-derived velocities and
+activity indicators for more than 5000 stars observed with HARPS
+\citep{Mayor2003}, and it has already been searched for planets
+\citep{Sreenivas2022}. Low-amplitude signals in such data have a mixed record.
+Signals later withdrawn turned out to be produced by the sampling and the noise
+\citep{Rajpaul2016}, by stellar rotation or its harmonics
+\citep{Robertson2014,Santos2014,Robertson2015,Carleo2020,Burrows2024}, or by an alias
+of rotation that did not hold phase when new data arrived \citep{Lubin2021}.
+The tests used to screen candidates are well known individually: false-alarm
+probabilities \citep{Baluev2008}, alias comparisons, activity-indicator
+periodograms, signal growth and stacked periodograms \citep{MortierCC2017},
+apodised sinusoids \citep{Hara2022b} and false-inclusion probabilities
+\citep{Hara2022}. What is rarely measured is how well each of them separates
+planets from impostors on the sampling and noise of real archival series, and
+how they perform on signals whose fate is known.
+
+Blind challenges have measured how well activity models recover planets in
+simulated data sets \citep{Dumusque2017,Zhao2022}. Here we ask a complementary
+question for archival searches: given a significant periodic signal in a long,
+irregular, single-instrument series, which tests tell a planet from an
+impostor, and how often do they fail? We answer it in four steps.
+\begin{enumerate}
+\item We implement a ladder of interpretable tests as tested, open software
+      (Sect.~\ref{sec:ladder}).
+\item We calibrate every test on simulations built from the real sampling and
+      noise of \nmSimStars\ HARPS-RVBank stars, with planets and evolving stellar
+      activity injected and every significant peak labelled
+      (Sects.~\ref{sec:sims} and~\ref{sec:simres}).
+\item We apply the ladder, a rule whose thresholds were fixed before the benchmark was run, and
+      classifiers trained only on the simulations to published signals around
+      HARPS-RVBank stars whose later verdict is known (Sect.~\ref{sec:bench}).
+\item Because the analysis that motivated this work was written with an AI
+      assistant, we report the defects that checks of it found, coded by two
+      independent instances of the model, as a case study in verifying AI-assisted analysis
+      (Sect.~\ref{sec:verify}).
+\end{enumerate}
+The candidate that motivated the work, HD\,297396\,b (Fraser, in preparation), is
+the worked example of Sect.~\ref{sec:example}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data}
+\label{sec:data}
+
+We use the HARPS-RVBank table of \citet{Perdelwitz2024} (CDS J/A+A/683/A125, the
+version of 2026 April 20), with \nmRVBankSpectra\ spectra of \nmRVBankStars\ stars
+taken before 2022. For each spectrum it gives the \texttt{SERVAL} velocity
+\citep{Zechmeister2018} corrected for the nightly zero point, its uncertainty, and
+eight activity indicators: the differential line width (dLW), H$\alpha$, the
+Na\,\textsc{i} D1 index, the chromatic index (CRX), the full width at half maximum
+(FWHM), contrast and bisector span of the cross-correlation function, and
+$R'_{\rm HK}$.
+
+The same instrumental cuts, none of which uses model residuals, apply to every
+star: RVBank flag zero, signal-to-noise ratio at least 10 in order 55, absolute
+drift at most $3\ms$, and a finite uncertainty below $20\ms$ (\nmRVBankKeptPct\% of
+all spectra pass). Spectra are averaged by night with inverse-variance weights,
+separately before and after the 2015 fibre upgrade \citep{LoCurto2015}; a night runs
+from local noon to local noon at La Silla (16:43\,UT). The two eras receive
+independent offsets and jitters. For every star, simulated or real, nightly epochs
+more than 15 robust standard deviations from a per-era quadratic are dropped, which
+removes misidentified or grossly deviant spectra (\nmBenchClipped\ epochs in
+\nmBenchClippedStars\ benchmark hosts) but keeps merely discrepant nights, and a
+quadratic trend is fitted jointly with everything else. We write $N$ for the number of
+nightly epochs, $T$ for the baseline and $n_{\rm era} \le 2$ for the number of eras.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The vetting ladder}
+\label{sec:ladder}
+
+\subsection{Periodogram and detection}
+\label{sec:detect}
+
+For velocities $y_i$ with uncertainties $\epsilon_i$ and era labels $g(i)$, the model
+has per-era offsets and per-era jitters $s_g$, so that the variance of epoch $i$ is
+$\sigma_i^2 = \epsilon_i^2 + s_{g(i)}^2$. With the jitters fixed, the improvement in
+$\chi^2$ from adding a sinusoid at frequency $f$ is
+\begin{equation}
+\dchi(f) = \chi^2_{\rm offsets} - \chi^2_{\rm offsets + a\cos 2\pi ft + b \sin 2\pi ft},
+\qquad \chi^2 = \sum_i r_i^2/\sigma_i^2 .
+\end{equation}
+Offsets are removed by projecting the whitened sinusoids and data (each divided by
+$\sigma_i$) onto the complement of the whitened era indicators, so each frequency
+costs $O(N n_{\rm era})$ operations and many simulated series are processed in one
+matrix product. The search band is 1.2--500\,d on a grid of three frequencies per
+$1/T$.
+
+The jitters matter. We first fit them by maximum likelihood with offsets only, and
+take the candidate frequency $f_0$ as the highest peak of $\dchi(f)$ with those
+jitters (or, for a claimed period, the highest point within $\pm0.5/T$ of it, half a
+resolution element on either side; Sect.~\ref{sec:changes} gives the effect of this
+choice). A real
+signal inflates the planet-free jitters and so deflates its own $\dchi$. We therefore
+rescale all jitters by one common factor fitted with the sinusoid at $f_0$ in the
+model, and use as detection statistic the likelihood ratio
+$z_0 = 2(\ln L_1 - \ln L_0)$, with the jitters at their planet-free values under $L_0$
+and rescaled under $L_1$. (Refitting each era's jitter separately under $L_1$ can
+collapse the jitter of an era with few epochs onto a sinusoid that happens to fit
+them; one common factor cannot.) All later rungs use the rescaled jitters. The
+false-alarm probability (FAP) of $z_0$ over the band is the approximation of
+\citet{Baluev2008} for a sinusoid in noise of known variance,
+\begin{equation}
+{\rm FAP} \simeq 1 - (1 - e^{-z_0/2})\,e^{-\tau}, \quad
+\tau = W e^{-z_0/2}\sqrt{z_0/2},
+\end{equation}
+with $W = (f_{\max} - f_{\min})\sqrt{4\pi\,{\rm Var}_w(t)}$ and ${\rm Var}_w(t)$ the
+variance of the epochs weighted by $1/\sigma_i^2$. It bounds the FAP from above as the
+FAP tends to zero; how it performs on real noise with a fitted jitter is measured in
+Sect.~\ref{sec:fap}. For a period known in advance, the single-frequency probability
+is $e^{-z_0/2}$.
+
+\subsection{The rungs}
+
+Given $f_0$, the ladder computes the features of Table~\ref{tab:features}.
+
+\emph{Amplitude.} The semi-amplitude $K$ and its uncertainty from the sinusoid fit,
+$K/\sigma_K$, and $K$ over the rms of the velocities about the offsets.
+
+\emph{Period.} The candidate aliases of $f_0$ are its first-order aliases through
+the sidereal day, the synodic month and the year and through the three strongest
+peaks of the star's own spectral window. Those inside the search band are refined
+within $\pm 0.5/T$ (inside the band), and any that refines to within $1.5/T$ of $f_0$ is
+dropped, since it has found the candidate's own peak. The feature is the margin in
+$\dchi$ between $f_0$ and the strongest remaining alias.
+
+\emph{Stationarity.} A Keplerian keeps amplitude and phase; rotational modulation
+does not. We fit the sinusoid at $f_0$, with a common phase origin, separately to the
+two halves of the series and to four blocks with equal numbers of epochs. Each fit
+gives $(a, b)$ with a covariance matrix. About their generalised-least-squares mean
+$\mu$, the deviations are split into the component along $\mu$ (amplitude) and across
+it (phase), and each sum of squared standardised deviations is compared with a
+$\chi^2$ distribution with $n_{\rm b} - 1$ degrees of freedom, $n_{\rm b}$ being the
+number of sub-samples. For four blocks this gives the probabilities
+\code{block\_phase\_p} and \code{block\_amp\_p}, and the rms phase deviation; for
+the halves, the phase and amplitude differences in units of their uncertainty and the
+imbalance between the halves' share of $\dchi$ and their share of epochs. Because $f_0$
+is fitted to the whole series, any constant phase drift between the halves is absorbed
+into it, so the half-phase test is weak by construction; the block test, with four
+sub-samples, retains power, and its calibration on simulated planets is given in
+Sect.~\ref{sec:calib}. We also follow $\dchi$ as epochs accumulate in time order and
+report its Spearman correlation with the number of epochs
+\citep[cf.][]{MortierCC2017,Sreenivas2022}, and we replace the constant amplitude by a
+Gaussian envelope over a grid of centres and widths (0.1--0.5 of the baseline) and
+report the gain in $\dchi$ \citep[cf. the apodised sinusoids of][]{Hara2022b}.
+
+\emph{Activity.} Each indicator is fitted with per-era offsets and the same quadratic trend
+as the velocities, which are removed, and is divided by its robust scatter over the whole
+series. Values more than 15 robust standard deviations from the fit, the level used for the
+velocities, are dropped and the fit repeated, since a least-squares trend tilted by one
+gross outlier leaves a spurious long-period signal. Indicators with values on fewer than
+60\% of the epochs are dropped. Indicators carry no usable errors, so each era receives the
+closed-form maximum-likelihood jitter (the era's standard deviation). The feature
+\code{ind\_max\_dchi2} is the largest $\dchi$ of any indicator within $\pm 0.5/T$ of
+$f_0$ (eleven frequencies); with no usable indicator it is zero. We also report the
+largest absolute correlation of an indicator with the velocities. As a rotation proxy
+we take, among dLW, H$\alpha$, FWHM and $R'_{\rm HK}$, the most significant local maximum
+over 2.5--200\,d, excluding frequencies within $1/T$ of one and two cycles per year, where
+seasonal sampling puts spurious power; its Baluev FAP is multiplied by the number of
+indicators searched, and we write $f_{\rm proxy}$ for its frequency. When that FAP is below 1\%, \code{harm\_dist} is
+the distance of $f_0$ from the nearest of $k f_{\rm proxy}$, $k = 1$--4, in units of $1/T$, and \code{harm\_alias\_dist} the
+distance from the nearest first-order alias of one of them; otherwise both are
+undefined and the classifiers receive a flag, \code{harm\_missing}.
+
+\emph{Known signals.} When a system has accepted planets, they are removed first by
+Keplerian fits with fixed periods. For fixed eccentricity and time of periastron the
+orbit is linear in $K\cos\omega$ and $K\sin\omega$, so the orbital elements are found by
+a grid in $(e, t_p)$ and simplex refinement, by backfitting over the planets, jointly
+with the offsets and the quadratic trend.
+
+\begin{table}
+\caption{Ladder features and the question each answers.}
+\label{tab:features}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{L{2.6cm}L{5.4cm}}
+\hline\hline
+Feature & Definition \\
+\hline
+\code{dchi2}, \code{log10\_fap} & likelihood ratio $z_0$; its Baluev FAP over 1.2--500\,d \\
+\code{snr\_K}, \code{K\_over\_rms} & $K/\sigma_K$; $K$ over the rms about the offsets \\
+\code{alias\_margin} & $\dchi(f_0)$ minus the largest alias $\dchi$ inside the band \\
+\code{half\_phase\_z}, \code{half\_amp\_z} & phase, amplitude difference between halves (in $\sigma$) \\
+\code{half\_imbalance} & $|$share of $\dchi$ $-$ share of epochs$|$ in the first half \\
+\code{block\_phase\_p}, \code{block\_amp\_p}, \code{block\_phase\_rms} & constancy of phase and amplitude in four blocks; rms phase deviation \\
+\code{growth\_rho} & Spearman $\rho$ of $\dchi(f_0)$ with epochs in time order \\
+\code{apod\_gain} & $\dchi$ gain of a Gaussian envelope \\
+\code{ind\_max\_dchi2}, \code{ind\_max\_absr} & largest indicator $\dchi$ near $f_0$; largest $|r|$ with the RVs \\
+\code{act\_log10\_fap} & FAP of the rotation proxy (2.5--200\,d, seasonal aliases excluded) \\
+\code{harm\_dist}, \code{harm\_alias\_dist}, \code{harm\_missing} & distance to $k f_{\rm proxy}$ and to its aliases ($1/T$ units); no proxy \\
+\code{log\_n}, \code{log\_ncyc} & $\log N$; $\log (T f_0)$. Reported, not used by the classifiers \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{An a-priori rule}
+\label{sec:rule}
+
+Before any benchmark signal was run through the pipeline we wrote down a rule-based
+verdict (released with the code): a candidate passes if its FAP is below 1\%, it
+beats its aliases, its phase is constant across blocks ($p > 0.01$) and halves
+($<3\sigma$), no indicator has $\dchi \ge 13.8$ near $f_0$, and it is not within one
+resolution element of a rotation harmonic. A rung that cannot be computed does not
+reject: with fewer than three usable blocks or no halves the phase rung passes, and
+without a significant rotation proxy the rotation rung passes. The thresholds came from nominal
+significance levels and from the analysis of HD\,297396\,b, so that candidate's
+passing the rule (Sect.~\ref{sec:example}) is partly circular. They are not nominal
+error rates: 13.8 is the single-frequency $p = 10^{-3}$ point of a $\chi^2_2$
+distribution, but it is applied to the maximum over eight indicators and eleven
+frequencies. We therefore report what each rung does to simulated planets
+(Sect.~\ref{sec:calib}). The rule does not use \code{harm\_alias\_dist}, which we
+added after the first benchmark pass; results with it are labelled as such. The
+thresholds have not changed since they were frozen, but the features they apply to
+have (Sect.~\ref{sec:changes}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Simulations on real sampling and noise}
+\label{sec:sims}
+
+We selected \nmSimStars\ stars at random from those with 40--250 nightly epochs, a
+baseline of at least 1500\,d, a median uncertainty of at most $3\ms$, dLW and H$\alpha$
+on at least 80\% of the spectra, and an RV standard deviation of at most $20\ms$
+(which excludes binaries and giant planets), and excluded every benchmark host and
+HD\,297396.
+
+\emph{Noise.} Each simulated series starts from the star's real nightly velocities
+and indicators with one random permutation within each era, shared by the
+velocities, the indicators and the uncertainties. The sampling, the errors and the
+joint distribution of velocity and indicator noise, including its tails, are real;
+any coherent signal the star had, and any noise correlated between nights, is
+destroyed. The star's series is clipped for outliers before the permutation, and each
+simulated series is fitted with the same quadratic trend as a real star.
+
+\emph{Planets.} Keplerians with $P$ log-uniform in 1.2--300\,d, eccentricity from
+the distribution of \citet{Kipping2013} redrawn above 0.8, random orientation and
+phase, and $K$ log-uniform in 0.15--3 times the scatter $\sigma$ of the noise series.
+We describe each case by its expected $K/\sigma_K$, with
+$\sigma_K = \sigma\sqrt{2/N}$.
+
+\emph{Activity.} We use the FF$'$ picture \citep{Aigrain2012,Rajpaul2015}: a latent
+process $G(t)$ with a quasi-periodic kernel
+$k(\tau) = \exp[-\tau^2/2\lambda^2 - \sin^2(\pi\tau/P_{\rm rot})/2w^2]$ and its
+derivative $G'(t)$, drawn jointly at the epochs from the analytic covariance of
+$(G, G')$. The velocities receive $A[\sqrt{1-\varphi^2}\,G + \varphi G']$, $\varphi$ being
+the share of the rotational term $G'$, with
+$P_{\rm rot}$ log-uniform in 3--150\,d, $\lambda$ log-uniform in 1--30 rotations, $w$
+uniform in 0.25--1.2, $A$ log-uniform in 0.2--3 times $\sigma$ and $\varphi$ uniform in 0--0.9. Both $K$ and $A$ scale with $\sigma$ and not with $N$, so
+the number of epochs carries no information about the class. How strongly activity
+shows in the indicators is the most consequential assumption of the simulations, so
+we vary it: in four cases out of five each indicator $j$ receives
+$A_j[\cos\theta_j\,G + \sin\theta_j\,G']$ times its own scatter, with a common amplitude
+log-uniform in 0.1--3, a factor $10^{\mathcal{N}(0,\,0.3)}$ for each indicator and a
+phase lag $\theta_j$ uniform within $\pm45\degr$ of $0$ (all indicators except the
+bisector) or of $90\degr$ (bisector); in the fifth case the indicators receive nothing.
+The indicator amplitudes are drawn independently of the RV amplitude $A$.
+
+\emph{Cases and labels.} Each case is a planet alone (35\%), a planet with activity
+(25\%), activity alone (30\%) or noise alone (10\%). The ladder is run blind on the
+highest peak. That peak is labelled, in this order of precedence:
+a \emph{planet} if it lies within $1/T$ of the injected orbital frequency $f_p$;
+a \emph{planet alias} if within $1/T$ of $2f_p$, $3f_p$, $f_p/2$ or a first-order alias
+of $f_p$; a \emph{rotation harmonic} if within $1/T$ of $k f_{\rm rot}$ ($k = 1$--4, with
+$f_{\rm rot} = 1/P_{\rm rot}$ the injected rotation frequency) or a first-order alias of
+one; a \emph{rotation line} if within
+$\max[1/T, 1/(\pi\lambda)]$ of $k f_{\rm rot}$, $k = 0$--4, that is inside the
+$\pm2\sigma$ width of a line of the quasi-periodic power spectrum, whose lines are
+Gaussians of standard deviation $1/(2\pi\lambda)$ (for $k = 0$, inside the
+low-frequency envelope of the evolving amplitude); otherwise \emph{other activity} if
+the series has activity, and \emph{noise} if not. Every case is reproducible from its
+seed.

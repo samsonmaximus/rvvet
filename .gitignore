@@ -10,3 +10,14 @@ Thumbs.db
 table4.dat.gz
 *.parquet.tmp
 data/rvbank.parquet
+paper/*.pdf
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*Notes.bib
+paper/fig_*.pdf
+paper/rvvet_methods.tex
+paper/build.log
+paper/bib.log

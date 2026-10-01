@@ -1,0 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Methods paper -- Open Journal of Astrophysics. Every number in the text is a macro
+% \nm... defined in numbers.tex, written by rvvet/scripts/analyze.py; tables tab_*.tex are
+% written by the same script. Literature values typed by hand are listed in NUMBERS.md.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[twocolumn,numberedappendix,appendixfloats]{openjournal}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage[colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue,hypertexnames=false,pdftitle={Which tests catch false planets in archival radial velocities?},pdfauthor={Samson Fraser}]{hyperref}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\ms}{\,\mathrm{m\,s^{-1}}}
+\newcommand{\dchi}{\Delta\chi^2}
+\newcommand{\tablefoot}[1]{\par\vspace{3pt}{\footnotesize\raggedright #1\par}}
+\newcommand{\code}[1]{\texttt{#1}}
+\providecommand{\degr}{\ensuremath{^\circ}}
+\makeatletter\newcommand{\inputrows}[1]{\@@input #1.tex }\makeatother
+\input{numbers}
+
+\begin{document}
+
+\title{Which tests catch false planets in archival radial velocities?\\
+       An injection-calibrated vetting ladder tested on published signals with known fates}
+
+\author{Samson Fraser}
+\email{samsonmfraser@gmail.com}
+\affiliation{Independent researcher, Sicamous, British Columbia, Canada}
+\submitted{Preprint, 2026 September 30}
+\journalinfo{Prepared for The Open Journal of Astrophysics}

@@ -1,5 +1,10 @@
 # Where every number in the methods paper comes from
 
+> Note for this repository: `analysis/counts.py` and `analysis/xstar.py` are in the companion
+> repository `hd297396b`; `CHANGELOG.md` and `sims.log` were working files of the release folder
+> and are summarised in the paper's Sect. 6.4 and Appendix B. `data/rvbank.parquet` is rebuilt
+> locally with `rvvet/scripts/load_rvbank.py` (see README).
+
 **Generated numbers.** Every computed result in the text of `paper/rvvet_methods.tex` is a
 LaTeX macro `\nm...` defined in `paper/numbers.tex`. That file is written by
 `rvvet/scripts/analyze.py` from the analysis outputs; so are the table bodies

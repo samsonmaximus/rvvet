@@ -1,0 +1,186 @@
+{
+ "GJ 581 d": {
+  "tabname": "GJ 581 d",
+  "refs": "\\citealt{Udry2007,Mayor2009a}; \\citealt{Robertson2014,vonStauffenberg2024}"
+ },
+ "GJ 581 g": {
+  "tabname": "GJ 581 g",
+  "refs": "\\citealt{Vogt2010}; \\citealt{Robertson2014,vonStauffenberg2024}"
+ },
+ "GJ 581 f": {
+  "tabname": "GJ 581 f",
+  "refs": "\\citealt{Vogt2010}; \\citealt{Robertson2014,vonStauffenberg2024}"
+ },
+ "Kapteyn b": {
+  "tabname": "Kapteyn b",
+  "refs": "\\citealt{AngladaEscude2014}; \\citealt{Robertson2015,Bortle2021}"
+ },
+ "Kapteyn c": {
+  "tabname": "Kapteyn c",
+  "refs": "\\citealt{AngladaEscude2014}; \\citealt{Bortle2021}"
+ },
+ "HD 41248 b": {
+  "tabname": "HD 41248 b",
+  "refs": "\\citealt{Jenkins2013}; \\citealt{Santos2014,Faria2020}"
+ },
+ "HD 41248 c": {
+  "tabname": "HD 41248 c",
+  "refs": "\\citealt{Jenkins2013}; \\citealt{Santos2014,Faria2020}"
+ },
+ "HD 26965 b": {
+  "tabname": "HD 26965 b",
+  "refs": "\\citealt{Ma2018}; \\citealt{Laliotis2023,Burrows2024}"
+ },
+ "Barnard b (233 d)": {
+  "tabname": "Barnard b (233 d)",
+  "refs": "\\citealt{Ribas2018}; \\citealt{Lubin2021,GonzalezHernandez2024}"
+ },
+ "GJ 832 c": {
+  "tabname": "GJ 832 c",
+  "refs": "\\citealt{Wittenmyer2014}; \\citealt{Gorrini2022}"
+ },
+ "AD Leo b": {
+  "tabname": "AD Leo b",
+  "refs": "\\citealt{Tuomi2018}; \\citealt{Carleo2020}"
+ },
+ "alpha Cen Bb": {
+  "tabname": "$\\alpha$ Cen Bb",
+  "refs": "\\citealt{Dumusque2012}; \\citealt{Rajpaul2016}"
+ },
+ "GJ 176 b (HET, 10.24 d)": {
+  "tabname": "GJ 176 b (10.2 d)",
+  "refs": "\\citealt{Endl2008}; \\citealt{Forveille2009}"
+ },
+ "GJ 667 C d": {
+  "tabname": "GJ 667 C d",
+  "refs": "\\citealt{AngladaEscude2013}; \\citealt{RobertsonMahadevan2014}"
+ },
+ "HD 20794 c (40 d; Pepe+2011)": {
+  "tabname": "HD 20794 c (40 d)",
+  "refs": "\\citealt{Pepe2011}; \\citealt{Nari2025}"
+ },
+ "HD 85512 b": {
+  "tabname": "HD 85512 b",
+  "refs": "\\citealt{Pepe2011}; \\citealt{Laliotis2023}"
+ },
+ "tau Ceti b (13.97 d; Tuomi+2013)": {
+  "tabname": "$\\tau$ Ceti b",
+  "refs": "\\citealt{Tuomi2013a}; \\citealt{Feng2017}"
+ },
+ "HD 136352 b": {
+  "tabname": "HD 136352 b",
+  "refs": "\\citealt{Udry2019}; \\citealt{Kane2020}"
+ },
+ "HD 136352 c": {
+  "tabname": "HD 136352 c",
+  "refs": "\\citealt{Udry2019}; \\citealt{Kane2020}"
+ },
+ "HD 136352 d": {
+  "tabname": "HD 136352 d",
+  "refs": "\\citealt{Udry2019}; \\citealt{Delrez2021}"
+ },
+ "pi Men c": {
+  "tabname": "$\\pi$ Men c",
+  "refs": "\\citealt{Huang2018,Gandolfi2018}"
+ },
+ "GJ 357 b": {
+  "tabname": "GJ 357 b",
+  "refs": "\\citealt{Luque2019}"
+ },
+ "GJ 1132 b": {
+  "tabname": "GJ 1132 b",
+  "refs": "\\citealt{BertaThompson2015}"
+ },
+ "HD 15337 b": {
+  "tabname": "HD 15337 b",
+  "refs": "\\citealt{Gandolfi2019,Dumusque2019}"
+ },
+ "HD 15337 c": {
+  "tabname": "HD 15337 c",
+  "refs": "\\citealt{Gandolfi2019,Dumusque2019}"
+ },
+ "Proxima b": {
+  "tabname": "Proxima b",
+  "refs": "\\citealt{AngladaEscude2016}; \\citealt{SuarezMascareno2020,SuarezMascareno2025}"
+ },
+ "Proxima d": {
+  "tabname": "Proxima d",
+  "refs": "\\citealt{Faria2022}; \\citealt{SuarezMascareno2025}"
+ },
+ "GJ 581 b": {
+  "tabname": "GJ 581 b",
+  "refs": "\\citealt{Bonfils2005}; \\citealt{Rosenthal2021,vonStauffenberg2024}"
+ },
+ "GJ 581 c": {
+  "tabname": "GJ 581 c",
+  "refs": "\\citealt{Udry2007}; \\citealt{Rosenthal2021,vonStauffenberg2024}"
+ },
+ "GJ 436 b": {
+  "tabname": "GJ 436 b",
+  "refs": "\\citealt{Butler2004}; \\citealt{Gillon2007}"
+ },
+ "GJ 876 b": {
+  "tabname": "GJ 876 b",
+  "refs": "\\citealt{Marcy1998}; \\citealt{Rosenthal2021}"
+ },
+ "HD 1461 b": {
+  "tabname": "HD 1461 b",
+  "refs": "\\citealt{Rivera2010}; \\citealt{Rosenthal2021}"
+ },
+ "HD 1461 c": {
+  "tabname": "HD 1461 c",
+  "refs": "\\citealt{Diaz2016}; \\citealt{Rosenthal2021}"
+ },
+ "HD 192310 b": {
+  "tabname": "HD 192310 b",
+  "refs": "\\citealt{Howard2011,Pepe2011}"
+ },
+ "GJ 176 b": {
+  "tabname": "GJ 176 b",
+  "refs": "\\citealt{Forveille2009}; \\citealt{Rosenthal2021,Trifonov2018}"
+ },
+ "Barnard b (3.15 d)": {
+  "tabname": "Barnard b (3.15 d)",
+  "refs": "\\citealt{GonzalezHernandez2024}; \\citealt{Basant2025}"
+ },
+ "HD 10180 d": {
+  "tabname": "HD 10180 d",
+  "refs": "\\citealt{Lovis2011}"
+ },
+ "HD 47186 b": {
+  "tabname": "HD 47186 b",
+  "refs": "\\citealt{Bouchy2009}"
+ },
+ "HD 181433 b": {
+  "tabname": "HD 181433 b",
+  "refs": "\\citealt{Bouchy2009}; \\citealt{Horner2019}"
+ },
+ "GJ 163 c": {
+  "tabname": "GJ 163 c",
+  "refs": "\\citealt{Bonfils2013}"
+ },
+ "HD 40307 b": {
+  "tabname": "HD 40307 b",
+  "refs": "\\citealt{Mayor2009b}; \\citealt{Diaz2016}"
+ },
+ "GJ 581 e": {
+  "tabname": "GJ 581 e",
+  "refs": "\\citealt{Mayor2009a}; \\citealt{vonStauffenberg2024}"
+ },
+ "HD 20794 b": {
+  "tabname": "HD 20794 b",
+  "refs": "\\citealt{Pepe2011}; \\citealt{Nari2025}"
+ },
+ "GJ 667 C e": {
+  "tabname": "GJ 667 C e",
+  "refs": "\\citealt{AngladaEscude2013}; \\citealt{FerozHobson2014,RobertsonMahadevan2014}"
+ },
+ "GJ 667 C f": {
+  "tabname": "GJ 667 C f",
+  "refs": "\\citealt{AngladaEscude2013}; \\citealt{FerozHobson2014,RobertsonMahadevan2014}"
+ },
+ "HD 40307 g": {
+  "tabname": "HD 40307 g",
+  "refs": "\\citealt{Tuomi2013b}; \\citealt{Diaz2016}"
+ }
+}

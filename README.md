@@ -24,6 +24,7 @@ whose fate is known: upheld or refuted.
 | Folder / file | Contents |
 |---|---|
 | `rvvet/` | The Python package (`src/rvvet`), 40 unit tests, CLI and the scripts that reproduce the paper. **Start with `rvvet/README.md`.** |
+| `paper/` | LaTeX source of the paper. `numbers.tex` and `tab_*.tex` are written by `rvvet/scripts/analyze.py`; `build.sh` builds the PDF (needs the figures from `figures/`). |
 | `results/` | Outputs behind every number: `numbers.json` (full precision), false-alarm calibration, benchmark features and scores, calibration tables, reproducibility check. |
 | `figures/` | The six paper figures, written by `rvvet/scripts/analyze.py`. |
 | `sims/` | The 16 000 simulated cases (parquet, 500 per file) and `stars.json` (the 260 stars and the seed). |

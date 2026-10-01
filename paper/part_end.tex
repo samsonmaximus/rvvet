@@ -1,0 +1,168 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Limitations}
+\label{sec:limits}
+
+\emph{The simulated activity.} The quasi-periodic FF$'$ model is a common description of
+spot-driven variability, but it is an assumption, and so is every prior on its
+parameters. Most consequential is how activity imprints on the indicators: we vary the
+amplitude, the lag and the share of indicator-free cases (Sect.~\ref{sec:sens}), but the
+fifth of cases without any indicator signal is an arbitrary choice, and the classifiers
+learn the coupling we assumed. The kernel also puts little power in high harmonics of
+the rotation period.
+
+\emph{The noise model.} Permuting residuals within eras keeps the error distribution,
+its tails and the joint RV--indicator noise, but removes correlated noise on timescales
+longer than a night, including magnetic cycles and slow instrumental drifts. The
+false-alarm rates of Sect.~\ref{sec:fap} are for noise without such correlations.
+
+\emph{The priors.} The fraction of significant peaks that are impostors, and the
+classifiers' probabilities, depend on the class mix and the amplitude priors. They
+describe these simulations, not the archive.
+
+\emph{The benchmark.} It has \nmBenchBinary\ signals with a verdict and only
+\nmBRuleRefN\ significant refuted ones, and its results depend on the window allowed
+around a claimed period (Table~\ref{tab:window}). The rotation proxy behaves differently
+on real indicators than on simulated ones (Sect.~\ref{sec:bench}). Its labels come from later literature that often
+used similar tests, and some of its upheld signals are easy, \nmBEasyN\ with
+$K/\sigma_K > 20$. It measures agreement with the literature on the full archive, not the
+performance a discoverer would have had.
+
+\emph{Changes after the first pass.} The rule's thresholds were fixed before the
+benchmark was run, but the pipeline changed four times afterwards
+(Sect.~\ref{sec:changes}), and some thresholds came from the analysis of HD\,297396\,b.
+
+\emph{One instrument.} Every test here uses HARPS data alone. A signal specific to one
+star in one spectrograph passes every rung; only a second instrument addresses it.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+\label{sec:conc}
+
+\begin{enumerate}
+\item Neither common treatment of the jitter gives nominal false-alarm rates on real
+      archival noise. Held at its planet-free value, it makes the Baluev approximation
+      conservative by a factor of \nmFapFixFactorLo--\nmFapFixFactorHi; rescaled under the
+      signal model, liberal by a factor of \nmFapLiberalPerm\ at 1\% and
+      \nmFapLiberalPermTenth\ at 0.1\%. On these stars a Baluev FAP of \nmFapEmpOne\%
+      corresponds to a real false-alarm rate of 1\%.
+\item Evolving activity produces many significant peaks inside the broad lines of its
+      power spectrum rather than on exact rotation harmonics; the balance shifts from
+      lines to harmonics as spots live longer (\nmLineShort\ against \nmHarmShort\ for
+      lifetimes under three rotations, \nmLineLong\ against \nmHarmLong\ above ten). Tests of
+      harmonic distance see only the harmonics, and only when the indicators reveal the
+      rotation period.
+\item No single test is decisive: the best reaches an AUC of \nmAucInd\ and the detection
+      statistics \nmAucFap--\nmAucDchi. Combined, the rungs reach \nmAucLog--\nmAucTree, and
+      \nmAucNoInd\ without the indicators. How strongly activity shows in the indicators
+      matters more than any other property of the simulated activity.
+\item On published signals, \nmRefNotDet\ of \nmBenchR\ refuted signals are not
+      significant in a blind search of the full archive, though \nmRefDetSingle\ keep
+      single-frequency power at their period. The rule with thresholds fixed in advance rejects
+      \nmRefFFInd\ of the \nmBRuleRefN\ significant refuted signals on indicators,
+      \nmRefFFPeriod\ on period and \nmRefFFPhase\ on phase, accepts \nmBRuleRefAcc, and rejects \nmBRuleUpRej\ of \nmBRuleUpN\
+      significant upheld signals; the classifiers rank the significant signals with AUCs
+      of \nmBAucTree\ (trees) and \nmBAucLog\ (logistic). These counts shift with the window
+      allowed around the claimed period, and the numbers are too small to bound either
+      error rate tightly.
+\item In the AI-assisted analysis that motivated this work, \nmDefN\ defects were found
+      in three revisions. Overclaims were the largest category (\nmDefCatOverclaim), and
+      transcriptions of the code's own output were few (\nmDefOriCode); an independent
+      reviewer that saw the sources but not the history found \nmDefRouteRev\ of them.
+\end{enumerate}
+
+\section*{Acknowledgements}
+
+This work is based on data from the HARPS-RVBank \citep{Trifonov2020,Perdelwitz2024},
+built from observations collected at the European Southern Observatory and
+retrieved from the ESO Science Archive Facility. It made use of NASA's Astrophysics
+Data System, the NASA Exoplanet Archive, SIMBAD and VizieR, and of \texttt{numpy}
+\citep{Harris2020}, \texttt{scipy} \citep{Virtanen2020}, \texttt{scikit-learn}
+\citep{Pedregosa2011} and \texttt{matplotlib} \citep{Hunter2007}.
+
+\emph{Use of generative AI.} The author designed the study and made the analysis
+decisions. The code, the literature search for the benchmark, the extraction and coding
+of the defect log, and the draft text were produced with the assistance of Claude
+(Anthropic), a large language model. They were validated as follows. The package has 40
+unit tests, 13 of which compare it with an independent calculation
+(Sect.~\ref{sec:verify}). Every simulated case is reproducible from its seed: \nmConsistN\ randomly chosen
+cases regenerated with the released code gave features \nmConsistDiff\ to the stored
+ones. Every
+benchmark label, period and reference, and every entry of the bibliography, was checked
+against the publisher's record. A separate instance of the model, given the manuscript,
+the code and the outputs but not the conversation that produced them, reviewed the first
+draft as a referee; its report and our response are released with the code. The defect
+log was extracted and coded by separate instances following a codebook fixed in
+advance, with agreement measured between two coders. Every computed result in the
+text is generated by the analysis script from its outputs; design constants, literature
+values and counts typed by hand are listed in the released provenance file. The author takes responsibility for the content.
+
+\section*{Data and code availability}
+
+HARPS-RVBank is available at the CDS (J/A+A/683/A125). The package \code{rvvet}, the
+simulation outputs, the false-alarm calibration, the benchmark table with its
+references, the frozen rule and the frozen-pipeline results, the defect log with its
+codebook, sources and both codings, the referee report and every script used for this
+paper are released at \url{https://github.com/GITHUBUSER/rvvet} and archived at Zenodo
+(\href{https://doi.org/ZENODODOI}{doi:ZENODODOI}).
+
+\bibliographystyle{aasjournal}
+\bibliography{methods}
+
+\clearpage
+\appendix
+\section{The benchmark}
+\label{app:bench}
+
+Table~\ref{tab:bench} lists the \nmBenchN\ benchmark signals, their verdicts and
+references, and the outcome of the ladder on the full HARPS-RVBank series of each host.
+
+\begin{table*}
+\caption{The benchmark: signals around HARPS-RVBank stars with later verdicts, and the
+ladder on the full HARPS-RVBank series.}
+\label{tab:bench}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrcrrrrlcL{5.6cm}}
+\hline\hline
+Signal & $P$ (d) & $K$ ($\ms$) & Verdict & $N$ & $\Delta f\,T$ & $\log_{10}$FAP & $K/\sigma_K$ & Fails at & Trees & Discovery; verdict \\
+\hline
+\inputrows{tab_bench_rows}
+\hline
+\end{tabular}
+\tablefoot{$P$, $K$: as claimed. Verdict: UI, upheld by independent evidence; UH, accepted
+from HARPS data and not contested; R, refuted; D, disputed. $N$, $\log_{10}$FAP (global,
+over 1.2--500\,d; 0.0 means a FAP near 1) and $K/\sigma_K$: this work, at the claimed
+period. $\Delta f\,T$: offset of the evaluated frequency from the claimed one, in resolution
+elements; $^e$ marks the edge of the $\pm0.5/T$ window. Fails at: the first rung of the a-priori rule the signal fails (det.: detection;
+ind.: indicators; rot.: rotation; --: passes). Trees: score from the boosted trees, in
+brackets where the signal is not significant and the score is outside the training domain.
+References: discovery; later verdict. A single reference means the discovery paper itself
+provides the verdict (e.g. transits) or, for UH, that no later paper contests it.}
+\end{table*}
+
+
+\section{Benchmark outcomes before and after the corrections}
+\label{app:changes}
+
+Table~\ref{tab:changes} lists the benchmark signals whose significance or first failed
+rung changed between the frozen first-pass pipeline (rvvet 0.1) and this version.
+
+\begin{table}
+\caption{Benchmark signals whose outcome changed between the first pass (rvvet 0.1)
+and this version.}
+\label{tab:changes}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcrlrl}
+\hline\hline
+ & & \multicolumn{2}{c}{rvvet 0.1} & \multicolumn{2}{c}{rvvet \nmrvvetVersion} \\
+Signal & Verdict & $\log_{10}$FAP & Fails at & $\log_{10}$FAP & Fails at \\
+\hline
+\inputrows{tab_v01_rows}
+\hline
+\end{tabular}
+\tablefoot{Fails at: the first rung of the a-priori rule the signal fails (det.:
+detection; ind.: indicators; rot.: rotation; --: passes).}
+\end{table}

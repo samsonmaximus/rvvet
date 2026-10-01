@@ -1,0 +1,31 @@
+\begin{abstract}
+Long public radial-velocity archives can reveal low-mass planets, but archival signals
+have a mixed record: many have been withdrawn as stellar activity, aliases or noise.
+We measure how well common vetting tests separate planets from impostors on the real
+sampling and noise of the HARPS-RVBank archive. We implement a ladder of interpretable
+tests (false-alarm probability, alias comparison, phase and amplitude stationarity,
+activity-indicator power and rotation harmonics) as tested open-source software and run
+it blind on \nmSimCases\ simulated series built from \nmSimStars\ HARPS stars, with
+Keplerian planets and evolving quasi-periodic activity injected into permuted real
+noise. The false-alarm probability depends on how the jitter is fitted: held at its
+planet-free value it is conservative by a factor of \nmFapFixFactorLo--\nmFapFixFactorHi,
+and rescaled with the signal it is liberal by \nmFapLiberalPerm\ at 1\%. Many activity
+impostors fall inside the broad lines of evolving rotation rather than on its exact
+harmonics, more so the shorter the spot lifetime. No single test is decisive (best area under the ROC curve \nmAucInd, detection
+statistics \nmAucFap); all rungs together reach \nmAucTree, with indicator power the most
+important input. Of \nmBenchR\ published signals later refuted, \nmRefNotDet\ are not
+significant in a blind search of the full archive; a rule whose thresholds were fixed before this benchmark was run (its features were
+revised afterwards) rejects \nmRuleRejRef\ of the other \nmBRuleRefN\ and \nmBRuleUpRej\ of
+\nmBRuleUpN\ significant upheld signals, counts that shift with the window allowed around
+the claimed period. We also report the \nmDefN\ defects found in the
+AI-assisted analysis that motivated this work, coded by two independent instances of the model: overclaims were
+the largest category, few were numbers miscopied from code, and an independent reviewer
+found most of them.
+\end{abstract}
+
+\begin{keywords}
+{techniques: radial velocities -- methods: data analysis -- methods: statistical --
+planets and satellites: detection -- stars: activity}
+\end{keywords}
+
+\maketitle

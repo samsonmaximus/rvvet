@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results on simulations}
+\label{sec:simres}
+
+The simulation set has \nmSimCases\ cases on \nmSimStars\ stars with a median of
+\nmSimMedianN\ nightly epochs: \nmNPlanetOnly\ planets alone, \nmNPlanetAct\ planets with
+activity, \nmNActOnly\ activity alone and \nmNNoiseOnly\ noise alone.
+
+\subsection{False alarms}
+\label{sec:fap}
+
+For the false-alarm calibration we drew \nmFapPerStar\ noise-only series per star
+(\nmFapSeries\ in all) of two kinds: the star's own velocities permuted within each
+era, and Gaussian noise with the star's error bars and fitted jitters. Each went
+through the same clip, trend and detection step as the simulations
+(Fig.~\ref{fig:fapcal}). Neither common treatment of the jitter gives nominal rates.
+With the jitter held at its planet-free value, the statistic of our first version, the
+Baluev FAP of the highest peak falls below 1\% in only \nmFapPermFixOne\% of the
+real-noise series (95\% interval \nmFapPermFixOneLo--\nmFapPermFixOneHi\%) and below
+10\% in \nmFapPermFixTen\%: conservative by a factor of
+\nmFapFixFactorLo--\nmFapFixFactorHi\ between 1 and 10\%, because a peak's own power
+inflates the jitter that weights it. With the jitter rescaled under the signal model, as
+in the ladder, the approximation errs the other way: \nmFapPermLROne\% of real-noise
+series fall below 1\% (\nmFapPermLROneLo--\nmFapPermLROneHi\%), \nmFapPermLRTen\% below
+10\% and \nmFapPermLRTenth\% below 0.1\%, a factor of \nmFapLiberalPerm\ at 1\% and
+\nmFapLiberalPermTenth\ at 0.1\%. For Gaussian noise the factor at 1\% is
+\nmFapLiberalGauss, so part of the excess comes from fitting the jitter scale, which the
+known-variance approximation does not count, and part from the heavy tails of real
+velocities. On these stars a Baluev FAP of \nmFapEmpOne\% (95\% interval
+\nmFapEmpOneLo--\nmFapEmpOneHi\%) corresponds to a real false-alarm rate of 1\%, and
+\nmFapEmpTenth\% (\nmFapEmpTenthLo--\nmFapEmpTenthHi\%) to 0.1\%. We keep the frozen 1\%
+threshold in the rule and report its real rate. Permutation makes the noise white
+between nights, so none of these rates includes correlated noise on timescales longer
+than a night.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{fig_fapcal.pdf}
+\caption{False-alarm calibration: the fraction of noise-only series whose highest
+peak has a Baluev FAP below a given threshold, for the likelihood-ratio statistic of
+the ladder (blue) and for $\dchi$ with the jitter fixed at its planet-free value
+(red), on the stars' own permuted velocities (solid, with 95\% intervals) and on
+Gaussian noise (dotted). The dashed line is the nominal rate.}
+\label{fig:fapcal}
+\end{figure}
+
+\subsection{Completeness}
+
+Planets alone are recovered at the right period with FAP below 1\% in half the cases
+at an expected $K/\sigma_K$ of \nmCompFifty\ and in 90\% at \nmCompNinety\
+(Fig.~\ref{fig:completeness}), with \nmCompPLo--\nmCompPHi\% recovery across five period
+ranges between 1.2 and 300\,d at expected $K/\sigma_K > 10$. Of the \nmPlDetN\ series
+with a planet alone and a significant highest peak, \nmPlWrongPct\% (\nmPlWrongN) peak at
+the wrong period: \nmPlWrongAliasN\ at an alias or harmonic of the planet and the rest
+on a noise peak that outgrew a weak planet.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{fig_completeness.pdf}
+\caption{Recovery of injected planets (alone) at the right period with FAP below
+1\%, against the expected $K/\sigma_K$.}
+\label{fig:completeness}
+\end{figure}
+
+\subsection{What the impostors are}
+
+Of the \nmNDet\ cases with a significant highest peak, \nmNDetPlanet\
+(\nmDetPlanetPct\%) are the injected planet and \nmNDetImp\ are impostors:
+\nmImpRotHarm\ at a rotation harmonic or its alias, \nmImpRotLine\ inside a line of the
+activity spectrum but more than one resolution element from a harmonic (\nmImpEnvelopeN\
+of them in the low-frequency envelope), \nmImpActOther\ elsewhere in series with
+activity, \nmImpPlAlias\ at an alias or harmonic of the planet, and \nmImpNoise\ from
+noise. These proportions follow from the class mix and the amplitude priors, not from
+the archive. Because both planet and activity amplitudes scale with the star's scatter,
+the planet fraction hardly depends on $N$ (\nmDetPlanetPctNLo\% in the lowest quartile,
+\nmDetPlanetPctNHi\% in the highest), but it would change with the mix. Less dependent on
+the mix is where activity impostors fall. An evolving spot pattern has lines of width
+$\sim 1/(\pi\lambda)$, and of the \nmImpActTotal\ activity impostors \nmImpRotLinePctAct\%
+lie inside those lines but more than one resolution element from any exact harmonic,
+about as many as lie on a harmonic (\nmImpRotLineNoEnv\ of them excluding the
+low-frequency envelope). The balance depends on the spot lifetime, and so on its prior:
+for $\lambda$ shorter than three rotations, \nmLineShort\ impostors lie inside a line at
+$k = 1$--4 and \nmHarmShort\ on a harmonic; for $\lambda$ longer than ten rotations,
+\nmLineLong\ and \nmHarmLong. A harmonic-distance test does not look inside the lines.
+
+\subsection{Calibration of the rungs on planets}
+\label{sec:calib}
+
+For the \nmNPlanetOnlyDet\ planets alone detected at the right period, the block phase
+probability has a median of \nmBPhMed\ and falls below 0.05 in \nmBPhFive\% of cases,
+close to nominal. With $n_{\rm b} - 2$ degrees of freedom for the phase, our first choice
+on the argument that the fitted frequency absorbs a linear phase drift, \nmBPhFiveNbTwo\%
+of the same planets fall below 0.05, so we adopted $n_{\rm b} - 1$. The block amplitude
+probability is somewhat liberal: its median is \nmBAmpMed\ and \nmBAmpFive\%
+(\nmBAmpFiveLo--\nmBAmpFiveHi\%) fall below 0.05, probably because an eccentric orbit
+fitted with a sinusoid, and heavy-tailed noise, add scatter the block uncertainties do
+not include. The half-phase difference exceeds
+$1.96\sigma$ in \nmHPhOver\% of planets and the half-amplitude difference in
+\nmHAmpOver\%. Taken alone, the rungs of the a-priori rule reject these planets at the
+following rates: period \nmRungRejPeriod\%, phase \nmRungRejPhase\%, indicators
+\nmRungRejInd\% and rotation \nmRungRejRot\%. The indicator rung, nominally a
+$10^{-3}$ test, rejects \nmIndOverPl\% because it takes the maximum over indicators and
+frequencies.
+
+\subsection{Which tests carry the information}
+
+Table~\ref{tab:auc} gives the power of each feature alone to separate planets from
+impostors among significant peaks, as the area under the ROC curve (AUC).
+No single test is decisive. The strongest, the indicator power (\nmAucInd), the block
+phase rms (\nmAucBlockRms) and the growth of $\dchi$ (\nmAucGrowth), are only slightly
+better than the detection statistics themselves (FAP \nmAucFap, $\dchi$ \nmAucDchi).
+The distance to a rotation harmonic is informative where it can be computed: for the
+\nmHarmDefinedN\ peaks with a significant rotation proxy it reaches \nmAucHarmDefined, but
+over all peaks only \nmAucHarm, because the proxy is usually not detected: it is significant for \nmProxyActPct\% of the activity
+impostors and \nmProxyPlanetPct\% of the planets alone. The number of
+epochs alone has an AUC of \nmAucLogN: with both planet and activity amplitudes scaled to
+the star's scatter, it carries no information about the class.
+
+\begin{table}
+\caption{Power of each ladder feature alone to separate planets from impostors
+among \nmNDet\ significant simulated peaks.}
+\label{tab:auc}
+\centering
+\footnotesize
+\begin{tabular}{lc|lc}
+\hline\hline
+Feature & AUC & Feature & AUC \\
+\hline
+\inputrows{tab_auc_rows}
+\hline
+\end{tabular}
+\tablefoot{AUC is reported as $\max(A, 1-A)$, so it does not depend on the sign of
+the feature, and after the transforms of Sect.~\ref{sec:classifiers}. $^\dagger$Reported
+but not used by the classifiers, because its power depends on the injection priors.}
+\end{table}
+
+\subsection{Classifiers}
+\label{sec:classifiers}
+
+We trained a logistic regression ($L_2$ penalty, $C = 0.5$, standardised features,
+median imputation with missing-value indicators) and gradient-boosted trees
+(scikit-learn's histogram implementation with 400 iterations, learning rate 0.04,
+15 leaves, $L_2 = 1$ and at least 40 cases per leaf; \citealt{Pedregosa2011}) on the
+ladder features of the significant peaks, excluding $\log N$ and $\log(T f_0)$. Heavy-tailed
+features enter as $\log(1+x)$, the block probabilities as $\log_{10} p$, the alias
+margin as ${\rm sign}(x)\log(1+|x|)$, and a missing \code{harm\_dist} as $\log(1+1000)$
+with the flag \code{harm\_missing}. We used five-fold cross-validation in which all
+cases of a star are in the same fold. Out of fold, the AUC is \nmAucLog\ for the
+logistic regression and \nmAucTree\ for the trees (95\% intervals
+\nmAucLogLo--\nmAucLogHi\ and \nmAucTreeLo--\nmAucTreeHi\ from a bootstrap over stars,
+which holds the fitted models fixed), against \nmAucDetOnly\ for the detection features
+alone (FAP, $\dchi$, $K/\sigma_K$) and \nmAucFapOnly\ for the FAP alone
+(Fig.~\ref{fig:roc}). The combination, not any one test, carries the information. Adding
+$\log N$ and $\log(T f_0)$ raises the trees' AUC to \nmAucTreePrior, through the period
+distributions assumed for planets and rotation. Removing every activity-indicator and
+rotation feature lowers it to \nmAucNoInd, and removing only the rotation-proxy features
+to \nmAucNoProxy; the indicator power dominates the permutation importance
+(Fig.~\ref{fig:importance}).
+
+The Brier scores are \nmBrierLog\ and \nmBrierTree. Calibration was tested per bin of
+predicted probability (Fig.~\ref{fig:reliability}): for the logistic regression the
+largest deviation is $\nmCalMaxZLog\sigma$, with \nmCalNBadLog\ of \nmCalNBinsLog\ bins
+beyond $2\sigma$, so it is well calibrated; the trees are overconfident at both ends, with
+a largest deviation of $\nmCalMaxZTree\sigma$ and \nmCalNBadTree\ of \nmCalNBinsTree\ bins
+beyond $2\sigma$. Either calibration holds only for the class mix of the simulations, so
+on real candidates the output is a score, not a probability. At a
+threshold of 0.5 the trees accept \nmTreeTPR\% of planets and \nmTreeFPR\% of
+impostors: \nmTreeAccRotHarm\% at a rotation harmonic, \nmTreeAccRotLine\% inside a
+rotation line, \nmTreeAccActOther\% of other activity, \nmTreeAccPlAlias\% of planet
+aliases and \nmTreeAccNoise\% of noise peaks. At a false-positive rate of 5\% they
+accept \nmTreeTPRatFiveFPR\% of planets, and at 1\%, \nmTreeTPRatOneFPR\%. If one
+significant signal in ten were a planet, the precision at the 0.5 threshold would be
+\nmTreePPVTen\%; at one in two, \nmTreePPVFifty\%.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{fig_roc.pdf}
+\caption{Separating planets from impostors among significant simulated peaks, out of
+fold with folds grouped by star; AUC in brackets. The square is the a-priori rule.}
+\label{fig:roc}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{fig_reliability.pdf}
+\caption{Reliability of the out-of-fold probabilities: the fraction of cases that
+are planets in bins of predicted probability, with binomial errors.}
+\label{fig:reliability}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{fig_importance.pdf}
+\caption{Permutation importance of the features for the boosted trees, measured on
+a quarter of the stars held out of training (symmetric-log scale).}
+\label{fig:importance}
+\end{figure}
+
+\subsection{The a-priori rule}
+
+The rule accepts \nmRuleTPR\% of planets and \nmRuleFPR\% of impostors; at the same
+planet acceptance the trees accept \nmTreeFPRatRuleTPR\% of impostors (Fig.~\ref{fig:roc}). It accepts
+\nmRuleAccRotHarm\% of impostors at a rotation harmonic, \nmRuleAccRotLine\% of those
+inside a rotation line, \nmRuleAccActOther\% of other activity, \nmRuleAccPlAlias\% of
+planet aliases and \nmRuleAccNoise\% of noise peaks. Its thresholds sit where they
+reject few planets, and about half of the impostors in these simulations cross none of
+them: the
+indicators are weak or silent in many activity cases (Sect.~\ref{sec:sens}), a rotation
+proxy is usually not detected, and a noise peak, once significant, looks stationary.
+
+\subsection{Sensitivity to the simulated activity}
+\label{sec:sens}
+
+How much the indicators help depends on how strongly activity shows in them, which the
+simulations set by assumption, and it is the largest dependence we find. For the \nmStNUnc\ activity impostors whose indicators
+received nothing, the rule accepts \nmStRuleUnc\% and the trees \nmStTreeUnc\%; for
+indicator amplitudes of 0.1--0.3 times the scatter (\nmStNWeak\ impostors), \nmStRuleWeak\%
+and \nmStTreeWeak\%; for 1--3 times (\nmStNStrong), \nmStRuleStrong\% and \nmStTreeStrong\%.
+The RV amplitude of the activity matters too: for amplitudes of 0.2--0.5 times the
+star's scatter (\nmAmpLoN\ impostors) the rule accepts \nmAmpLoRule\% and the trees
+\nmAmpLoTree\%, above once the scatter (\nmAmpHiN) \nmAmpHiRule\% and \nmAmpHiTree\%,
+presumably because weak activity becomes significant mainly where it is coherent.
+The rotation domain matters as well. For activity impostors with $P_{\rm rot} > 40$\,d
+(\nmDomProtLongN), the rule accepts \nmDomProtLongRule\% and the trees
+\nmDomProtLongTree\%; with $P_{\rm rot} < 10$\,d (\nmDomProtShortN), \nmDomProtShortRule\%
+and \nmDomProtShortTree\%. For spot patterns that live longer than ten rotations
+(\nmDomLamLongN), \nmDomLamLongRule\% and \nmDomLamLongTree\%; shorter than three
+(\nmDomLamShortN), \nmDomLamShortRule\% and \nmDomLamShortTree\%. The \nmDomBothN\
+impostors with both a long rotation period and long-lived spots, the regime of
+GJ\,581\,d, are accepted at \nmDomBothRule\% by the rule and \nmDomBothTree\% by the trees,
+against \nmRuleAccAct\% and \nmTreeAccAct\% for all activity impostors: over the ranges
+simulated, the rotation period and the spot lifetime matter much less than the
+indicators.

@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Published signals with known fates}
+\label{sec:bench}
+
+\subsection{Construction}
+
+We compiled \nmBenchN\ periodic signals once claimed as planets around HARPS-RVBank
+stars with at least 20 nights, and labelled each by the later peer-reviewed verdict
+(Table~\ref{tab:bench}): \nmBenchUI\ upheld by independent evidence (transits, another
+spectrograph or an independent data set), \nmBenchUH\ accepted from HARPS data and not
+contested, \nmBenchR\ refuted (attributed to activity, an alias or the sampling, or not
+recovered with better data) and \nmBenchD\ disputed, which we exclude from the metrics.
+Of these signals, \nmBenchNotHarps\ were not discovered with HARPS data. The labels, periods
+and references were compiled with web searches by an AI agent and each was checked
+against the publisher's record; we did not choose signals by how the ladder treats
+them. For every signal we remove the other accepted planets of its system with
+Keplerian fits and evaluate the ladder at the claimed period.
+
+Three caveats apply. Several refuted signals were refuted with the same kinds of
+tests the ladder uses, so agreement is partly circular. The refuted signals were
+claimed from subsets of the data now in the archive, so the benchmark tests the
+ladder on the full archive, not on the data the discoverers had. And the numbers are
+small, so we give exact binomial intervals.
+
+\subsection{Significance}
+
+Whether a claimed signal is significant depends on the question. A blind search of
+the full archive needs the global FAP over the search band: by that measure
+\nmRefNotDet\ of the \nmBenchR\ refuted signals are not significant (FAP $> 1\%$), while
+\nmUpDet\ of the \nmUpN\ upheld signals are (Fig.~\ref{fig:bench}). The \nmUpNotDet\
+upheld signals that are not have measured $K/\sigma_K$ of
+\nmUpNotDetSnrLo--\nmUpNotDetSnrHi\ in these data, all were confirmed with other
+instruments or by transits, and all lie below the 50\% completeness point of
+Fig.~\ref{fig:completeness}, although that point is in expected $K/\sigma_K$, about which
+the measured value scatters by roughly one. For a period known in advance,
+the single-frequency probability is the right measure; below 1\% by that measure,
+\nmRefNotDetSingle\ refuted and \nmUpNotDetSingle\ upheld signals are not significant.
+This probability is taken at the best point within $\pm0.5/T$ and from the likelihood
+ratio, which Sect.~\ref{sec:fap} found liberal, so it overstates significance somewhat;
+Table~\ref{tab:window} gives the counts at the claimed period itself. Even so, most
+refuted signals leave some power at their period in the full archive; what they lack is
+the strength to stand out in a blind search.
+
+\subsection{The rule and the classifiers}
+
+Among significant signals, the a-priori rule accepts \nmBRuleRefAcc\ of the
+\nmBRuleRefN\ refuted ones (95\% interval \nmBRuleFPRLo--\nmBRuleFPRHi\%) and rejects
+\nmBRuleUpRej\ of the \nmBRuleUpN\ upheld ones (\nmBRuleFNRLo--\nmBRuleFNRHi\%):
+\nmBRuleUIRej\ of \nmBRuleUIN\ upheld by independent evidence and \nmBRuleUHRej\ of
+\nmBRuleUHN\ accepted from HARPS alone. Table~\ref{tab:refsig} lists the features of the
+significant refuted signals and of any significant upheld signal the rule rejects. All
+\nmTopUp\ significant upheld signals are the highest peak in the band, against
+\nmTopRef\ of the \nmBRuleRefN\ significant refuted ones, a difference the classifiers,
+trained on highest peaks, do not see.
+GJ\,581\,d, Barnard's star b at 233\,d and HD\,41248\,c fail on indicator power (the first
+was attributed to activity by \citealt{Robertson2014}, the second to a yearly alias of
+rotation by \citealt{Lubin2021}, the third to rotation by \citealt{Santos2014}, whose
+rotation period our proxy recovers); Kapteyn c fails on phase and has H$\alpha$ power as
+well; AD\,Leo\,b fails the period rung, because a stronger peak of the same activity signal
+lies a few resolution elements away, and has chromatic-index power, as expected for the
+spot-induced signal of \citet{Carleo2020}. The rule accepts HD\,26965\,b, for which the
+indicators show neither power above the threshold at the period nor a significant rotation
+proxy. It rejects two upheld signals, HD\,192310\,b and GJ\,163\,c, on indicator power.
+Several margins are thin (Table~\ref{tab:refsig}). Adding the rotation-alias test of the first benchmark pass (\code{harm\_alias\_dist}) to
+the rule \nmBRuleAliasEffect.
+
+The classifiers rank the significant signals with an AUC of \nmBAucTree\ (trees; 95\%
+interval \nmBAucTreeLo--\nmBAucTreeHi\ from a bootstrap within each class) and
+\nmBAucLog\ (logistic regression; \nmBAucLogLo--\nmBAucLogHi), misordering \nmBMisTree\
+and \nmBMisLog\ of the \nmBPairs\ upheld--refuted pairs. At a score of 0.5 the trees
+accept \nmBTreeRefAcc\ significant refuted signal (GJ\,581\,d) and reject
+\nmBTreeUpRej\ upheld ones (HD\,15337\,c and HD\,192310\,b); the logistic regression accepts
+\nmBLogRefAcc\ (GJ\,581\,d) and rejects \nmBLogUpRej\ (HD\,15337\,c, the weakest upheld signal
+that is significant).
+GJ\,581\,d has indicator power above the rule's threshold but a strong, stationary,
+alias-free peak, and both models weigh the latter more. Without the \nmBEasyN\ upheld
+signals with $K/\sigma_K > 20$ the trees' AUC is \nmBAucTreeNoEasy; for signals upheld by
+independent evidence only, \nmBAucTreeUI. The model without indicator features reaches
+\nmBAucNoInd\ (\nmBAucNoIndLo--\nmBAucNoIndHi). Among the same significant signals,
+single features reach AUCs of \nmBSingleGrowth\ (growth of $\dchi$), \nmBSingleAlias\
+(alias margin), \nmBSingleBlockRms\ (block phase rms), \nmBSingleInd\ (indicator power)
+and \nmBSingleFap\ (FAP). On signals that are not significant, the classifiers, trained
+only on significant peaks, are outside their training domain and their scores should
+not be used.
+
+Only \nmRefOutsideProt\ refuted host, AD\,Leo, has a published rotation period outside the
+simulated 3--150\,d; at 2.23\,d it is also below the 2.5-d lower limit of the rotation
+proxy, so no rotation test is possible for it.
+
+The rotation proxy behaves differently on real stars. It is significant for
+\nmProxyHostsN\ of the \nmNHosts\ benchmark hosts and for \nmProxyUpSigN\ of the
+\nmBRuleUpN\ significant upheld signals, but for only \nmProxyPlanetPct\% of simulated
+planets: permutation destroys the star's own coherent indicator variations, rotation and
+cycles alike, so simulated planets sit on indicators without activity and real ones do
+not. Where a host has a significant proxy and a published rotation period, the two agree
+within 20\% for \nmProxyAgreeN\ of \nmProxyCmpN. The rotation features of real candidates
+therefore lie partly outside the simulated range. A model trained
+without the rotation-proxy features reaches an AUC of \nmBAucNoProxy\
+(\nmBAucNoProxyLo--\nmBAucNoProxyHi) on the significant benchmark signals.
+
+\begin{table*}
+\caption{Significant refuted signals, and significant upheld signals the a-priori rule
+rejects: the features behind each verdict.}
+\label{tab:refsig}
+\centering
+\footnotesize
+\begin{tabular}{lcrrlrrlccc}
+\hline\hline
+Signal & Verdict & $\log_{10}$FAP & Alias margin & Indicator $\dchi$ & $P_{\rm proxy}$ (d) & \code{harm\_dist} & Fails at & Trees & Logistic & No ind. \\
+\hline
+\inputrows{tab_refsig_rows}
+\hline
+\end{tabular}
+\tablefoot{Alias margin: $\dchi(f_0)$ minus the strongest alias inside the band. Fails at:
+the first rung of the a-priori rule the signal fails (period, phase; ind.: indicators;
+rot.: rotation; --: passes).
+Indicator $\dchi$: the largest near $f_0$, with the indicator. $P_{\rm proxy}$: the
+rotation proxy, when significant. The last three columns are classifier scores.}
+\end{table*}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{fig_benchmark.pdf}
+\caption{The benchmark: score from the boosted trees for signals upheld by
+independent evidence (blue), accepted from HARPS data (green), refuted (red) and
+disputed (grey). Open symbols are not significant at the claimed period in a blind
+search of the full archive; crosses mark significant signals rejected by the a-priori
+rule.}
+\label{fig:bench}
+\end{figure}
+
+\subsection{Changes after the first pass}
+\label{sec:changes}
+
+The rule was frozen before the first benchmark pass, and its thresholds have not
+changed. The pipeline has, four times. After the first pass exposed failures we lowered
+the S/N cut from 20 to 10 (it removed \nmProxLossTwenty\% of the spectra of Proxima
+Centauri), replaced two-term Fourier prewhitening of known companions by Keplerian
+orbits (the Fourier terms failed for $\pi$\,Men\,b with $e = 0.64$), added the quadratic
+trend and the 15-$\sigma$ clip (for the binaries $\alpha$\,Cen\,B and GJ\,667\,C), and
+added \code{harm\_alias\_dist}. An independent review of the first draft then found
+four errors, which version 0.2 corrected: nights began at 0\,h\,UT instead of
+local noon; the period rung compared candidates with aliases outside the search band
+and could refine onto the candidate's own peak, so that it rejected planets on their
+one-day mirrors; the jitter was held at its planet-free value; and the block tests had
+the wrong degrees of freedom. At the same time we widened the window around a claimed
+period from $\pm0.25/T$ to $\pm0.5/T$, after the review showed a refuted signal refined to
+the edge of the narrower window, and changed the simulations (Sect.~\ref{sec:sims}). A
+second review found that the effective window had grown to $\pm0.6/T$, now capped at
+$\pm0.5/T$, and that the rotation proxy fired on slow variations of real indicators; the
+indicators are now detrended like the velocities. A third review found that this
+detrending, done by least squares, was tilted by indicator outliers in the simulations,
+and that many real proxies sat at half a year; outliers are now clipped before the fit and
+the seasonal aliases are excluded from the proxy search (version \nmrvvetVersion).
+Table~\ref{tab:window} shows how the benchmark results depend on the window: with the
+first-pass window the rule rejects \nmWinQRefRej\ of \nmWinQRefSig\ significant refuted
+signals and \nmWinQUpRej\ of \nmWinQUpSig\ upheld ones; at the claimed period itself,
+\nmWinZRefRej\ of \nmWinZRefSig\ and \nmWinZUpRej\ of \nmWinZUpSig.
+Of the benchmark signals, \nmNEdge\ reach the edge of the adopted window (marked in
+Table~\ref{tab:bench}).
+
+\begin{table*}
+\caption{Benchmark results for three windows around the claimed period.}
+\label{tab:window}
+\centering
+\footnotesize
+\begin{tabular}{lcccccccc}
+\hline\hline
+ & \multicolumn{2}{c}{Refuted, significant} & \multicolumn{2}{c}{Upheld, significant} & \multicolumn{2}{c}{AUC (significant)} & \multicolumn{2}{c}{Not significant, single $f$} \\
+Window & $N$ & rule rejects & $N$ & rule rejects & trees & logistic & refuted & upheld \\
+\hline
+\inputrows{tab_window_rows}
+\hline
+\end{tabular}
+\tablefoot{Significant: global Baluev FAP $< 1\%$. The last two columns count signals whose
+single-frequency probability is above 1\% (of \nmBenchR\ refuted and \nmUpN\ upheld).}
+\end{table*} Table~\ref{tab:changes} lists the \nmBChanged\ benchmark signals
+whose outcome differs between the first pass and this version. The frozen-pipeline
+results are released with the code.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\texorpdfstring{A worked example: HD\,297396\,\ensuremath{\mathrm{b}}}{A worked example: HD 297396 b}}
+\label{sec:example}
+
+HD\,297396\,b is a 4.27-d candidate found in a ranked search of HARPS-RVBank (Fraser,
+in preparation). Through the generic pipeline, with \nmHDn\ nightly epochs over
+\nmHDbase\,yr (the discovery analysis, with stricter cuts, keeps 104), its peak has a
+Baluev FAP of $10^{\nmHDfap}$ and $K = \nmHDK \pm \nmHDsK\ms$ ($K/\sigma_K = \nmHDsnr$).
+It beats its aliases by $\dchi = \nmHDalias$, holds phase across halves
+($\nmHDhalf\sigma$) and blocks ($p = \nmHDblockp$), grows steadily with the number of
+epochs ($\rho = \nmHDrho$), gains $\dchi = \nmHDapod$ from an envelope, and no indicator
+has power near its period beyond $\dchi = \nmHDind$. The indicators give no significant
+rotation proxy, so the rotation rung is not applied.
+It \nmHDrule\ the a-priori rule, whose thresholds were partly set during its own
+analysis, and the classifiers give it scores of \nmHDpTree\ (trees), \nmHDpLog\
+(logistic) and \nmHDpNoInd\ (without indicators).
+
+The example also shows what the ladder cannot do. The star's rotation period is not
+measured; the indicators are weak for this star; and activity calibrations place its
+rotation near 39\,d, close to nine times the orbital period, a harmonic that our
+simulated activity rarely puts power into (Fraser, in preparation). A high score says
+that the signal behaves like the simulated planets and unlike the simulated
+impostors; it does not replace a second instrument.
