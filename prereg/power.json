@@ -1,0 +1,30 @@
+{
+ "GJ902": {
+  "n_spectra": 50,
+  "n_nights_by_inst": {
+   "ESPRESSO": 19,
+   "NIRPS": 12,
+   "HARPS": 11
+  },
+  "sigma_A": 0.4917970129986811,
+  "K_pred": 1.89863716905,
+  "sK": 0.406372439916,
+  "expected_z_median": 3.294713574233369,
+  "P_z_ge_3": 0.60725,
+  "P_z_ge_2": 0.802,
+  "phase_unc_cycles_mid": 0.12618820475755319
+ },
+ "HD58489": {
+  "n_spectra": 20,
+  "n_nights_by_inst": {
+   "HARPS": 18
+  },
+  "sigma_A": 1.4643500856433072,
+  "K_pred": 5.47530249534,
+  "sK": 1.34121993016,
+  "expected_z_median": 3.490298908999816,
+  "P_z_ge_3": 0.769,
+  "P_z_ge_2": 0.9465,
+  "phase_unc_cycles_mid": 0.08376790877728062
+ }
+}
