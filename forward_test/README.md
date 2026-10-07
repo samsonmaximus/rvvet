@@ -41,10 +41,23 @@ The git history keeps the original commit times. In order: the ledger and the T1
 executable test at 08:17, the data decisions at 09:09, and the result at 09:12 (MDT, 4 Oct 2026).
 Git times are written by the committer, so they record the order, not an independent proof of it.
 
-Later work in the same repository, which is not part of this paper, and the working notes of that
-morning were filtered out of this history. `prereg/T1-RESULT.md` is the record written on 4 Oct.
-Where it differs from the paper, the paper's reading holds: under the registered model the HD 58489
-test is undecided, not passed.
+These commits were first made in a private working repository and are copies here, so their hashes
+differ from the ones that `prereg/T1-RESULT.md` cites:
+
+| Original | Here | Commit |
+|---|---|---|
+| `0fba0be` | `fc5cbef` | ledger v1 and the T1 rule |
+| `7a72d7c` | `fa17b58` | the executable test |
+| `2b5a4b0` | `fdda2a1` | the data decisions |
+| `6080378` | `78e9912` | the result |
+
+The copies keep the content, times and messages of the originals. Two things differ: the originals
+carried SSH signatures, and the working notes of that morning (added in `afb07c0`, and present in the
+last two originals) are left out. Later work in the same repository, which is not part of this
+paper, was left out as well.
+
+`prereg/T1-RESULT.md` is the record written on 4 Oct. Where it differs from the paper, the paper's
+reading holds: under the registered model the HD 58489 test is undecided, not passed.
 
 ## ESO data used by T1
 
