@@ -43,6 +43,14 @@ print(rvvet.rule_pass(pd.DataFrame([r])).iloc[0])
 
 ## Reproduce the paper (about four hours on two cores)
 
+Use the pinned environment in `../requirements-paper.txt` (Python 3.13). In it, the steps below
+regenerate the simulated cases, the benchmark features and every number, table and figure of
+the paper exactly. Newer library versions give slightly different numbers: scikit-learn 1.9
+changes the classifier outputs (`results/sklearn19_sensitivity.json`), and scipy 1.18 changes
+recomputed features in the fifth decimal place for simulated cases and by a few per cent for HD 10180 d.
+To skip the four-hour runs, `python analyze.py` alone rebuilds everything from the stored
+simulations and features (about a minute).
+
 ```bash
 cd scripts
 python run_sims.py ../../sims 16000 2 20260929                       # labelled simulations on 260 RVBank stars
@@ -54,7 +62,10 @@ python analyze.py                                                    # numbers.j
 ```
 
 Every number in the text of the paper is a macro in `paper/numbers.tex`, written by
-`analyze.py`; every table except the feature definitions is written by it too. Every run is
+`analyze.py`; every table except the feature definitions is written by it too. The numbers
+of Sect. 6.5 are in `paper/numbers_forward.tex`, written by `../forward_test/timesplit.py`, and
+those on software versions in `paper/numbers_versions.tex`, written by
+`version_sensitivity.py`. Every run is
 seeded; `rvvet vet` writes a provenance block (version, source hash, input file).
 
 ## Changes in 0.3.1 (after a third review)

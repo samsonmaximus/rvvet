@@ -178,11 +178,75 @@ single-frequency probability is above 1\% (of \nmBenchR\ refuted and \nmUpN\ uph
 whose outcome differs between the first pass and this version. The frozen-pipeline
 results are released with the code.
 
+\subsection{A test forward in time}
+\label{sec:timesplit}
+
+The benchmark asks how the ladder treats signals whose fate was already known. A stricter
+test asks whether it would have pointed the right way before the fate was known.
+HARPS-RVBank ends in January 2022, so we ran the frozen ladder blind on every star with at
+least 20 nights over 100\,d (\nmTsStars\ stars; the highest peak per star, 1.2--500\,d) and
+built the list it would have produced at that date: significant peaks that pass the
+a-priori rule, have $K < 100\ms$ and lie on stars with no planet published before 2022 in
+the NASA Exoplanet Archive (queried on 2026 October 4). That list has \nmTsN\ signals.
+Since then, \nmTsHits\ of them have been published as planets at the same period
+($|1/P - 1/P_{\rm pub}| < 1.5/T$).
+
+Ranked by the boosted trees, \nmTsTreeTen\ of the top 10 and \nmTsTreeTwenty\ of the top 20
+were later published, against \nmTsExpTen\ and \nmTsExpTwenty\ expected from the base rate
+of \nmTsBase\% (hypergeometric $p = \nmTsPTen$ and $\nmTsPTwenty$;
+Fig.~\ref{fig:timesplit}). Ranked by the false-alarm probability alone the counts are
+\nmTsFapTen\ and \nmTsFapTwenty, and by the logistic regression \nmTsLogTen\ and
+\nmTsLogTwenty. Over the whole list the area under the ROC curve is \nmTsAucTree\ (95\%
+interval \nmTsAucTreeLo--\nmTsAucTreeHi) for the trees, \nmTsAucLog\
+(\nmTsAucLogLo--\nmTsAucLogHi) for the logistic regression, \nmTsAucFap\
+(\nmTsAucFapLo--\nmTsAucFapHi) for the false-alarm probability and \nmTsAucSnr\ for
+$K/\sigma_K$. With \nmTsHits\ positives these cannot be told apart: the later planets
+gather at the top of the list, but this test does not show that the classifiers rank
+better than significance alone. Keeping stars that had other planets before 2022
+(\nmTsLooseN\ signals, the same \nmTsLooseHits\ later planets) leaves the trees at
+\nmTsLooseTreeTen\ of the top 10. A coordinate match with exoplanet.eu found
+\nmTsEuN\ listed signals, on HD\,157172 and HIP\,112414 (HD\,215456), that are planets
+announced in 2011 \citep{Mayor2011} but absent from the NASA archive; removing them leaves
+the trees at \nmTsEuExTreeTen\ of the top 10 (AUC \nmTsEuExAucTree), and counting them as
+later planets gives \nmTsEuHitTreeTen\ of the top 10 and \nmTsEuHitTreeTwenty\ of the top 20.
+
+Two limits apply. Of the \nmTsHits\ later planets, \nmTsToi\ orbit TESS candidate hosts,
+stars often observed with HARPS because of the candidate, so the list is enriched in stars
+someone was already following; \nmTsToiTopTen\ of the \nmTsTreeTen\ in the trees' top 10
+are such stars. And ``not yet published'' is not ``false'': the share of later planets is a
+lower bound that will rise as the other signals are followed up.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{fig_timesplit.pdf}
+\caption{The \nmTsN\ signals the ladder would have listed in January 2022 on stars with no
+known planet, ranked by each score: the cumulative number published as planets at the same
+period since then (\nmTsHits\ in all).}
+\label{fig:timesplit}
+\end{figure}
+
+The open signals also make predictions that new data can test. We froze them, with
+circular ephemerides, in a list (the discovery ledger) and tested the two of its 30
+highest-ranked signals that had at least ten public spectra taken after 2022 in the ESO
+archive, with the decision rule written down before their velocities were read. For
+GJ\,902 (\nmTaGjP\,d, predicted $K = \nmTaGjK \pm \nmTaGjsK\ms$), ESPRESSO, HARPS and NIRPS
+spectra on \nmTaGjNights\ nights give $\nmTaGjA \pm \nmTaGjsA\ms$ at the predicted phase.
+The ladder and the rule passed this signal (trees score \nmTaGjTree), and the new data
+exclude it. For HD\,58489 (\nmTaHdP\,d, $\nmTaHdK \pm \nmTaHdsK\ms$), \nmTaHdNights\ HARPS
+nights give $\nmTaHdA \pm \nmTaHdsA\ms$ at the predicted phase, about $\nmTaHdSigma\sigma$
+once the statistic is calibrated on noise-only simulations. That result gives the two
+cross-correlation masks of these spectra separate zero points, a choice made after the
+velocities were displayed but before any fit; with the single zero point that was
+registered, the amplitude is $\nmTaHdLitA \pm \nmTaHdLitsA\ms$ and the test is undecided.
+One prediction failed and one survived weakly. The ledger, the rule, the data and the
+results are released with the code; git commit times record the order in which they were
+written, but they are not independent timestamps.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\texorpdfstring{A worked example: HD\,297396\,\ensuremath{\mathrm{b}}}{A worked example: HD 297396 b}}
 \label{sec:example}
 
-HD\,297396\,b is a 4.27-d candidate found in a ranked search of HARPS-RVBank (Fraser,
+HD\,297396\,b is a 4.27-d candidate found in a periodogram survey of HARPS-RVBank (Fraser,
 in preparation). Through the generic pipeline, with \nmHDn\ nightly epochs over
 \nmHDbase\,yr (the discovery analysis, with stricter cuts, keeps 104), its peak has a
 Baluev FAP of $10^{\nmHDfap}$ and $K = \nmHDK \pm \nmHDsK\ms$ ($K/\sigma_K = \nmHDsnr$).
@@ -193,7 +257,13 @@ has power near its period beyond $\dchi = \nmHDind$. The indicators give no sign
 rotation proxy, so the rotation rung is not applied.
 It \nmHDrule\ the a-priori rule, whose thresholds were partly set during its own
 analysis, and the classifiers give it scores of \nmHDpTree\ (trees), \nmHDpLog\
-(logistic) and \nmHDpNoInd\ (without indicators).
+(logistic) and \nmHDpNoInd\ (without indicators). These are not the candidate's adopted
+values. The discovery analysis (Fraser, in preparation) gives each of four groups of
+programmes its own offset and jitter, so one discrepant night inflates the noise of its own
+programme only; it finds $K = 5.5 \pm 0.8\ms$ and a false-alarm probability, calibrated by
+simulation, of $1.4\times10^{-3}$ with all epochs and $7\times10^{-6}$ without that night. The
+generic values above come from two eras and a likelihood ratio with one jitter scale, whose
+Baluev approximation is liberal on real noise (Sect.~\ref{sec:fap}).
 
 The example also shows what the ladder cannot do. The star's rotation period is not
 measured; the indicators are weak for this star; and activity calibrations place its

@@ -21,9 +21,16 @@ inside the search band, the window around a claimed period, the detrending and c
 indicators, the exclusion of seasonal aliases from the rotation proxy, a transient versus
 a stationary signal, removal of an $e = 0.6$ orbit, deterministic seeding, folds that
 never split a star, and the command line. A simulated case takes about
-\nmSecPerCase\,s on one core. Every computed result in the text of this paper is a macro written by the
-analysis script from its outputs, and so is every table body except
-Table~\ref{tab:features}; the numbers typed by hand are design constants, literature values
+\nmSecPerCase\,s on one core. The results come from Python 3.13 with \code{numpy} 2.4,
+\code{scipy} 1.17, \code{pandas} 3.0, \code{scikit-learn} 1.8 and \code{matplotlib} 3.10, pinned
+in the release; in that environment the released code regenerates the benchmark features,
+\nmConsistN\ randomly chosen simulated cases and every number, table and figure exactly. Newer versions differ slightly: with
+\code{scikit-learn} \nmVerOther, which assigns stars to cross-validation folds differently and
+builds different trees, the classifier AUCs on the simulations move by at most \nmVerAucMax\ and
+the benchmark AUC without indicator features changes from \nmVerBNoIndPaper\ to
+\nmVerBNoIndOther. Every computed result in the text of this paper is a macro written by the
+analysis scripts from their outputs (Sect.~\ref{sec:timesplit} by its own script), and so is
+every table body except Table~\ref{tab:features}; the numbers typed by hand are design constants, literature values
 and counts of items such as tests, listed in the released provenance file.
 
 \subsection{Defects found in an AI-assisted analysis}

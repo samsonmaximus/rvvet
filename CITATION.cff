@@ -12,7 +12,7 @@ license:
   - MIT
   - CC-BY-4.0
 doi: ZENODODOI
-repository-code: "https://github.com/GITHUBUSER/rvvet"
+repository-code: "https://github.com/samsonmaximus/rvvet"
 keywords: [exoplanets, radial velocity, false positives, stellar activity, injection-recovery, machine learning]
 preferred-citation:
   type: article

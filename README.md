@@ -18,6 +18,9 @@ whose fate is known: upheld or refuted.
 - No single test is decisive. The best single feature reaches AUC 0.78; combined classifiers reach 0.91–0.92.
 - On these stars the Baluev false-alarm approximation is *liberal*: a nominal 0.44 % corresponds to a real 1 %.
 - The a-priori rule rejects 5 of the 6 significant refuted signals and 2 of 21 significant upheld ones.
+- Run on the archive as it stood in January 2022, the ladder ranks the 14 signals since published as planets
+  near the top (6 of the top 10), though not measurably better than the false-alarm probability alone. Of two
+  pre-registered predictions tested with newer ESO spectra, one failed (GJ 902) and one passed weakly (HD 58489).
 
 ## Layout
 
@@ -32,12 +35,28 @@ whose fate is known: upheld or refuted.
 | `defects/` | The defect-log study of Sect. 8.2: codebook, sources, extraction, two independent codings, adjudicated log. |
 | `reviews/` | The referee reports on the paper and the responses. |
 | `results_v0.1/`, `figures_v0.1/`, `sims_v0.1/`, `rvvet_v0.1_snapshot/` | The frozen first pass, kept for the before/after comparison in Appendix B. |
+| `forward_test/` | The forward-in-time test of Sect. 6.5: the 30 Sept archive run, catalogue cross-matches, the discovery ledger and the pre-registered test T1, with its git history. See `forward_test/README.md`. |
+| `requirements-paper.txt` | The exact environment that reproduces the paper (see below). |
 | `NUMBERS.md`, `ACCEPTANCE_methods.md` | Provenance of every number; the acceptance list frozen before the work. |
+
+## Reproduce the paper
+
+```bash
+python3.13 -m venv venv && . venv/bin/activate
+pip install -r requirements-paper.txt && pip install -e ./rvvet
+python rvvet/scripts/load_rvbank.py table4.dat.gz data/rvbank.parquet   # see below for table4.dat.gz
+python rvvet/scripts/analyze.py                                         # every macro, table and figure
+(cd forward_test && python timesplit.py)                                # Sect. 6.5
+```
+
+In this environment the released code regenerates the paper's numbers, tables and figures exactly
+(checked in a fresh virtual environment on 2026-10-06). `rvvet/README.md` lists the longer runs
+that regenerate the simulations and benchmark features themselves.
 
 ## Install
 
 ```bash
-pip install "git+https://github.com/GITHUBUSER/rvvet#subdirectory=rvvet"
+pip install "git+https://github.com/samsonmaximus/rvvet#subdirectory=rvvet"
 # or, from a clone:
 pip install -e "./rvvet[test]" && (cd rvvet && pytest)    # 40 tests
 ```

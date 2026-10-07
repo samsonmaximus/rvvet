@@ -4,6 +4,7 @@
 set -e
 cd "$(dirname "$0")"
 cp ../figures/fig_*.pdf .
+cp ../forward_test/fig_timesplit.pdf .
 cat part_front.tex part_abstract.tex part_methods.tex part_results.tex part_bench.tex \
     part_verify.tex part_end.tex part_apptable.tex > rvvet_methods.tex
 pdflatex -interaction=nonstopmode rvvet_methods.tex > build.log 2>&1 || true

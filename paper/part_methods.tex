@@ -12,7 +12,7 @@ Signals later withdrawn turned out to be produced by the sampling and the noise
 \citep{Robertson2014,Santos2014,Robertson2015,Carleo2020,Burrows2024}, or by an alias
 of rotation that did not hold phase when new data arrived \citep{Lubin2021}.
 The tests used to screen candidates are well known individually: false-alarm
-probabilities \citep{Baluev2008}, alias comparisons, activity-indicator
+probabilities \citep{Baluev2008}, including against red noise \citep{Ejaz2026}, alias comparisons, activity-indicator
 periodograms, signal growth and stacked periodograms \citep{MortierCC2017},
 apodised sinusoids \citep{Hara2022b} and false-inclusion probabilities
 \citep{Hara2022}. What is rarely measured is how well each of them separates
@@ -20,7 +20,9 @@ planets from impostors on the sampling and noise of real archival series, and
 how they perform on signals whose fate is known.
 
 Blind challenges have measured how well activity models recover planets in
-simulated data sets \citep{Dumusque2017,Zhao2022}. Here we ask a complementary
+simulated data sets \citep{Dumusque2017,Zhao2022}, and a neural network trained on
+simulations has been proposed to replace the significance test and classify signals as
+planetary or not \citep{Nieto2023}. Here we ask a complementary
 question for archival searches: given a significant periodic signal in a long,
 irregular, single-instrument series, which tests tell a planet from an
 impostor, and how often do they fail? We answer it in four steps.
@@ -33,7 +35,9 @@ impostor, and how often do they fail? We answer it in four steps.
       (Sects.~\ref{sec:sims} and~\ref{sec:simres}).
 \item We apply the ladder, a rule whose thresholds were fixed before the benchmark was run, and
       classifiers trained only on the simulations to published signals around
-      HARPS-RVBank stars whose later verdict is known (Sect.~\ref{sec:bench}).
+      HARPS-RVBank stars whose later verdict is known (Sect.~\ref{sec:bench}), and to the
+      archive as it stood in January 2022, against the planets published since
+      (Sect.~\ref{sec:timesplit}).
 \item Because the analysis that motivated this work was written with an AI
       assistant, we report the defects that checks of it found, coded by two
       independent instances of the model, as a case study in verifying AI-assisted analysis

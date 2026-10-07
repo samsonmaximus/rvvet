@@ -1,8 +1,9 @@
 # Where every number in the methods paper comes from
 
 > Note for this repository: `analysis/counts.py` and `analysis/xstar.py` are in the companion
-> repository `hd297396b`; `CHANGELOG.md` and `sims.log` were working files of the release folder
-> and are summarised in the paper's Sect. 6.4 and Appendix B. `data/rvbank.parquet` is rebuilt
+> repository `hd297396b`; `CHANGELOG.md` was a working file of the release folder and is
+> summarised in the paper's Sect. 6.4 and Appendix B. `sims.log` (the per-chunk simulation
+> timing behind `\nmSecPerCase`) is in the repository root. `data/rvbank.parquet` is rebuilt
 > locally with `rvvet/scripts/load_rvbank.py` (see README).
 
 **Generated numbers.** Every computed result in the text of `paper/rvvet_methods.tex` is a
@@ -30,6 +31,8 @@ run). To regenerate: see `rvvet/README.md`, "Reproduce the paper".
 | `\nmHD*` | `data/rvbank.parquet` (HD 297396) | worked example |
 | `\nmRVBank*`, `\nmBenchClipped*`, `\nmProx*` | `data/rvbank.parquet` | the archive |
 | `\nmDef*` (incl. `\nmDefNum*`), Table 5 rows | `defects/defect_log.csv`, `defects/coder_A.csv`, `defects/coder_B.csv`, `defects/excluded.csv` | defect log |
+| `\nmTs*`, `\nmTa*` (Sect. 6.5) | `paper/numbers_forward.tex`, written by `forward_test/timesplit.py` from `forward_test/archive_run_2026-09-30/archive_blind_rvvet.csv`, `nea_xmatch_2026-10-04.txt`, `eu_xmatch_2026-10-04.txt` and `prereg/t1_data/*.json` | forward test |
+| `\nmVer*` (Sect. 8.1) | `paper/numbers_versions.tex`, written by `rvvet/scripts/version_sensitivity.py` from `results/sklearn19_sensitivity.json` | software versions |
 
 **Numbers typed by hand** (all others are macros):
 
@@ -50,3 +53,8 @@ run). To regenerate: see `rvvet/README.md`, "Reproduce the paper".
 | Referee points on the first draft; review rounds | 41; three rounds | `reviews/REFEREE_methods_v1.md`, `REFEREE_methods_v2.md`, `REFEREE_methods_v3.md` |
 | "Four errors" found in the first draft | night boundary, alias rung, fixed jitter, block dof | `reviews/REFEREE_methods_v1.md` points 7, 8, 13 |
 | v15 post-release correction (1221→1214 stars; 612→611, 1.24→1.21, 49→54, 7.6→8.1) | | v15 `CHANGELOG.md`, `analysis/xstar.py`, `analysis/counts.py` |
+| Sect. 7: discovery-analysis values for HD 297396 b (K = 5.5 ± 0.8 m/s; FAP 1.4 × 10⁻³ with all epochs, 7 × 10⁻⁶ without the discrepant night; four groups of programmes) | | the HD 297396 b paper (Fraser, in preparation), Sects. 2.1, 4.2 and 4.5 |
+| Sect. 6.5: hit window 1.5/T; K < 100 m/s; NASA archive query date | 2026-10-04 | `forward_test/timesplit.py` |
+| Sect. 6.5: "the two of its 30 highest-ranked signals with at least ten public post-2022 spectra" | | `forward_test/prereg/PREREG-T1-out-of-sample.md` |
+| Acknowledgements: ESO programme IDs of the T1 spectra (11 programmes, 67 products) | | ESO archive TAP query of the product identifiers in `forward_test/prereg/t1_data/`, 2026-10-06; listed in `forward_test/README.md` |
+| Sect. 8.1: software versions (Python 3.13, numpy 2.4, scipy 1.17, pandas 3.0, scikit-learn 1.8, matplotlib 3.10) | | `requirements-paper.txt` |
