@@ -1,0 +1,12 @@
+{
+ "created_utc": "2026-10-04T14:11:25.806229Z",
+ "rvvet_version": "0.3.1",
+ "rvvet_commit": "7ae430ed68c85586f4af812a5b5586c3dadce766",
+ "table4_sha256": "ce3d41c54fd213d2ac6292eff8786e2facfc4f73723672d386d8208bac7c30e5",
+ "sklearn": "1.9.1",
+ "python": "3.13.16",
+ "catalogue": "NASA Exoplanet Archive pscomppars dec<35 fetched 2026-10-04 (nea_xmatch_2026-10-04.txt)",
+ "selection": "top peak per star, 1.2-500 d, Baluev FAP<1%, frozen a-priori rule passes, K<100 m/s, no NASA-catalogued planet at that period",
+ "ranking": "open candidates first (no literature match, snr_K>=3), then by boosted-trees score trained on the released simulations",
+ "prediction": "circular sinusoid; T2027 = time of maximum RV nearest 2027-07-01 with propagated 1-sigma"
+}

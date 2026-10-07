@@ -1,0 +1,17 @@
+{
+ "star": "HD58489",
+ "n_spectra": 20,
+ "n_nights": 18,
+ "A": 4.021621432226993,
+ "sigma_A": 1.0155363489954128,
+ "z": 3.960095998735304,
+ "K_pred": 5.47530249534,
+ "verdict": "SUPPORTED",
+ "jitter": {
+  "HARPS_G2": 2.201,
+  "HARPS_K5": 3.597
+ },
+ "free_phase_offset_cycles": 0.1109352183752456,
+ "free_phase_amp": 6.864190333163224,
+ "input_sha256": "c138f9bbcc6d45c233dbee0c1efb75a4b9340e07e69038e9dae0d14e884added"
+}

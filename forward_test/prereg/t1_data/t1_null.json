@@ -1,0 +1,14 @@
+{
+ "HD58489": {
+  "null_P_z_ge_obs": 0.006,
+  "null_z_sd": 1.4008608294113793,
+  "planet_P_z_le_obs": 0.052,
+  "planet_median_z": 6.603112725216814
+ },
+ "GJ902": {
+  "null_P_z_ge_obs": 0.339,
+  "null_z_sd": 1.4199046742312442,
+  "planet_P_z_le_obs": 0.0,
+  "planet_median_z": 6.079604190398317
+ }
+}
