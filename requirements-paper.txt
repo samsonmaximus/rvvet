@@ -1,17 +1,38 @@
-# Exact environment in which rvvet/scripts/analyze.py reproduces every number, table and figure of
-# the paper byte for byte (figures pixel for pixel). Python 3.13.
-#   python -m venv venv && . venv/bin/activate
+# The environment that produced the paper, recovered and checked on 2026-10-06. Python 3.13.
+# In a fresh virtual environment with exactly these versions:
+#   - the 40 unit tests pass;
+#   - rvvet/scripts/check_sims_consistency.py regenerates simulated cases with identical features;
+#   - rvvet/scripts/run_benchmark.py regenerates results/benchmark_features.csv byte for byte;
+#   - rvvet/scripts/analyze.py rewrites all 356 macros and 7 tables byte for byte and the 6 figures
+#     pixel for pixel.
+#
+#   python3.13 -m venv venv && . venv/bin/activate
 #   pip install -r requirements-paper.txt && pip install -e ./rvvet
 #   python rvvet/scripts/load_rvbank.py table4.dat.gz data/rvbank.parquet
 #   python rvvet/scripts/analyze.py
-# scikit-learn 1.9 changed how GroupKFold assigns stars to folds; with it the classifier numbers
-# move slightly (see README.md, "Reproducing the paper"). Versions 1.5.2-1.8.0 all give the paper's numbers.
-numpy==2.5.3
-scipy==1.18.1
-pandas==3.0.5
+#
+# Newer versions give slightly different results. scikit-learn 1.9 changes the classifier numbers
+# (results/sklearn19_sensitivity.json). scipy 1.18 changes recomputed features by up to 2e-5
+# (relative) for simulated cases, and by a few per cent for HD 10180 d, whose six-planet Keplerian
+# backfit converges differently. Neither changes a reported number except where stated in the paper.
+numpy==2.4.4
+scipy==1.17.1
+pandas==3.0.3
 scikit-learn==1.8.0
 matplotlib==3.10.9
-pyarrow==25.0.1
+pyarrow==24.0.0
 joblib==1.6.0
 threadpoolctl==3.7.0
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.66.1
+kiwisolver==1.5.1
+packaging==26.3
+pillow==12.3.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+six==1.17.0
 pytest==9.1.1
+iniconfig==2.3.1
+pluggy==1.6.0
+Pygments==2.21.0

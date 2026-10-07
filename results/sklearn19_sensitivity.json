@@ -1,6 +1,6 @@
 {
  "other_scikit_learn": "1.9.1",
- "what": "Paper numbers (scikit-learn 1.8.0) against a rerun with another scikit-learn version, everything else pinned as in requirements-paper.txt. scikit-learn 1.5.2, 1.6.1, 1.7.2 and 1.8.0 reproduce the paper exactly; 1.9 changed GroupKFold's assignment of stars to folds.",
+ "what": "Paper numbers (environment of requirements-paper.txt, scikit-learn 1.8.0) against a rerun of analyze.py with scikit-learn 1.9.1 (numpy 2.5.3, scipy 1.18.1, pandas 3.0.5, matplotlib 3.11.2). analyze.py reads the stored features, so every difference comes from scikit-learn: 1.9 assigns stars to GroupKFold folds differently and its gradient-boosted trees give different models. scikit-learn 1.5.2, 1.6.1, 1.7.2 and 1.8.0 reproduce the paper exactly.",
  "simulation_cv_auc_full_precision": {
   "cv_logistic": {
    "paper": 0.9126815527217269,

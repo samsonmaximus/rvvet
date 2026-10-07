@@ -2,8 +2,8 @@
 Sect. 8.1 (paper/numbers_versions.tex).
 
 The paper's numbers come from the environment pinned in requirements-paper.txt (scikit-learn 1.8.0).
-scikit-learn 1.9 changed how GroupKFold assigns stars to folds, which changes the out-of-fold
-classifier scores. To regenerate results/sklearn19_sensitivity.json, run analyze.py in a copy of the
+scikit-learn 1.9 assigns stars to GroupKFold folds differently and its gradient-boosted trees give
+different models. To regenerate results/sklearn19_sensitivity.json, run analyze.py in a copy of the
 repository with scikit-learn 1.9.x installed and pass that copy's results/numbers.json and
 paper/numbers.tex:
 
@@ -38,7 +38,7 @@ def main():
         out = {"other_scikit_learn": a.other_version,
                "what": "Paper numbers (scikit-learn 1.8.0) against a rerun with another scikit-learn version, "
                        "everything else pinned as in requirements-paper.txt. scikit-learn 1.5.2, 1.6.1, 1.7.2 and "
-                       "1.8.0 reproduce the paper exactly; 1.9 changed GroupKFold's assignment of stars to folds.",
+                       "1.8.0 reproduce the paper exactly; 1.9 assigns stars to GroupKFold folds differently and its boosted trees differ.",
                "simulation_cv_auc_full_precision": full,
                "max_abs_auc_change_classifiers": max(abs(full[k]["delta"]) for k in CLASSIFIERS),
                "macros_that_change": {k: {"paper": rel[k], "other": new[k]} for k in sorted(rel) if rel[k] != new[k]},
