@@ -1,0 +1,156 @@
+# exoplanet.eu full catalogue CSV (https://exoplanet.eu/catalog/csv/; 8338 planets, all with planet_status Confirmed; sha256 of the CSV text c47fb8dfec03002bb7cffdc73936a5cca8af201c4d4d55378c2557b224f84d65),
+# downloaded 2026-10-07 02:39 UTC (6 October, Pacific time) and matched in the browser by coordinates (within 0.03 deg) to the 240 stars with a significant,
+# rule-passing signal with K < 100 m/s in archive_run_2026-09-30 (the stars of the time-split list before any catalogue cut). Stars without a listed planet do not appear.
+# star | number of matched planets | name ~ P <orbital_period, d> ~ disc <discovered, year> ~ <planet_status> ;; ...
+BD+062168 | 1 | TOI-603 b ~ P 16.179846 ~ disc 2024 ~ Confirmed
+BD-114672 | 2 | BD-11 4672 b ~ P 1634 ~ disc 2010 ~ Confirmed ;; BD-11 4672 c ~ P 74.2 ~ disc 2020 ~ Confirmed
+BD-141137 | 2 | TOI-421 Ab ~ P 5.197576 ~ disc 2020 ~ Confirmed ;; TOI-421 Ac ~ P 16.067541 ~ disc 2020 ~ Confirmed
+BD-202976 | 1 | WASP-166 b ~ P 5.44354215 ~ disc 2018 ~ Confirmed
+CD-341735 | 1 | TOI-2449 b ~ P 106.14468 ~ disc 2025 ~ Confirmed
+CD-348236 | 1 | TOI-757 b ~ P 17.46819 ~ disc 2024 ~ Confirmed
+CD-415929 | 1 | TOI-1036 Ab ~ P 3.78031 ~ disc 2019 ~ Confirmed
+CD-50714 | 1 | WASP-117 b ~ P 10.020593 ~ disc 2014 ~ Confirmed
+CD-611276 | 1 | TOI-220 b ~ P 10.695264 ~ disc 2021 ~ Confirmed
+GJ1044 | 1 | BD-21 397 c ~ P 6369.25 ~ disc 2023 ~ Confirmed
+GJ108 | 1 | iot Hor b ~ P 320.1 ~ disc 1999 ~ Confirmed
+GJ1246 | 1 | TOI-2194 b ~ P 15.337597 ~ disc 2019 ~ Confirmed
+GJ128 | 1 | 94 Cet Ab ~ P 466.2 ~ disc 2003 ~ Confirmed
+GJ143 | 2 | GJ 143 b ~ P 35.613442 ~ disc 2018 ~ Confirmed ;; GJ 143 c ~ P 7.789787 ~ disc 2018 ~ Confirmed
+GJ163 | 3 | GJ 163 b ~ P 8.6312 ~ disc 2012 ~ Confirmed ;; GJ 163 c ~ P 25.637 ~ disc 2012 ~ Confirmed ;; GJ 163 d ~ P 604 ~ disc 2013 ~ Confirmed
+GJ180 | 3 | GJ 180 b ~ P 17.132 ~ disc 2014 ~ Confirmed ;; GJ 180 c ~ P 24.329 ~ disc 2014 ~ Confirmed ;; GJ 180 d ~ P 106.341 ~ disc 2020 ~ Confirmed
+GJ2046 | 6 | HD 40307 b ~ P 4.3114 ~ disc 2008 ~ Confirmed ;; HD 40307 c ~ P 9.621 ~ disc 2008 ~ Confirmed ;; HD 40307 d ~ P 20.412 ~ disc 2008 ~ Confirmed ;; HD 40307 e ~ P 34.62 ~ disc 2012 ~ Confirmed ;; HD 40307 f ~ P 51.68 ~ disc 2012 ~ Confirmed ;; HD 40307 g ~ P 197.8 ~ disc 2012 ~ Confirmed
+GJ2126 | 1 | GJ 2126 b ~ P 272.7 ~ disc 2025 ~ Confirmed
+GJ221 | 3 | BD-06 1339 c ~ P 125.94 ~ disc 2013 ~ Confirmed ;; BD-06 1339 d ~ P 487 ~ disc 2014 ~ Confirmed ;; BD-06 1339 e ~ P 2.3946 ~ disc 2019 ~ Confirmed
+GJ253 | 2 | HD 51608 b ~ P 14.071 ~ disc 2011 ~ Confirmed ;; HD 51608 c ~ P 95.87 ~ disc 2011 ~ Confirmed
+GJ302 | 3 | HD 69830 b ~ P 8.6682 ~ disc 2006 ~ Confirmed ;; HD 69830 c ~ P 31.601 ~ disc 2006 ~ Confirmed ;; HD 69830 d ~ P 200.57 ~ disc 2006 ~ Confirmed
+GJ3082 | 1 | GJ 3082 b ~ P 11.942 ~ disc 2020 ~ Confirmed
+GJ3138 | 3 | GJ 3138 b ~ P 5.974 ~ disc 2017 ~ Confirmed ;; GJ 3138 c ~ P 1.22003 ~ disc 2017 ~ Confirmed ;; GJ 3138 d ~ P 257.8 ~ disc 2017 ~ Confirmed
+GJ3293 | 4 | GJ 3293 b ~ P 30.5987 ~ disc 2014 ~ Confirmed ;; GJ 3293 c ~ P 122.6196 ~ disc 2014 ~ Confirmed ;; GJ 3293 d ~ P 48.1345 ~ disc 2014 ~ Confirmed ;; GJ 3293 e ~ P 13.2543 ~ disc 2017 ~ Confirmed
+GJ3341 | 1 | GJ 3341 b ~ P 14.207 ~ disc 2014 ~ Confirmed
+GJ3634 | 1 | GJ 3634 b ~ P 2.64561 ~ disc 2011 ~ Confirmed
+GJ393 | 1 | GJ 393 b ~ P 7.02679 ~ disc 2021 ~ Confirmed
+GJ4291 | 4 | HD 215152 b ~ P 5.75942 ~ disc 2018 ~ Confirmed ;; HD 215152 c ~ P 7.28345 ~ disc 2011 ~ Confirmed ;; HD 215152 d ~ P 10.8642 ~ disc 2011 ~ Confirmed ;; HD 215152 e ~ P 25.1968 ~ disc 2018 ~ Confirmed
+GJ433 | 3 | GJ 433 b ~ P 7.3708 ~ disc 2009 ~ Confirmed ;; GJ 433 c ~ P 4874 ~ disc 2012 ~ Confirmed ;; GJ 433 d ~ P 36.052 ~ disc 2020 ~ Confirmed
+GJ436 | 1 | GJ 436 b ~ P 2.64394 ~ disc 2004 ~ Confirmed
+GJ480 | 2 | GJ 480 b ~ P 9.5536 ~ disc 2020 ~ Confirmed ;; GJ 480 c ~ P 6.4349 ~ disc 2025 ~ Confirmed
+GJ506 | 3 | 61 Vir b ~ P 4.215 ~ disc 2009 ~ Confirmed ;; 61 Vir c ~ P 38.021 ~ disc 2009 ~ Confirmed ;; 61 Vir d ~ P 123.01 ~ disc 2009 ~ Confirmed
+GJ514 | 1 | Gl 514 b ~ P 140.43 ~ disc 2022 ~ Confirmed
+GJ536 | 2 | GJ 536 b ~ P 8.7076 ~ disc 2016 ~ Confirmed ;; GJ 536 c ~ P 32.761 ~ disc 2025 ~ Confirmed
+GJ54.1 | 3 | YZ Cet b ~ P 2.02087 ~ disc 2017 ~ Confirmed ;; YZ Cet c ~ P 3.05989 ~ disc 2017 ~ Confirmed ;; YZ Cet d ~ P 4.65626 ~ disc 2017 ~ Confirmed
+GJ550 | 1 | HD 126525 b ~ P 948.12 ~ disc 2011 ~ Confirmed
+GJ569 | 1 | GJ 569 Bb ~ P 870 ~ disc 1999 ~ Confirmed
+GJ581 | 3 | GJ 581 b ~ P 5.368 ~ disc 2005 ~ Confirmed ;; GJ 581 c ~ P 12.919 ~ disc 2007 ~ Confirmed ;; GJ 581 e ~ P 3.153 ~ disc 2009 ~ Confirmed
+GJ628 | 3 | Wolf 1061 b ~ P 4.8869 ~ disc 2015 ~ Confirmed ;; Wolf 1061 c ~ P 17.8719 ~ disc 2015 ~ Confirmed ;; Wolf 1061 d ~ P 217.21 ~ disc 2015 ~ Confirmed
+GJ667 | 5 | GJ 667 Cb ~ P 7.2004 ~ disc 2009 ~ Confirmed ;; GJ 667 Cc ~ P 28.14 ~ disc 2011 ~ Confirmed ;; GJ 667 Ce ~ P 62.24 ~ disc 2013 ~ Confirmed ;; GJ 667 Cf ~ P 39.026 ~ disc 2013 ~ Confirmed ;; GJ 667 Cg ~ P 256.2 ~ disc 2013 ~ Confirmed
+GJ674 | 1 | GJ 674 b ~ P 4.6944 ~ disc 2007 ~ Confirmed
+GJ740 | 1 | GJ 740 b ~ P 2.37756 ~ disc 2021 ~ Confirmed
+GJ776 | 2 | HD 189567 b ~ P 14.288 ~ disc 2011 ~ Confirmed ;; HD 189567 c ~ P 33.688 ~ disc 2021 ~ Confirmed
+GJ845 | 1 | Eps Ind Ab ~ P null ~ disc 2018 ~ Confirmed
+GJ9018 | 1 | GJ 27.1 b ~ P 15.819 ~ disc 2014 ~ Confirmed
+GJ902 | 1 | HD 222237 b ~ P 20075 ~ disc 2024 ~ Confirmed
+GJ9191 | 3 | HD 39194 b ~ P 5.6368 ~ disc 2011 ~ Confirmed ;; HD 39194 c ~ P 14.03 ~ disc 2011 ~ Confirmed ;; HD 39194 d ~ P 33.91 ~ disc 2011 ~ Confirmed
+GJ9479 | 1 | HD 125595 b ~ P 9.6737 ~ disc 2009 ~ Confirmed
+GJ9827 | 3 | GJ 9827 b ~ P 1.2089765 ~ disc 2017 ~ Confirmed ;; GJ 9827 c ~ P 3.648086 ~ disc 2017 ~ Confirmed ;; GJ 9827 d ~ P 6.20183 ~ disc 2017 ~ Confirmed
+HATS-17 | 1 | HATS-17 b ~ P 16.254611 ~ disc 2016 ~ Confirmed
+HD10180 | 6 | HD 10180 c ~ P 5.75979 ~ disc 2010 ~ Confirmed ;; HD 10180 d ~ P 16.3579 ~ disc 2010 ~ Confirmed ;; HD 10180 e ~ P 49.745 ~ disc 2010 ~ Confirmed ;; HD 10180 f ~ P 122.76 ~ disc 2010 ~ Confirmed ;; HD 10180 g ~ P 601.2 ~ disc 2010 ~ Confirmed ;; HD 10180 h ~ P 2222 ~ disc 2010 ~ Confirmed
+HD101930 | 1 | HD 101930 Ab ~ P 70.46 ~ disc 2005 ~ Confirmed
+HD102117 | 1 | HD 102117 b ~ P 20.67 ~ disc 2004 ~ Confirmed
+HD102195 | 1 | HD 102195 b ~ P 4.114 ~ disc 2005 ~ Confirmed
+HD103197 | 1 | HD 103197 b ~ P 47.84 ~ disc 2009 ~ Confirmed
+HD103720 | 1 | HD 103720 b ~ P 4.5557 ~ disc 2014 ~ Confirmed
+HD103774 | 1 | HD 103774 Ab ~ P 5.8881 ~ disc 2013 ~ Confirmed
+HD103891 | 2 | HD 103891 b ~ P 1919 ~ disc 2021 ~ Confirmed ;; HD 103891 c ~ P 951.5 ~ disc 2026 ~ Confirmed
+HD104067 | 3 | HD 104067 b ~ P 55.851 ~ disc 2009 ~ Confirmed ;; HD 104067 c ~ P 13.8992 ~ disc 2024 ~ Confirmed ;; HD 104067 d ~ P 2.1538197 ~ disc 2024 ~ Confirmed
+HD105779 | 1 | HD 105779 b ~ P 2412 ~ disc 2021 ~ Confirmed
+HD10700 | 3 | tau Cet f ~ P 636.13 ~ disc 2012 ~ Confirmed ;; tau Cet g ~ P 20 ~ disc 2017 ~ Confirmed ;; tau Cet h ~ P 49.41 ~ disc 2017 ~ Confirmed
+HD107148 | 2 | HD 107148 Ab ~ P 48.056 ~ disc 2006 ~ Confirmed ;; HD 107148 Ac ~ P 18.3267 ~ disc 2021 ~ Confirmed
+HD108147 | 1 | HD 108147 b ~ P 10.8985 ~ disc 2002 ~ Confirmed
+HD108236 | 5 | HD 108236 b ~ P 3.79523 ~ disc 2020 ~ Confirmed ;; HD 108236 c ~ P 6.2037 ~ disc 2020 ~ Confirmed ;; HD 108236 d ~ P 14.17555 ~ disc 2020 ~ Confirmed ;; HD 108236 e ~ P 19.5917 ~ disc 2020 ~ Confirmed ;; HD 108236 f ~ P 29.54115 ~ disc 2020 ~ Confirmed
+HD109271 | 2 | HD 109271 Ab ~ P 7.8543 ~ disc 2013 ~ Confirmed ;; HD 109271 Ac ~ P 30.93 ~ disc 2013 ~ Confirmed
+HD111998 | 1 | 38 Vir b ~ P 825.9 ~ disc 2016 ~ Confirmed
+HD11231 | 3 | HD 11231 b ~ P 5.203 ~ disc 2019 ~ Confirmed ;; HD 11231 c ~ P 3.168 ~ disc 2026 ~ Confirmed ;; HD 11231 d ~ P 16.491 ~ disc 2026 ~ Confirmed
+HD117618 | 1 | HD 117618 b ~ P 25.8 ~ disc 2004 ~ Confirmed
+HD121504 | 1 | HD 121504 Ab ~ P 63.33 ~ disc 2003 ~ Confirmed
+HD128356 | 1 | HD 128356 b ~ P 298.2 ~ disc 2016 ~ Confirmed
+HD134060 | 2 | HD 134060 b ~ P 3.27 ~ disc 2011 ~ Confirmed ;; HD 134060 c ~ P 1160.9 ~ disc 2011 ~ Confirmed
+HD134606 | 5 | HD 134606 Ab ~ P 12.083 ~ disc 2011 ~ Confirmed ;; HD 134606 Ac ~ P 59.519 ~ disc 2011 ~ Confirmed ;; HD 134606 Ad ~ P 967.9 ~ disc 2011 ~ Confirmed ;; HD 134606 Ae ~ P 4.3203 ~ disc 2024 ~ Confirmed ;; HD 134606 Af ~ P 26.915 ~ disc 2024 ~ Confirmed
+HD136352 | 3 | nu2 Lup b ~ P 11.577794 ~ disc 2011 ~ Confirmed ;; nu2 Lup c ~ P 27.592076 ~ disc 2011 ~ Confirmed ;; nu2 Lup d ~ P 107.1363 ~ disc 2011 ~ Confirmed
+HD137388 | 1 | HD 137388 b ~ P 330 ~ disc 2011 ~ Confirmed
+HD137496 | 2 | HD 137496 b ~ P 1.62116 ~ disc 2021 ~ Confirmed ;; HD 137496 c ~ P 479.9 ~ disc 2021 ~ Confirmed
+HD13808 | 2 | HD 13808 b ~ P 14.1774 ~ disc 2011 ~ Confirmed ;; HD 13808 c ~ P 53.804 ~ disc 2011 ~ Confirmed
+HD143361 | 1 | HD 143361 Ab ~ P 1057 ~ disc 2008 ~ Confirmed
+HD1461 | 2 | HD 1461 b ~ P 5.7715 ~ disc 2009 ~ Confirmed ;; HD 1461 c ~ P 13.506 ~ disc 2011 ~ Confirmed
+HD147513 | 1 | HD 147513 Ab ~ P 528.4 ~ disc 2003 ~ Confirmed
+HD15337 | 2 | TOI-402 Ab ~ P 4.7559804 ~ disc 2019 ~ Confirmed ;; TOI-402 Ac ~ P 17.180546 ~ disc 2019 ~ Confirmed
+HD153950 | 1 | HD 153950 b ~ P 499.4 ~ disc 2008 ~ Confirmed
+HD154088 | 1 | HD 154088 b ~ P 18.56 ~ disc 2011 ~ Confirmed
+HD156411 | 1 | HD 156411 b ~ P 842.2 ~ disc 2009 ~ Confirmed
+HD157172 | 1 | HD 157172 b ~ P 104.84 ~ disc 2011 ~ Confirmed
+HD168746 | 1 | HD 168746 b ~ P 6.403 ~ disc 2002 ~ Confirmed
+HD169830 | 2 | HD 169830 b ~ P 225.62 ~ disc 2000 ~ Confirmed ;; HD 169830 c ~ P 2102 ~ disc 2003 ~ Confirmed
+HD175541 | 1 | HD 175541 b ~ P 297.3 ~ disc 2007 ~ Confirmed
+HD176986 | 3 | HD 176986 b ~ P 6.49164 ~ disc 2017 ~ Confirmed ;; HD 176986 c ~ P 16.8124 ~ disc 2017 ~ Confirmed ;; HD 176986 d ~ P 61.376 ~ disc 2026 ~ Confirmed
+HD181433 | 3 | HD 181433 b ~ P 9.3745 ~ disc 2008 ~ Confirmed ;; HD 181433 c ~ P 1014.5 ~ disc 2008 ~ Confirmed ;; HD 181433 d ~ P 12775 ~ disc 2008 ~ Confirmed
+HD183263 | 2 | HD 183263 Ab ~ P 626.5 ~ disc 2004 ~ Confirmed ;; HD 183263 Ac ~ P 4971.3 ~ disc 2008 ~ Confirmed
+HD183579 | 1 | HD 183579 b ~ P 17.471278 ~ disc 2021 ~ Confirmed
+HD190647 | 1 | HD 190647 b ~ P 1038.1 ~ disc 2007 ~ Confirmed
+HD190984 | 1 | HD 190984 b ~ P 4885 ~ disc 2009 ~ Confirmed
+HD192263 | 1 | HD 192263 b ~ P 24.3587 ~ disc 1999 ~ Confirmed
+HD204941 | 1 | HD 204941 Ab ~ P 1733 ~ disc 2011 ~ Confirmed
+HD205739 | 1 | HD 205739 b ~ P 279.8 ~ disc 2008 ~ Confirmed
+HD20781 | 4 | HD 20781 b ~ P 5.3135 ~ disc 2011 ~ Confirmed ;; HD 20781 c ~ P 13.8905 ~ disc 2011 ~ Confirmed ;; HD 20781 d ~ P 29.158 ~ disc 2019 ~ Confirmed ;; HD 20781 e ~ P 85.5073 ~ disc 2019 ~ Confirmed
+HD210277 | 1 | HD 210277 b ~ P 442.1 ~ disc 1998 ~ Confirmed
+HD212301B | 1 | HD 212301 Ab ~ P 2.245715 ~ disc 2005 ~ Confirmed
+HD215497 | 2 | HD 215497 b ~ P 3.93404 ~ disc 2009 ~ Confirmed ;; HD 215497 c ~ P 567.94 ~ disc 2009 ~ Confirmed
+HD216435 | 1 | tau1 Gru b ~ P 1311 ~ disc 2002 ~ Confirmed
+HD216770 | 1 | HD 216770 b ~ P 118.45 ~ disc 2003 ~ Confirmed
+HD21693 | 2 | HD 21693 b ~ P 22.656 ~ disc 2011 ~ Confirmed ;; HD 21693 c ~ P 53.881 ~ disc 2011 ~ Confirmed
+HD224538 | 1 | HD 224538 b ~ P 1202.1 ~ disc 2016 ~ Confirmed
+HD224693 | 1 | HD 224693 b ~ P 26.73 ~ disc 2006 ~ Confirmed
+HD231701 | 1 | HD 231701 b ~ P 141.89 ~ disc 2007 ~ Confirmed
+HD2638 | 1 | HD 2638 Ab ~ P 3.444 ~ disc 2005 ~ Confirmed
+HD285968 | 2 | GJ 176 b ~ P 8.7748 ~ disc 2007 ~ Confirmed ;; GJ 176 c ~ P 28.586 ~ disc 2019 ~ Confirmed
+HD31527 | 3 | HD 31527 b ~ P 16.557 ~ disc 2011 ~ Confirmed ;; HD 31527 c ~ P 51.2 ~ disc 2011 ~ Confirmed ;; HD 31527 d ~ P 274.2 ~ disc 2011 ~ Confirmed
+HD38283 | 1 | HD 38283 b ~ P 363.2 ~ disc 2011 ~ Confirmed
+HD38677 | 4 | HD 38677 b ~ P 18.57 ~ disc 2019 ~ Confirmed ;; HD 38677 c ~ P 6.584 ~ disc 2019 ~ Confirmed ;; HD 38677 d ~ P 2.882 ~ disc 2020 ~ Confirmed ;; HD 38677 e ~ P 5.516 ~ disc 2019 ~ Confirmed
+HD4308 | 1 | HD 4308 b ~ P 15.609 ~ disc 2005 ~ Confirmed
+HD43629 | 3 | TOI-880 Ab ~ P 2.57571 ~ disc 2024 ~ Confirmed ;; TOI-880 Ac ~ P 6.3872703 ~ disc 2025 ~ Confirmed ;; TOI-880 Ad ~ P 14.33201 ~ disc 2025 ~ Confirmed
+HD44219 | 1 | HD 44219 b ~ P 472.3 ~ disc 2009 ~ Confirmed
+HD45184 | 2 | HD 45184 b ~ P 5.8872 ~ disc 2011 ~ Confirmed ;; HD 45184 c ~ P 13.1354 ~ disc 2019 ~ Confirmed
+HD47186 | 2 | HD 47186 b ~ P 4.0845 ~ disc 2008 ~ Confirmed ;; HD 47186 c ~ P 5838 ~ disc 2008 ~ Confirmed
+HD48265 | 2 | HD 48265 b ~ P 789.6 ~ disc 2008 ~ Confirmed ;; HD 48265 c ~ P 10418 ~ disc 2026 ~ Confirmed
+HD52265 | 1 | HD 52265 b ~ P 119.27 ~ disc 2000 ~ Confirmed
+HD5388 | 1 | HD 5388 b ~ P 772.5 ~ disc 2009 ~ Confirmed
+HD564 | 1 | HD 564 b ~ P 492.3 ~ disc 2014 ~ Confirmed
+HD5976 | 1 | TOI-261 b ~ P 3.3639254 ~ disc 2024 ~ Confirmed
+HD63454 | 1 | HD 63454 b ~ P 2.81747 ~ disc 2005 ~ Confirmed
+HD63765 | 1 | HD 63765 b ~ P 358 ~ disc 2009 ~ Confirmed
+HD66428 | 2 | HD 66428 b ~ P 2284.535 ~ disc 2006 ~ Confirmed ;; HD 66428 c ~ P 25915 ~ disc 2021 ~ Confirmed
+HD6718 | 1 | HD 6718 b ~ P 2476 ~ disc 2009 ~ Confirmed
+HD7449 | 2 | HD 7449 Ab ~ P 1270.6 ~ disc 2011 ~ Confirmed ;; HD 7449 Ad ~ P 51.154 ~ disc 2022 ~ Confirmed
+HD74698 | 2 | HD 74698 b ~ P 15.017 ~ disc 2023 ~ Confirmed ;; HD 74698 c ~ P 3449 ~ disc 2023 ~ Confirmed
+HD76700 | 1 | HD 76700 b ~ P 3.97101 ~ disc 2002 ~ Confirmed
+HD77338 | 1 | HD 77338 b ~ P 5.7561 ~ disc 2012 ~ Confirmed
+HD81968 | 1 | TOI-6267 b ~ P 733.99 ~ disc 2019 ~ Confirmed
+HD83443 | 2 | HD 83443 b ~ P 2.985628 ~ disc 2002 ~ Confirmed ;; HD 83443 c ~ P 8241 ~ disc 2022 ~ Confirmed
+HD8535 | 1 | HD 8535 Ab ~ P 1313 ~ disc 2009 ~ Confirmed
+HD89839 | 1 | HD 89839 b ~ P 3369.315 ~ disc 2010 ~ Confirmed
+HD90156 | 1 | HD 90156 b ~ P 49.77 ~ disc 2009 ~ Confirmed
+HD93385 | 3 | HD 93385 Ab ~ P 7.3426 ~ disc 2021 ~ Confirmed ;; HD 93385 Ac ~ P 13.18 ~ disc 2011 ~ Confirmed ;; HD 93385 Ad ~ P 46.025 ~ disc 2011 ~ Confirmed
+HD96700 | 3 | HD 96700 Ab ~ P 8.1245 ~ disc 2011 ~ Confirmed ;; HD 96700 Ac ~ P 19.88 ~ disc 2021 ~ Confirmed ;; HD 96700 Ad ~ P 103.5 ~ disc 2011 ~ Confirmed
+HD99492 | 2 | HD 99492 b ~ P 17.0503 ~ disc 2004 ~ Confirmed ;; HD 99492 c ~ P 95.233 ~ disc 2023 ~ Confirmed
+HIP112414 | 2 | HD 215456 Ab ~ P 191.99 ~ disc 2011 ~ Confirmed ;; HD 215456 Ac ~ P 2277 ~ disc 2011 ~ Confirmed
+HIP12961 | 1 | HIP 12961 b ~ P 57.435 ~ disc 2009 ~ Confirmed
+HIP17157 | 1 | HIP 17157 b ~ P 22315.6 ~ disc 2022 ~ Confirmed
+HIP49067 | 2 | BD-08 2823 b ~ P 5.6 ~ disc 2009 ~ Confirmed ;; BD-08 2823 c ~ P 237.6 ~ disc 2009 ~ Confirmed
+HIP54597 | 2 | HIP 54597 b ~ P 3274 ~ disc 2023 ~ Confirmed ;; HIP 54597 c ~ P null ~ disc 2018 ~ Confirmed
+HIP73427 | 2 | TOI-836 b ~ P 3.81673 ~ disc 2022 ~ Confirmed ;; TOI-836 c ~ P 8.59545 ~ disc 2022 ~ Confirmed
+K2-314 | 3 | K2-314 b ~ P 3.5951 ~ disc 2020 ~ Confirmed ;; K2-314 c ~ P 15.624 ~ disc 2020 ~ Confirmed ;; K2-314 d ~ P 35.747 ~ disc 2020 ~ Confirmed
+TOI-500 | 4 | TOI-500 b ~ P 0.5481579 ~ disc 2022 ~ Confirmed ;; TOI-500 c ~ P 6.6299 ~ disc 2022 ~ Confirmed ;; TOI-500 d ~ P 26.235 ~ disc 2022 ~ Confirmed ;; TOI-500 e ~ P 60.33 ~ disc 2022 ~ Confirmed
+TOI-849 | 1 | TOI-849 b ~ P 0.765548 ~ disc 2020 ~ Confirmed
+TOI125 | 3 | TOI-125 b ~ P 4.65382 ~ disc 2019 ~ Confirmed ;; TOI-125 c ~ P 9.15059 ~ disc 2019 ~ Confirmed ;; TOI-125 d ~ P 19.98 ~ disc 2019 ~ Confirmed
+TOI175 | 6 | L 98-59 b ~ P 2.2531136 ~ disc 2018 ~ Confirmed ;; L 98-59 c ~ P 3.6906777 ~ disc 2018 ~ Confirmed ;; L 98-59 d ~ P 7.4507245 ~ disc 2018 ~ Confirmed ;; L 98-59 e ~ P 12.796 ~ disc 2021 ~ Confirmed ;; L 98-59 f ~ P 23.064 ~ disc 2021 ~ Confirmed ;; L 98-59 g ~ P 1.73615 ~ disc 2025 ~ Confirmed
+TYC111-1915-1 | 1 | TOI-941 b ~ P 8.5145626 ~ disc 2019 ~ Confirmed
+TYC6570-1482-1 | 2 | TOI-6695 b ~ P 80.389 ~ disc 2025 ~ Confirmed ;; TOI-6695 c ~ P 242.4 ~ disc 2025 ~ Confirmed
+TYC8954-1014-1 | 2 | TOI-2000 b ~ P 3.098331 ~ disc 2022 ~ Confirmed ;; TOI-2000 c ~ P 9.1270553 ~ disc 2022 ~ Confirmed
+TYC9325-163-1 | 1 | TOI-2196 b ~ P 1.1947268 ~ disc 2022 ~ Confirmed

@@ -1,0 +1,32 @@
+{
+ "period": 4.26837,
+ "discrepant_night_bjd": 2454922.5269789,
+ "all": {
+  "n": 106,
+  "log10_fap_rescaled": -5.690504865565376,
+  "log10_fap_planet_free": -3.8265917461272134,
+  "jitter_planet_free": {
+   "pre": 7.88,
+   "post": 5.12
+  },
+  "jitter_rescaled": {
+   "pre": 6.27,
+   "post": 4.07
+  },
+  "paper1_analytic_over_planet_free": 14.757555559967052
+ },
+ "without_night": {
+  "n": 105,
+  "log10_fap_rescaled": -9.219208521081445,
+  "log10_fap_planet_free": -5.879661034652673,
+  "jitter_planet_free": {
+   "pre": 5.7,
+   "post": 5.28
+  },
+  "jitter_rescaled": {
+   "pre": 4.09,
+   "post": 3.79
+  },
+  "paper1_analytic_over_planet_free": 5.078504450212376
+ }
+}

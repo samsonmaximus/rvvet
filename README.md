@@ -18,16 +18,18 @@ whose fate is known: upheld or refuted.
 - No single test is decisive. The best single feature reaches AUC 0.78; combined classifiers reach 0.91–0.92.
 - On these stars the Baluev false-alarm approximation is *liberal*: a nominal 0.44 % corresponds to a real 1 %.
 - The a-priori rule rejects 5 of the 6 significant refuted signals and 2 of 21 significant upheld ones.
-- Run on the archive as it stood in January 2022, the ladder ranks the 14 signals since published as planets
-  near the top (6 of the top 10), though not measurably better than the false-alarm probability alone. Of two
-  pre-registered predictions tested with newer ESO spectra, one failed (GJ 902) and one passed weakly (HD 58489).
+- Run on the archive as it stood in January 2022, the ladder ranks the 10 signals since published as planets
+  near the top (6 of the top 10, against 1.0 expected), though not measurably better than the false-alarm
+  probability alone. Five of those six are on stars with TESS candidates, which observers were already
+  following. Of two pre-registered predictions tested with newer ESO spectra, one failed (GJ 902) and the other
+  (HD 58489) is undecided under the registered model.
 
 ## Layout
 
 | Folder / file | Contents |
 |---|---|
 | `rvvet/` | The Python package (`src/rvvet`), 40 unit tests, CLI and the scripts that reproduce the paper. **Start with `rvvet/README.md`.** |
-| `paper/` | LaTeX source of the paper. `numbers.tex` and `tab_*.tex` are written by `rvvet/scripts/analyze.py`; `build.sh` builds the PDF (needs the figures from `figures/`). |
+| `paper/` | LaTeX source of the paper. `numbers.tex` and `tab_*.tex` are written by `rvvet/scripts/analyze.py`, `numbers_forward.tex` by `forward_test/timesplit.py`, `numbers_versions.tex` by `rvvet/scripts/version_sensitivity.py` and `numbers_hdfap.tex` by `rvvet/scripts/hd297396_fap.py`; `build.sh` builds the PDF (needs the figures from `figures/`). |
 | `results/` | Outputs behind every number: `numbers.json` (full precision), false-alarm calibration, benchmark features and scores, calibration tables, reproducibility check. |
 | `figures/` | The six paper figures, written by `rvvet/scripts/analyze.py`. |
 | `sims/` | The 16 000 simulated cases (parquet, 500 per file) and `stars.json` (the 260 stars and the seed). |
@@ -46,6 +48,7 @@ python3.13 -m venv venv && . venv/bin/activate
 pip install -r requirements-paper.txt && pip install -e ./rvvet
 python rvvet/scripts/load_rvbank.py table4.dat.gz data/rvbank.parquet   # see below for table4.dat.gz
 python rvvet/scripts/analyze.py                                         # every macro, table and figure
+python rvvet/scripts/hd297396_fap.py                                    # the FAP comparison of Sect. 7
 (cd forward_test && python timesplit.py)                                # Sect. 6.5
 ```
 

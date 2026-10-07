@@ -31,7 +31,8 @@ run). To regenerate: see `rvvet/README.md`, "Reproduce the paper".
 | `\nmHD*` | `data/rvbank.parquet` (HD 297396) | worked example |
 | `\nmRVBank*`, `\nmBenchClipped*`, `\nmProx*` | `data/rvbank.parquet` | the archive |
 | `\nmDef*` (incl. `\nmDefNum*`), Table 5 rows | `defects/defect_log.csv`, `defects/coder_A.csv`, `defects/coder_B.csv`, `defects/excluded.csv` | defect log |
-| `\nmTs*`, `\nmTa*` (Sect. 6.5) | `paper/numbers_forward.tex`, written by `forward_test/timesplit.py` from `forward_test/archive_run_2026-09-30/archive_blind_rvvet.csv`, `nea_xmatch_2026-10-04.txt`, `eu_xmatch_2026-10-04.txt` and `prereg/t1_data/*.json` | forward test |
+| `\nmTs*`, `\nmTa*` (Sect. 6.5) | `paper/numbers_forward.tex`, written by `forward_test/timesplit.py` from `forward_test/archive_run_2026-09-30/archive_blind_rvvet.csv`, `nea_xmatch_2026-10-04.txt`, `eu_xmatch_full_2026-10-06.txt`, `ledger_v1.csv` and `prereg/t1_data/` | forward test |
+| `\nmHDfapHz`, `\nmHDfapHzNoNight`, `\nmHDfapNoNight`, `\nmHDratio*` (Sect. 7) | `paper/numbers_hdfap.tex`, written by `rvvet/scripts/hd297396_fap.py` from `data/rvbank.parquet`; full precision in `results/hd297396_fap.json` | worked example: FAP comparison |
 | `\nmVer*` (Sect. 8.1) | `paper/numbers_versions.tex`, written by `rvvet/scripts/version_sensitivity.py` from `results/sklearn19_sensitivity.json` | software versions |
 
 **Numbers typed by hand** (all others are macros):
@@ -53,8 +54,11 @@ run). To regenerate: see `rvvet/README.md`, "Reproduce the paper".
 | Referee points on the first draft; review rounds | 41; three rounds | `reviews/REFEREE_methods_v1.md`, `REFEREE_methods_v2.md`, `REFEREE_methods_v3.md` |
 | "Four errors" found in the first draft | night boundary, alias rung, fixed jitter, block dof | `reviews/REFEREE_methods_v1.md` points 7, 8, 13 |
 | v15 post-release correction (1221→1214 stars; 612→611, 1.24→1.21, 49→54, 7.6→8.1) | | v15 `CHANGELOG.md`, `analysis/xstar.py`, `analysis/counts.py` |
-| Sect. 7: discovery-analysis values for HD 297396 b (K = 5.5 ± 0.8 m/s; FAP 1.4 × 10⁻³ with all epochs, 7 × 10⁻⁶ without the discrepant night; four groups of programmes) | | the HD 297396 b paper (Fraser, in preparation), Sects. 2.1, 4.2 and 4.5 |
-| Sect. 6.5: hit window 1.5/T; K < 100 m/s; NASA archive query date | 2026-10-04 | `forward_test/timesplit.py` |
+| Sect. 7: discovery-analysis values for HD 297396 b (K = 5.5 ± 0.8 m/s; FAP 1.4 × 10⁻³ by simulation with all epochs; without the discrepant night no simulation exceeds the peak and the analytic Baluev bound is 7 × 10⁻⁶ (6.7 × 10⁻⁶); four groups of programmes). `hd297396_fap.py` also uses that paper's analytic values, 2.2 × 10⁻³ and 6.7 × 10⁻⁶, and the night's date, BJD 2454922.53 | | the HD 297396 b paper (Fraser, in preparation), Sects. 2.1, 4.2 and 4.5 |
+| Sect. 6.5: hit window 1.5/T (and 1/T, 5 % for sensitivity); K < 100 m/s; catalogue query dates | NASA archive 2026-10-04, exoplanet.eu 2026-10-06 | `forward_test/timesplit.py`, headers of `nea_xmatch_2026-10-04.txt` and `eu_xmatch_full_2026-10-06.txt` |
+| Sect. 6.5: years of the planets named in the text (HD 134606, 2011; HD 137496, 2021; two TESS planets, 2019) | | `forward_test/timesplit_numbers.json` (`excluded_by_eu_dates`); `timesplit.py` stops if the list changes |
+| Sect. 6.5: the ESPRESSO product of another star in the GJ 902 cone (−106 against +70 km/s) | | `forward_test/prereg/T1-DEVIATIONS.md`, item 3 |
+| Sect. 6.5: period range of the HD 58489 check (2–150 d) | | `forward_test/prereg/t1_data/secondary.py` |
 | Sect. 6.5: "the two of its 30 highest-ranked signals with at least ten public post-2022 spectra" | | `forward_test/prereg/PREREG-T1-out-of-sample.md` |
 | Acknowledgements: ESO programme IDs of the T1 spectra (11 programmes, 67 products) | | ESO archive TAP query of the product identifiers in `forward_test/prereg/t1_data/`, 2026-10-06; listed in `forward_test/README.md` |
 | Sect. 8.1: software versions (Python 3.13, numpy 2.4, scipy 1.17, pandas 3.0, scikit-learn 1.8, matplotlib 3.10) | | `requirements-paper.txt` |

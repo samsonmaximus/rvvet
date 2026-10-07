@@ -3,8 +3,8 @@
 #   - the 40 unit tests pass;
 #   - rvvet/scripts/check_sims_consistency.py regenerates simulated cases with identical features;
 #   - rvvet/scripts/run_benchmark.py regenerates results/benchmark_features.csv byte for byte;
-#   - rvvet/scripts/analyze.py rewrites all 356 macros and 7 tables byte for byte and the 6 figures
-#     pixel for pixel.
+#   - rvvet/scripts/analyze.py rewrites all 356 macros and the 6 table files byte for byte and the
+#     6 figures pixel for pixel.
 #
 #   python3.13 -m venv venv && . venv/bin/activate
 #   pip install -r requirements-paper.txt && pip install -e ./rvvet

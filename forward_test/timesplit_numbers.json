@@ -1,6 +1,96 @@
 {
  "stars_run": 1198,
+ "stars_listed": 240,
+ "definition": "known before 2022: NASA archive publication date < 2022-01 or exoplanet.eu discovery year < 2022; hit: NASA archive planet published from 2022-01 within 1.5/T",
  "strict": {
+  "n": 102,
+  "hits": 10,
+  "base_rate": 0.09803921568627451,
+  "trees": {
+   "auc": 0.7728260869565217,
+   "lo": 0.5277451714951715,
+   "hi": 0.9759398496240601,
+   "top10": 6,
+   "top20": 7
+  },
+  "logistic": {
+   "auc": 0.767391304347826,
+   "lo": 0.5443118525908682,
+   "hi": 0.9474434363799284,
+   "top10": 5,
+   "top20": 6
+  },
+  "fap": {
+   "auc": 0.8076086956521739,
+   "lo": 0.6143551305047006,
+   "hi": 0.9387768671298307,
+   "top10": 3,
+   "top20": 7
+  },
+  "snrK": {
+   "auc": 0.7902173913043479,
+   "lo": 0.5866150591532595,
+   "hi": 0.957901968182104,
+   "top10": 5,
+   "top20": 7
+  },
+  "expected_top10": 0.9803921568627451,
+  "p_hypergeom_trees_top10": 2.8263244472485174e-05,
+  "p_hypergeom_fap_top10": 0.05699326026619307,
+  "expected_top20": 1.9607843137254901,
+  "p_hypergeom_trees_top20": 0.0003425906143944364,
+  "p_hypergeom_fap_top20": 0.0003425906143944364,
+  "dauc_trees_minus_fap": {
+   "value": -0.034782608695652195,
+   "lo": -0.18998528353367064,
+   "hi": 0.07669172932330826
+  }
+ },
+ "loose": {
+  "n": 126,
+  "hits": 10,
+  "base_rate": 0.07936507936507936,
+  "trees": {
+   "auc": 0.7681034482758621,
+   "lo": 0.5044219179127251,
+   "hi": 0.9777542372881356,
+   "top10": 6,
+   "top20": 7
+  },
+  "logistic": {
+   "auc": 0.7672413793103449,
+   "lo": 0.5412762955602219,
+   "hi": 0.9430953646280648,
+   "top10": 5,
+   "top20": 6
+  },
+  "fap": {
+   "auc": 0.8060344827586208,
+   "lo": 0.6024241027531958,
+   "hi": 0.9333493397358944,
+   "top10": 3,
+   "top20": 6
+  },
+  "snrK": {
+   "auc": 0.7879310344827586,
+   "lo": 0.5847287268312023,
+   "hi": 0.948264418675618,
+   "top10": 4,
+   "top20": 6
+  },
+  "expected_top10": 0.7936507936507936,
+  "p_hypergeom_trees_top10": 7.964232357235673e-06,
+  "p_hypergeom_fap_top10": 0.032494827146261014,
+  "expected_top20": 1.5873015873015872,
+  "p_hypergeom_trees_top20": 8.135775432554719e-05,
+  "p_hypergeom_fap_top20": 0.00108078838511453,
+  "dauc_trees_minus_fap": {
+   "value": -0.037931034482758696,
+   "lo": -0.2069465218423552,
+   "hi": 0.0720374193184928
+  }
+ },
+ "nea_only": {
   "n": 115,
   "hits": 14,
   "base_rate": 0.12173913043478261,
@@ -34,283 +124,390 @@
   },
   "expected_top10": 1.2173913043478262,
   "p_hypergeom_trees_top10": 0.00017236741315602283,
+  "p_hypergeom_fap_top10": 0.019318807169344233,
   "expected_top20": 2.4347826086956523,
-  "p_hypergeom_trees_top20": 2.9058216478074302e-05
+  "p_hypergeom_trees_top20": 2.9058216478074302e-05,
+  "p_hypergeom_fap_top20": 0.00033662141486807663,
+  "dauc_trees_minus_fap": {
+   "value": -0.04526166902404538,
+   "lo": -0.21333980582524276,
+   "hi": 0.08899216919472194
+  }
  },
- "loose": {
-  "n": 136,
-  "hits": 14,
-  "base_rate": 0.10294117647058823,
+ "window_1_over_T": {
+  "n": 102,
+  "hits": 10,
+  "base_rate": 0.09803921568627451,
   "trees": {
-   "auc": 0.7324355971896955,
-   "lo": 0.5456528103044496,
-   "hi": 0.9080810467339123,
+   "auc": 0.7728260869565217,
+   "lo": 0.5277451714951715,
+   "hi": 0.9759398496240601,
    "top10": 6,
-   "top20": 9
+   "top20": 7
   },
   "logistic": {
-   "auc": 0.6879391100702577,
-   "lo": 0.47562045454545454,
-   "hi": 0.8730579196892673,
+   "auc": 0.767391304347826,
+   "lo": 0.5443118525908682,
+   "hi": 0.9474434363799284,
+   "top10": 5,
+   "top20": 6
+  },
+  "fap": {
+   "auc": 0.8076086956521739,
+   "lo": 0.6143551305047006,
+   "hi": 0.9387768671298307,
+   "top10": 3,
+   "top20": 7
+  },
+  "snrK": {
+   "auc": 0.7902173913043479,
+   "lo": 0.5866150591532595,
+   "hi": 0.957901968182104,
    "top10": 5,
    "top20": 7
   },
-  "fap": {
-   "auc": 0.7716627634660421,
-   "lo": 0.6002188742443223,
-   "hi": 0.9111948065601346,
-   "top10": 3,
-   "top20": 6
-  },
-  "snrK": {
-   "auc": 0.7617096018735363,
-   "lo": 0.5691868279569892,
-   "hi": 0.9228515625,
-   "top10": 5,
-   "top20": 8
-  },
-  "expected_top10": 1.0294117647058822,
-  "p_hypergeom_trees_top10": 6.448901403328008e-05,
-  "expected_top20": 2.0588235294117645,
-  "p_hypergeom_trees_top20": 6.65960132932373e-06
+  "expected_top10": 0.9803921568627451,
+  "p_hypergeom_trees_top10": 2.8263244472485174e-05,
+  "p_hypergeom_fap_top10": 0.05699326026619307,
+  "expected_top20": 1.9607843137254901,
+  "p_hypergeom_trees_top20": 0.0003425906143944364,
+  "p_hypergeom_fap_top20": 0.0003425906143944364,
+  "dauc_trees_minus_fap": {
+   "value": -0.034782608695652195,
+   "lo": -0.18998528353367064,
+   "hi": 0.07669172932330826
+  }
  },
- "strict_excluding_eu_known": {
-  "n": 113,
-  "hits": 14,
-  "base_rate": 0.12389380530973451,
+ "period_within_5pc": {
+  "n": 102,
+  "hits": 6,
+  "base_rate": 0.058823529411764705,
   "trees": {
-   "auc": 0.7380952380952381,
-   "lo": 0.5438418003565063,
-   "hi": 0.9062060335497836,
-   "top10": 6,
-   "top20": 9
-  },
-  "logistic": {
-   "auc": 0.6875901875901876,
-   "lo": 0.48339699516170104,
-   "hi": 0.8743379485007325,
-   "top10": 6,
-   "top20": 8
-  },
-  "fap": {
-   "auc": 0.7842712842712842,
-   "lo": 0.6083210784313725,
-   "hi": 0.91996699669967,
+   "auc": 0.7760416666666667,
+   "lo": 0.44659774436090227,
+   "hi": 0.9932659932659932,
    "top10": 4,
-   "top20": 9
-  },
-  "snrK": {
-   "auc": 0.7691197691197691,
-   "lo": 0.5747572220635827,
-   "hi": 0.9298905178979437,
-   "top10": 5,
-   "top20": 9
-  },
-  "expected_top10": 1.238938053097345,
-  "p_hypergeom_trees_top10": 0.0001909770887613558,
-  "expected_top20": 2.47787610619469,
-  "p_hypergeom_trees_top20": 3.387908112198141e-05
- },
- "strict_counting_eu_known_as_hits": {
-  "n": 115,
-  "hits": 16,
-  "base_rate": 0.1391304347826087,
-  "trees": {
-   "auc": 0.7683080808080809,
-   "lo": 0.6005041542932964,
-   "hi": 0.9185632575757576,
-   "top10": 7,
-   "top20": 11
+   "top20": 4
   },
   "logistic": {
-   "auc": 0.7171717171717172,
-   "lo": 0.5291085845682167,
-   "hi": 0.8837374243908507,
-   "top10": 6,
-   "top20": 9
+   "auc": 0.7690972222222222,
+   "lo": 0.4990451388888889,
+   "hi": 0.9702970297029703,
+   "top10": 3,
+   "top20": 3
   },
   "fap": {
-   "auc": 0.8036616161616161,
-   "lo": 0.6545730134158927,
-   "hi": 0.9263772641133738,
-   "top10": 5,
-   "top20": 10
+   "auc": 0.7534722222222222,
+   "lo": 0.451530612244898,
+   "hi": 0.9529408670033669,
+   "top10": 2,
+   "top20": 4
   },
   "snrK": {
-   "auc": 0.7765151515151516,
-   "lo": 0.5990474189675871,
-   "hi": 0.9285714285714286,
-   "top10": 6,
-   "top20": 10
+   "auc": 0.6979166666666666,
+   "lo": 0.3939393939393939,
+   "hi": 0.9489795918367347,
+   "top10": 2,
+   "top20": 4
   },
-  "expected_top10": 1.391304347826087,
-  "p_hypergeom_trees_top10": 2.492508280033806e-05,
-  "expected_top20": 2.782608695652174,
-  "p_hypergeom_trees_top20": 6.771371810958745e-07
+  "expected_top10": 0.5882352941176471,
+  "p_hypergeom_trees_top10": 0.0006701978349961825,
+  "p_hypergeom_fap_top10": 0.10523869852115593,
+  "expected_top20": 1.1764705882352942,
+  "p_hypergeom_trees_top20": 0.012922171661727502,
+  "p_hypergeom_fap_top20": 0.012922171661727502,
+  "dauc_trees_minus_fap": {
+   "value": 0.02256944444444453,
+   "lo": -0.06827122343782868,
+   "hi": 0.09895833333333337
+  }
  },
- "eu_flagged": [
-  "HIP112414",
-  "HD157172"
- ],
- "eu_query_covers_open_strict_signals": 0.9504950495049505,
- "hits": [
+ "excluded_by_eu_dates": [
+  {
+   "star": "HD103891",
+   "P": 456.1750068404428,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "HD 103891 b (1919 d, 2021)"
+   ]
+  },
   {
    "star": "HD134606",
    "P": 12.093680284505322,
-   "K": 2.4974819331844698,
-   "planet": "HD 134606 b",
-   "pub": "2024-04",
-   "facility": "Multiple Observatories",
-   "method": "RV",
-   "rank_trees": 2,
-   "toi_host": false
+   "hit_by_nea_dates": true,
+   "eu_planets_before_2022": [
+    "HD 134606 Ab (12.083 d, 2011)",
+    "HD 134606 Ac (59.519 d, 2011)",
+    "HD 134606 Ad (967.9 d, 2011)"
+   ]
   },
+  {
+   "star": "HIP112414",
+   "P": 194.20640803657437,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "HD 215456 Ab (191.99 d, 2011)",
+    "HD 215456 Ac (2277 d, 2011)"
+   ]
+  },
+  {
+   "star": "GJ1246",
+   "P": 16.484035588049252,
+   "hit_by_nea_dates": true,
+   "eu_planets_before_2022": [
+    "TOI-2194 b (15.3376 d, 2019)"
+   ]
+  },
+  {
+   "star": "HD157172",
+   "P": 105.13165755089716,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "HD 157172 b (104.84 d, 2011)"
+   ]
+  },
+  {
+   "star": "HD81968",
+   "P": 115.57622338577576,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "TOI-6267 b (733.99 d, 2019)"
+   ]
+  },
+  {
+   "star": "CD-415929",
+   "P": 3.779554465222193,
+   "hit_by_nea_dates": true,
+   "eu_planets_before_2022": [
+    "TOI-1036 Ab (3.78031 d, 2019)"
+   ]
+  },
+  {
+   "star": "HIP54597",
+   "P": 2.5428254399888948,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "HIP 54597 c (?, 2018)"
+   ]
+  },
+  {
+   "star": "GJ569",
+   "P": 14.38029373578406,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "GJ 569 Bb (870 d, 1999)"
+   ]
+  },
+  {
+   "star": "HD105779",
+   "P": 310.6266935039514,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "HD 105779 b (2412 d, 2021)"
+   ]
+  },
+  {
+   "star": "HD137496",
+   "P": 341.78695177888727,
+   "hit_by_nea_dates": true,
+   "eu_planets_before_2022": [
+    "HD 137496 b (1.62116 d, 2021)",
+    "HD 137496 c (479.9 d, 2021)"
+   ]
+  },
+  {
+   "star": "HD89839",
+   "P": 316.96924204750974,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "HD 89839 b (3369.32 d, 2010)"
+   ]
+  },
+  {
+   "star": "TYC111-1915-1",
+   "P": 54.33920340737841,
+   "hit_by_nea_dates": false,
+   "eu_planets_before_2022": [
+    "TOI-941 b (8.51456 d, 2019)"
+   ]
+  }
+ ],
+ "hits": [
   {
    "star": "TOI-500",
    "P": 25.97645010006489,
    "K": 8.950855451462765,
+   "baseline": 527.2665126002394,
    "planet": "TOI-500 d",
+   "P_planet": 26.233,
+   "dP_frac": 0.009779663017386864,
    "pub": "2022-04",
    "facility": "LaSilla",
    "method": "RV",
-   "rank_trees": 3,
-   "toi_host": true
+   "eu_entry": "TOI-500 d (2022)",
+   "rank_trees": 1,
+   "within_1_over_T": true,
+   "toi_host": true,
+   "transit_host": true
   },
   {
    "star": "CD-321952",
    "P": 76.80134782797244,
    "K": 15.506105544633847,
+   "baseline": 290.21395689994097,
    "planet": "TOI-2447 b",
+   "P_planet": 69.33684,
+   "dP_frac": 0.10765572570039872,
    "pub": "2024-09",
    "facility": "TESS",
    "method": "Transit",
-   "rank_trees": 6,
-   "toi_host": true
+   "eu_entry": null,
+   "rank_trees": 3,
+   "within_1_over_T": true,
+   "toi_host": true,
+   "transit_host": true
   },
   {
    "star": "HD74698",
    "P": 15.015680760196338,
    "K": 7.263135981737783,
+   "baseline": 6520.163873299956,
    "planet": "HD 74698 b",
+   "P_planet": 15.017,
+   "dP_frac": 8.784975718600929e-05,
    "pub": "2023-07",
    "facility": "LaSilla",
    "method": "RV",
-   "rank_trees": 7,
-   "toi_host": false
+   "eu_entry": "HD 74698 b (2023)",
+   "rank_trees": 4,
+   "within_1_over_T": true,
+   "toi_host": false,
+   "transit_host": false
   },
   {
    "star": "HD43629",
    "P": 6.392179407650604,
    "K": 8.666308983217865,
+   "baseline": 563.3860597996973,
    "planet": "TOI-880 c",
+   "P_planet": 6.38727,
+   "dP_frac": 0.0007686237861566081,
    "pub": "2025-09",
    "facility": "TESS",
    "method": "Transit",
-   "rank_trees": 8,
-   "toi_host": true
+   "eu_entry": "TOI-880 Ac (2025)",
+   "rank_trees": 5,
+   "within_1_over_T": true,
+   "toi_host": true,
+   "transit_host": true
   },
   {
    "star": "TYC8954-1014-1",
    "P": 9.108334370116737,
    "K": 20.159780755595506,
+   "baseline": 145.80880590016022,
    "planet": "TOI-2000 c",
+   "P_planet": 9.127055,
+   "dP_frac": 0.0020511139555161595,
    "pub": "2023-09",
    "facility": "TESS",
    "method": "Transit",
-   "rank_trees": 10,
-   "toi_host": true
+   "eu_entry": "TOI-2000 c (2022)",
+   "rank_trees": 7,
+   "within_1_over_T": true,
+   "toi_host": true,
+   "transit_host": true
   },
   {
    "star": "CD-348236",
    "P": 15.6023689361637,
    "K": 5.502243933458837,
+   "baseline": 127.87305449973792,
    "planet": "TOI-757 b",
+   "P_planet": 17.46819,
+   "dP_frac": 0.10681250111409946,
    "pub": "2024-09",
    "facility": "TESS",
    "method": "Transit",
-   "rank_trees": 13,
-   "toi_host": true
-  },
-  {
-   "star": "CD-415929",
-   "P": 3.779554465222193,
-   "K": 11.194511169844631,
-   "planet": "TOI-1036 b",
-   "pub": "2026-05",
-   "facility": "TESS",
-   "method": "Transit",
-   "rank_trees": 17,
-   "toi_host": true
+   "eu_entry": "TOI-757 b (2024)",
+   "rank_trees": 9,
+   "within_1_over_T": true,
+   "toi_host": true,
+   "transit_host": true
   },
   {
    "star": "CD-341735",
    "P": 77.83563529457388,
    "K": 21.858768735382995,
+   "baseline": 289.15804259991273,
    "planet": "TOI-2449 b",
+   "P_planet": 106.1447,
+   "dP_frac": 0.2667025739902805,
    "pub": "2025-11",
    "facility": "TESS",
    "method": "Transit",
-   "rank_trees": 19,
-   "toi_host": true
+   "eu_entry": "TOI-2449 b (2025)",
+   "rank_trees": 13,
+   "within_1_over_T": true,
+   "toi_host": true,
+   "transit_host": true
   },
   {
    "star": "GJ2126",
    "P": 273.41035771202525,
    "K": 17.009167820026164,
+   "baseline": 6195.050800700206,
    "planet": "GJ 2126 b",
+   "P_planet": 272.7,
+   "dP_frac": 0.0026049054346359846,
    "pub": "2025-02",
    "facility": "LaSilla",
    "method": "RV",
-   "rank_trees": 51,
-   "toi_host": false
-  },
-  {
-   "star": "GJ1246",
-   "P": 16.484035588049252,
-   "K": 2.2601276204084835,
-   "planet": "TOI-2194 b",
-   "pub": "2023-07",
-   "facility": "TESS",
-   "method": "Transit",
-   "rank_trees": 65,
-   "toi_host": true
-  },
-  {
-   "star": "HD137496",
-   "P": 341.78695177888727,
-   "K": 45.99786401572068,
-   "planet": "HD 137496 c",
-   "pub": "2022-01",
-   "facility": "Multiple Observatories",
-   "method": "RV",
-   "rank_trees": 88,
-   "toi_host": false
+   "eu_entry": "GJ 2126 b (2025)",
+   "rank_trees": 43,
+   "within_1_over_T": true,
+   "toi_host": false,
+   "transit_host": false
   },
   {
    "star": "TYC6570-1482-1",
    "P": 269.15370214785,
    "K": 34.203209569485416,
+   "baseline": 647.098550342489,
    "planet": "TOI-6695 c",
+   "P_planet": 242.4,
+   "dP_frac": 0.1103700583657179,
    "pub": "2025-06",
    "facility": "Multiple Observatories",
    "method": "RV",
-   "rank_trees": 100,
-   "toi_host": true
+   "eu_entry": "TOI-6695 c (2025)",
+   "rank_trees": 89,
+   "within_1_over_T": true,
+   "toi_host": true,
+   "transit_host": true
   },
   {
    "star": "BD+062168",
    "P": 16.270196981933545,
    "K": 7.637324853101341,
+   "baseline": 370.9927972001024,
    "planet": "TOI-603 b",
+   "P_planet": 16.17985,
+   "dP_frac": 0.005583919624319478,
    "pub": "2026-07",
    "facility": "TESS",
    "method": "Transit",
-   "rank_trees": 101,
-   "toi_host": true
+   "eu_entry": "TOI-603 b (2024)",
+   "rank_trees": 90,
+   "within_1_over_T": true,
+   "toi_host": true,
+   "transit_host": true
   }
  ],
- "n_hits_toi_host": 10,
- "n_hits_toi_host_trees_top10": 4,
+ "n_hits_toi_host": 8,
+ "n_hits_toi_host_trees_top10": 5,
+ "n_hits_transit_host": 8,
+ "n_hits_transit_host_trees_top10": 5,
  "T1": {
   "results": {
    "GJ902": {
@@ -434,6 +631,10 @@
     "z_pred": 3.960095998735304,
     "frac_phases_z_ge_obs": 0.17
    }
+  },
+  "distinct_nights": {
+   "GJ902": 30,
+   "HD58489": 18
   },
   "trees_score_30sep": {
    "GJ902": 0.8578666710048668,
