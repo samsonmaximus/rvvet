@@ -8,7 +8,6 @@ for star,f,zobs in [('HD58489','rv_hd58489.csv',3.960),('GJ902','rv_gj902.csv',0
     for k in range(1000):
         dd=d.copy(); dd['rv']=rng.normal(0,np.sqrt(dd.err**2+np.array([jit[i] for i in dd.inst])**2))
         p,C,_=t.fit(dd,P,T); zs.append(p[-1]/np.sqrt(C[-1,-1]))
-        dd2=d.copy(); dd2['rv']=dd2.rv+float(e['K'])*np.cos(2*np.pi*(dd2.bjd-T)/P)*0  # placeholder
     zs=np.array(zs); out[star]=dict(null_P_z_ge_obs=float((zs>=zobs).mean()),null_z_sd=float(zs.std()))
     # planet-at-predicted-K simulation: inject predicted signal into white noise
     zi=[]

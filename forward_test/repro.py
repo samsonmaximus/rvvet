@@ -1,8 +1,8 @@
 import numpy as np, pandas as pd, warnings, time, sys; warnings.filterwarnings("ignore")
 import rvvet
 from rvvet.rules import rule_pass, first_failed_rung
-df=pd.read_parquet('data/rvbank.parquet')
-b=pd.read_csv('/mnt/user-data/uploads/exoplancsv/methods_paper/archive_run_2026-09-30/archive_blind_rvvet.csv')
+df=pd.read_parquet('../data/rvbank.parquet')
+b=pd.read_csv('archive_run_2026-09-30/archive_blind_rvvet.csv')
 rng=np.random.default_rng(20261004)
 sample=list(rng.choice(b.star.values,40,replace=False))+['HD297396','HD157172','GJ479','HD129642']
 rows=[];t0=time.time()

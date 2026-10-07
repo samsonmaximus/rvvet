@@ -2,7 +2,7 @@ import numpy as np, pandas as pd, warnings, time, json, hashlib, subprocess; war
 import rvvet
 from rvvet.rules import rule_pass, first_failed_rung
 from multiprocessing import Pool
-df=pd.read_parquet('data/rvbank.parquet')
+df=pd.read_parquet('../data/rvbank.parquet')
 def one(st):
     try:
         s=rvvet.load_star(df,st,clip_sigma=15)

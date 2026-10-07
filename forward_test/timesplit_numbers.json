@@ -1,0 +1,443 @@
+{
+ "stars_run": 1198,
+ "strict": {
+  "n": 115,
+  "hits": 14,
+  "base_rate": 0.12173913043478261,
+  "trees": {
+   "auc": 0.7277227722772277,
+   "lo": 0.5460505506091846,
+   "hi": 0.8951994430729443,
+   "top10": 6,
+   "top20": 9
+  },
+  "logistic": {
+   "auc": 0.6824611032531824,
+   "lo": 0.4759722152018702,
+   "hi": 0.868550905210569,
+   "top10": 5,
+   "top20": 7
+  },
+  "fap": {
+   "auc": 0.7729844413012731,
+   "lo": 0.6059996763754045,
+   "hi": 0.9088175926216067,
+   "top10": 4,
+   "top20": 8
+  },
+  "snrK": {
+   "auc": 0.7616690240452617,
+   "lo": 0.5673076923076924,
+   "hi": 0.930392516855227,
+   "top10": 5,
+   "top20": 9
+  },
+  "expected_top10": 1.2173913043478262,
+  "p_hypergeom_trees_top10": 0.00017236741315602283,
+  "expected_top20": 2.4347826086956523,
+  "p_hypergeom_trees_top20": 2.9058216478074302e-05
+ },
+ "loose": {
+  "n": 136,
+  "hits": 14,
+  "base_rate": 0.10294117647058823,
+  "trees": {
+   "auc": 0.7324355971896955,
+   "lo": 0.5456528103044496,
+   "hi": 0.9080810467339123,
+   "top10": 6,
+   "top20": 9
+  },
+  "logistic": {
+   "auc": 0.6879391100702577,
+   "lo": 0.47562045454545454,
+   "hi": 0.8730579196892673,
+   "top10": 5,
+   "top20": 7
+  },
+  "fap": {
+   "auc": 0.7716627634660421,
+   "lo": 0.6002188742443223,
+   "hi": 0.9111948065601346,
+   "top10": 3,
+   "top20": 6
+  },
+  "snrK": {
+   "auc": 0.7617096018735363,
+   "lo": 0.5691868279569892,
+   "hi": 0.9228515625,
+   "top10": 5,
+   "top20": 8
+  },
+  "expected_top10": 1.0294117647058822,
+  "p_hypergeom_trees_top10": 6.448901403328008e-05,
+  "expected_top20": 2.0588235294117645,
+  "p_hypergeom_trees_top20": 6.65960132932373e-06
+ },
+ "strict_excluding_eu_known": {
+  "n": 113,
+  "hits": 14,
+  "base_rate": 0.12389380530973451,
+  "trees": {
+   "auc": 0.7380952380952381,
+   "lo": 0.5438418003565063,
+   "hi": 0.9062060335497836,
+   "top10": 6,
+   "top20": 9
+  },
+  "logistic": {
+   "auc": 0.6875901875901876,
+   "lo": 0.48339699516170104,
+   "hi": 0.8743379485007325,
+   "top10": 6,
+   "top20": 8
+  },
+  "fap": {
+   "auc": 0.7842712842712842,
+   "lo": 0.6083210784313725,
+   "hi": 0.91996699669967,
+   "top10": 4,
+   "top20": 9
+  },
+  "snrK": {
+   "auc": 0.7691197691197691,
+   "lo": 0.5747572220635827,
+   "hi": 0.9298905178979437,
+   "top10": 5,
+   "top20": 9
+  },
+  "expected_top10": 1.238938053097345,
+  "p_hypergeom_trees_top10": 0.0001909770887613558,
+  "expected_top20": 2.47787610619469,
+  "p_hypergeom_trees_top20": 3.387908112198141e-05
+ },
+ "strict_counting_eu_known_as_hits": {
+  "n": 115,
+  "hits": 16,
+  "base_rate": 0.1391304347826087,
+  "trees": {
+   "auc": 0.7683080808080809,
+   "lo": 0.6005041542932964,
+   "hi": 0.9185632575757576,
+   "top10": 7,
+   "top20": 11
+  },
+  "logistic": {
+   "auc": 0.7171717171717172,
+   "lo": 0.5291085845682167,
+   "hi": 0.8837374243908507,
+   "top10": 6,
+   "top20": 9
+  },
+  "fap": {
+   "auc": 0.8036616161616161,
+   "lo": 0.6545730134158927,
+   "hi": 0.9263772641133738,
+   "top10": 5,
+   "top20": 10
+  },
+  "snrK": {
+   "auc": 0.7765151515151516,
+   "lo": 0.5990474189675871,
+   "hi": 0.9285714285714286,
+   "top10": 6,
+   "top20": 10
+  },
+  "expected_top10": 1.391304347826087,
+  "p_hypergeom_trees_top10": 2.492508280033806e-05,
+  "expected_top20": 2.782608695652174,
+  "p_hypergeom_trees_top20": 6.771371810958745e-07
+ },
+ "eu_flagged": [
+  "HIP112414",
+  "HD157172"
+ ],
+ "eu_query_covers_open_strict_signals": 0.9504950495049505,
+ "hits": [
+  {
+   "star": "HD134606",
+   "P": 12.093680284505322,
+   "K": 2.4974819331844698,
+   "planet": "HD 134606 b",
+   "pub": "2024-04",
+   "facility": "Multiple Observatories",
+   "method": "RV",
+   "rank_trees": 2,
+   "toi_host": false
+  },
+  {
+   "star": "TOI-500",
+   "P": 25.97645010006489,
+   "K": 8.950855451462765,
+   "planet": "TOI-500 d",
+   "pub": "2022-04",
+   "facility": "LaSilla",
+   "method": "RV",
+   "rank_trees": 3,
+   "toi_host": true
+  },
+  {
+   "star": "CD-321952",
+   "P": 76.80134782797244,
+   "K": 15.506105544633847,
+   "planet": "TOI-2447 b",
+   "pub": "2024-09",
+   "facility": "TESS",
+   "method": "Transit",
+   "rank_trees": 6,
+   "toi_host": true
+  },
+  {
+   "star": "HD74698",
+   "P": 15.015680760196338,
+   "K": 7.263135981737783,
+   "planet": "HD 74698 b",
+   "pub": "2023-07",
+   "facility": "LaSilla",
+   "method": "RV",
+   "rank_trees": 7,
+   "toi_host": false
+  },
+  {
+   "star": "HD43629",
+   "P": 6.392179407650604,
+   "K": 8.666308983217865,
+   "planet": "TOI-880 c",
+   "pub": "2025-09",
+   "facility": "TESS",
+   "method": "Transit",
+   "rank_trees": 8,
+   "toi_host": true
+  },
+  {
+   "star": "TYC8954-1014-1",
+   "P": 9.108334370116737,
+   "K": 20.159780755595506,
+   "planet": "TOI-2000 c",
+   "pub": "2023-09",
+   "facility": "TESS",
+   "method": "Transit",
+   "rank_trees": 10,
+   "toi_host": true
+  },
+  {
+   "star": "CD-348236",
+   "P": 15.6023689361637,
+   "K": 5.502243933458837,
+   "planet": "TOI-757 b",
+   "pub": "2024-09",
+   "facility": "TESS",
+   "method": "Transit",
+   "rank_trees": 13,
+   "toi_host": true
+  },
+  {
+   "star": "CD-415929",
+   "P": 3.779554465222193,
+   "K": 11.194511169844631,
+   "planet": "TOI-1036 b",
+   "pub": "2026-05",
+   "facility": "TESS",
+   "method": "Transit",
+   "rank_trees": 17,
+   "toi_host": true
+  },
+  {
+   "star": "CD-341735",
+   "P": 77.83563529457388,
+   "K": 21.858768735382995,
+   "planet": "TOI-2449 b",
+   "pub": "2025-11",
+   "facility": "TESS",
+   "method": "Transit",
+   "rank_trees": 19,
+   "toi_host": true
+  },
+  {
+   "star": "GJ2126",
+   "P": 273.41035771202525,
+   "K": 17.009167820026164,
+   "planet": "GJ 2126 b",
+   "pub": "2025-02",
+   "facility": "LaSilla",
+   "method": "RV",
+   "rank_trees": 51,
+   "toi_host": false
+  },
+  {
+   "star": "GJ1246",
+   "P": 16.484035588049252,
+   "K": 2.2601276204084835,
+   "planet": "TOI-2194 b",
+   "pub": "2023-07",
+   "facility": "TESS",
+   "method": "Transit",
+   "rank_trees": 65,
+   "toi_host": true
+  },
+  {
+   "star": "HD137496",
+   "P": 341.78695177888727,
+   "K": 45.99786401572068,
+   "planet": "HD 137496 c",
+   "pub": "2022-01",
+   "facility": "Multiple Observatories",
+   "method": "RV",
+   "rank_trees": 88,
+   "toi_host": false
+  },
+  {
+   "star": "TYC6570-1482-1",
+   "P": 269.15370214785,
+   "K": 34.203209569485416,
+   "planet": "TOI-6695 c",
+   "pub": "2025-06",
+   "facility": "Multiple Observatories",
+   "method": "RV",
+   "rank_trees": 100,
+   "toi_host": true
+  },
+  {
+   "star": "BD+062168",
+   "P": 16.270196981933545,
+   "K": 7.637324853101341,
+   "planet": "TOI-603 b",
+   "pub": "2026-07",
+   "facility": "TESS",
+   "method": "Transit",
+   "rank_trees": 101,
+   "toi_host": true
+  }
+ ],
+ "n_hits_toi_host": 10,
+ "n_hits_toi_host_trees_top10": 4,
+ "T1": {
+  "results": {
+   "GJ902": {
+    "results": [
+     {
+      "star": "GJ902",
+      "n_spectra": 66,
+      "n_nights": 41,
+      "A": 0.19982019008423882,
+      "sigma_A": 0.36666366169445264,
+      "z": 0.5449686209994612,
+      "K_pred": 1.89863716905,
+      "verdict": "REFUTED",
+      "jitter": {
+       "ESPRESSO": 1.486,
+       "HARPS": 1.023,
+       "NIRPS": 9.295
+      },
+      "free_phase_offset_cycles": 0.19370800619425174,
+      "free_phase_amp": 0.7174266365187287,
+      "input_sha256": "39dcb275a14fe23b5ce66be1a61b0d8bc4b122d00638d38e0bbe9907aad82f0d"
+     }
+    ]
+   },
+   "HD58489": {
+    "results": [
+     {
+      "star": "HD58489",
+      "n_spectra": 20,
+      "n_nights": 18,
+      "A": 4.021621432226993,
+      "sigma_A": 1.0155363489954128,
+      "z": 3.960095998735304,
+      "K_pred": 5.47530249534,
+      "verdict": "SUPPORTED",
+      "jitter": {
+       "HARPS_G2": 2.201,
+       "HARPS_K5": 3.597
+      },
+      "free_phase_offset_cycles": 0.1109352183752456,
+      "free_phase_amp": 6.864190333163224,
+      "input_sha256": "c138f9bbcc6d45c233dbee0c1efb75a4b9340e07e69038e9dae0d14e884added"
+     },
+     {
+      "star": "HD58489",
+      "n_spectra": 20,
+      "n_nights": 18,
+      "A": 0.9550388332534112,
+      "sigma_A": 2.8882094122133726,
+      "z": 0.3306681396490289,
+      "K_pred": 5.47530249534,
+      "verdict": "UNDECIDED",
+      "jitter": {
+       "HARPS": 8.526
+      },
+      "free_phase_offset_cycles": -0.22746806441518436,
+      "free_phase_amp": 6.814671970427866,
+      "input_sha256": "56c6fe96c5c0c4427e0cc00a970bc073c1c598890e50e00f25212bdf6d5cf1ef"
+     }
+    ]
+   }
+  },
+  "null": {
+   "HD58489": {
+    "null_P_z_ge_obs": 0.006,
+    "null_z_sd": 1.4008608294113793,
+    "planet_P_z_le_obs": 0.052,
+    "planet_median_z": 6.603112725216814
+   },
+   "GJ902": {
+    "null_P_z_ge_obs": 0.339,
+    "null_z_sd": 1.4199046742312442,
+    "planet_P_z_le_obs": 0.0,
+    "planet_median_z": 6.079604190398317
+   }
+  },
+  "secondary": {
+   "GJ902": {
+    "only_ESPRESSO": {
+     "n": 19,
+     "A": 0.16079936551250285,
+     "sA": 0.5284947753764964,
+     "z": 0.3042591393603662
+    },
+    "only_HARPS": {
+     "n": 11,
+     "A": 0.2628524445481162,
+     "sA": 0.5171593615569343,
+     "z": 0.5082619867051921
+    },
+    "only_NIRPS": {
+     "n": 11,
+     "A": -4.915091146350278,
+     "sA": 3.7767606682913746,
+     "z": -1.3014039220478035
+    },
+    "freephase_chi2_at_P": 3.663610186025598,
+    "frac_periods_2_150d_with_higher_chi2": 0.47433333333333333,
+    "best_period_new_data": 2.561942360182403,
+    "best_chi2": 61.47129333235586,
+    "z_pred": 0.5449686209994612,
+    "frac_phases_z_ge_obs": 0.395
+   },
+   "HD58489": {
+    "only_HARPS_G2": {
+     "n": 10,
+     "A": 13.04471644377736,
+     "sA": 4.0031541143279,
+     "z": 3.258609604133982
+    },
+    "only_HARPS_K5": {
+     "n": 8,
+     "A": 5.176386057123864,
+     "sA": 1.989451226564933,
+     "z": 2.601916542614428
+    },
+    "freephase_chi2_at_P": 39.37473989266202,
+    "frac_periods_2_150d_with_higher_chi2": 0.12733333333333333,
+    "best_period_new_data": 85.43322214304553,
+    "best_chi2": 118.80632384812009,
+    "z_pred": 3.960095998735304,
+    "frac_phases_z_ge_obs": 0.17
+   }
+  },
+  "trees_score_30sep": {
+   "GJ902": 0.8578666710048668,
+   "HD58489": 0.7148765980227154
+  }
+ }
+}

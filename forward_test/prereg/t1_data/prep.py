@@ -3,7 +3,7 @@ import pandas as pd, numpy as np
 from astropy.time import Time
 from astropy.coordinates import SkyCoord, EarthLocation
 import astropy.units as u
-df=pd.read_parquet('/home/claude/work/data/rvbank.parquet')
+df=pd.read_parquet('../../../data/rvbank.parquet')
 coord={s:SkyCoord(df[df.star==s].ra.iloc[0]*u.deg, df[df.star==s].dec.iloc[0]*u.deg) for s in ['GJ902','HD58489']}
 ls=EarthLocation.from_geodetic(lon=-70.7375*u.deg, lat=-29.2584*u.deg, height=2400*u.m)  # La Silla 3.6m
 h=pd.read_csv('harps_raw.csv')
