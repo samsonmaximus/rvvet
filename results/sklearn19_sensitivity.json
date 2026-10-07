@@ -1,0 +1,188 @@
+{
+ "other_scikit_learn": "1.9.1",
+ "what": "Paper numbers (scikit-learn 1.8.0) against a rerun with another scikit-learn version, everything else pinned as in requirements-paper.txt. scikit-learn 1.5.2, 1.6.1, 1.7.2 and 1.8.0 reproduce the paper exactly; 1.9 changed GroupKFold's assignment of stars to folds.",
+ "simulation_cv_auc_full_precision": {
+  "cv_logistic": {
+   "paper": 0.9126815527217269,
+   "other": 0.9136990933777007,
+   "delta": 0.0010175406559738143
+  },
+  "cv_boosting": {
+   "paper": 0.9171167652419745,
+   "other": 0.915580309286369,
+   "delta": -0.0015364559556054758
+  },
+  "cv_boosting_with_prior_features": {
+   "paper": 0.9263048969778129,
+   "other": 0.924040370223832,
+   "delta": -0.002264526753980922
+  },
+  "cv_boosting_no_indicators": {
+   "paper": 0.8460828573650803,
+   "other": 0.8462822060579007,
+   "delta": 0.00019934869282045575
+  },
+  "cv_boosting_no_proxy": {
+   "paper": 0.9156470970163639,
+   "other": 0.9149264658638612,
+   "delta": -0.0007206311525027598
+  },
+  "cv_n_only": {
+   "paper": 0.5008490495852397,
+   "other": 0.5052435131360475,
+   "delta": 0.004394463550807859
+  }
+ },
+ "max_abs_auc_change_classifiers": 0.002264526753980922,
+ "macros_that_change": {
+  "nmAmpHiTree": {
+   "paper": "16",
+   "other": "17"
+  },
+  "nmAucLog": {
+   "paper": "0.913",
+   "other": "0.914"
+  },
+  "nmAucLogLo": {
+   "paper": "0.903",
+   "other": "0.904"
+  },
+  "nmAucNOnly": {
+   "paper": "0.50",
+   "other": "0.51"
+  },
+  "nmAucNoProxy": {
+   "paper": "0.916",
+   "other": "0.915"
+  },
+  "nmAucTree": {
+   "paper": "0.917",
+   "other": "0.916"
+  },
+  "nmAucTreeHi": {
+   "paper": "0.926",
+   "other": "0.925"
+  },
+  "nmAucTreeLo": {
+   "paper": "0.907",
+   "other": "0.906"
+  },
+  "nmAucTreePrior": {
+   "paper": "0.926",
+   "other": "0.924"
+  },
+  "nmBAucNoInd": {
+   "paper": "0.82",
+   "other": "0.78"
+  },
+  "nmBAucNoIndHi": {
+   "paper": "0.98",
+   "other": "0.97"
+  },
+  "nmBAucNoIndLo": {
+   "paper": "0.60",
+   "other": "0.52"
+  },
+  "nmBAucNoIndUI": {
+   "paper": "0.81",
+   "other": "0.77"
+  },
+  "nmBAucNoProxyLo": {
+   "paper": "0.93",
+   "other": "0.91"
+  },
+  "nmBAucNoProxyUI": {
+   "paper": "0.98",
+   "other": "0.96"
+  },
+  "nmBAucTreeLo": {
+   "paper": "0.93",
+   "other": "0.90"
+  },
+  "nmBAucTreeNoEasy": {
+   "paper": "0.98",
+   "other": "0.97"
+  },
+  "nmBAucTreeUI": {
+   "paper": "0.98",
+   "other": "0.96"
+  },
+  "nmBMisNoInd": {
+   "paper": "23",
+   "other": "28"
+  },
+  "nmBMisNoProxy": {
+   "paper": "2",
+   "other": "3"
+  },
+  "nmBMisTree": {
+   "paper": "2",
+   "other": "3"
+  },
+  "nmBrierLog": {
+   "paper": "0.115",
+   "other": "0.114"
+  },
+  "nmBrierTree": {
+   "paper": "0.114",
+   "other": "0.116"
+  },
+  "nmCalMaxZLog": {
+   "paper": "1.6",
+   "other": "1.4"
+  },
+  "nmCalMaxZTree": {
+   "paper": "4.2",
+   "other": "4.6"
+  },
+  "nmCalNBadTree": {
+   "paper": "7",
+   "other": "5"
+  },
+  "nmHDpNoInd": {
+   "paper": "0.96",
+   "other": "0.95"
+  },
+  "nmHDpTree": {
+   "paper": "0.99",
+   "other": "0.98"
+  },
+  "nmStTreeStrong": {
+   "paper": "3",
+   "other": "4"
+  },
+  "nmStTreeWeak": {
+   "paper": "24",
+   "other": "26"
+  },
+  "nmTreeAccActOther": {
+   "paper": "24",
+   "other": "23"
+  },
+  "nmTreeAccNoise": {
+   "paper": "38",
+   "other": "41"
+  },
+  "nmTreeAccPlAlias": {
+   "paper": "44",
+   "other": "43"
+  },
+  "nmTreeAccRotLine": {
+   "paper": "13",
+   "other": "14"
+  },
+  "nmTreeFPRatRuleTPR": {
+   "paper": "38",
+   "other": "40"
+  },
+  "nmTreePPVTen": {
+   "paper": "31",
+   "other": "30"
+  },
+  "nmTreeTPRatOneFPR": {
+   "paper": "32",
+   "other": "31"
+  }
+ },
+ "n_macros_total": 356
+}

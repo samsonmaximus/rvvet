@@ -1,0 +1,17 @@
+# Exact environment in which rvvet/scripts/analyze.py reproduces every number, table and figure of
+# the paper byte for byte (figures pixel for pixel). Python 3.13.
+#   python -m venv venv && . venv/bin/activate
+#   pip install -r requirements-paper.txt && pip install -e ./rvvet
+#   python rvvet/scripts/load_rvbank.py table4.dat.gz data/rvbank.parquet
+#   python rvvet/scripts/analyze.py
+# scikit-learn 1.9 changed how GroupKFold assigns stars to folds; with it the classifier numbers
+# move slightly (see README.md, "Reproducing the paper"). Versions 1.5.2-1.8.0 all give the paper's numbers.
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.5
+scikit-learn==1.8.0
+matplotlib==3.10.9
+pyarrow==25.0.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+pytest==9.1.1
