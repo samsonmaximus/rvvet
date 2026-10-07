@@ -361,7 +361,7 @@
    "pub": "2024-09",
    "facility": "TESS",
    "method": "Transit",
-   "eu_entry": null,
+   "eu_entry": "NGTS-29 b (2024)",
    "rank_trees": 3,
    "within_1_over_T": true,
    "toi_host": true,

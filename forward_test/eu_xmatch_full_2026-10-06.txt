@@ -1,11 +1,14 @@
 # exoplanet.eu full catalogue CSV (https://exoplanet.eu/catalog/csv/; 8338 planets, all with planet_status Confirmed; sha256 of the CSV text c47fb8dfec03002bb7cffdc73936a5cca8af201c4d4d55378c2557b224f84d65),
 # downloaded 2026-10-07 02:39 UTC (6 October, Pacific time) and matched in the browser by coordinates (within 0.03 deg) to the 240 stars with a significant,
 # rule-passing signal with K < 100 m/s in archive_run_2026-09-30 (the stars of the time-split list before any catalogue cut). Stars without a listed planet do not appear.
+# One star is added by name: exoplanet.eu lists TOI-2447 b, the NASA archive planet on CD-32 1952, as NGTS-29 b at
+# Dec -39.907 instead of -31.908, so the coordinate match missed it (period identical, 69.33684 d).
 # star | number of matched planets | name ~ P <orbital_period, d> ~ disc <discovered, year> ~ <planet_status> ;; ...
 BD+062168 | 1 | TOI-603 b ~ P 16.179846 ~ disc 2024 ~ Confirmed
 BD-114672 | 2 | BD-11 4672 b ~ P 1634 ~ disc 2010 ~ Confirmed ;; BD-11 4672 c ~ P 74.2 ~ disc 2020 ~ Confirmed
 BD-141137 | 2 | TOI-421 Ab ~ P 5.197576 ~ disc 2020 ~ Confirmed ;; TOI-421 Ac ~ P 16.067541 ~ disc 2020 ~ Confirmed
 BD-202976 | 1 | WASP-166 b ~ P 5.44354215 ~ disc 2018 ~ Confirmed
+CD-321952 | 1 | NGTS-29 b ~ P 69.33684 ~ disc 2024 ~ Confirmed
 CD-341735 | 1 | TOI-2449 b ~ P 106.14468 ~ disc 2025 ~ Confirmed
 CD-348236 | 1 | TOI-757 b ~ P 17.46819 ~ disc 2024 ~ Confirmed
 CD-415929 | 1 | TOI-1036 Ab ~ P 3.78031 ~ disc 2019 ~ Confirmed
