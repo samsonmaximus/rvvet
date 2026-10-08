@@ -6,7 +6,7 @@ Code, simulations, benchmark and results behind
 
 > **Fraser, S. (2026). Which tests catch false planets in archival radial velocities? An
 > injection-calibrated vetting ladder tested on published signals with known fates.**
-> *Submitted to the Open Journal of Astrophysics.*
+> *Preprint.*
 > Preprint: [`Fraser2026_rvvet_methods.pdf`](Fraser2026_rvvet_methods.pdf) in this repository; archived at Zenodo, [doi:10.5281/zenodo.23249395](https://doi.org/10.5281/zenodo.23249395). arXiv ID to follow.
 
 `rvvet` runs a ladder of interpretable tests on a periodic signal in a long radial-velocity time
