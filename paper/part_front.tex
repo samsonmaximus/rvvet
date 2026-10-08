@@ -10,6 +10,14 @@
 \usepackage[colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue,hypertexnames=false,pdftitle={Which tests catch false planets in archival radial velocities?},pdfauthor={Samson Fraser}]{hyperref}
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+% revtex4-1 replaces the array package's tabular code with an old copy that expands
+% \color@endgroup inside \edef. Since color.sty v1.3e (2025) that macro contains a conditional,
+% which breaks every table with a p{} or >{} column ("! Extra \or"). Keep it unexpanded there;
+% its meaning when executed is unchanged.
+\makeatletter
+\AtBeginDocument{\let\oj@color@endgroup\color@endgroup
+  \protected\def\color@endgroup{\oj@color@endgroup}}
+\makeatother
 \newcommand{\ms}{\,\mathrm{m\,s^{-1}}}
 \newcommand{\dchi}{\Delta\chi^2}
 \newcommand{\tablefoot}[1]{\par\vspace{3pt}{\footnotesize\raggedright #1\par}}
